@@ -1,0 +1,23 @@
+@back Canyon
+Beginning day 2 of common route.|#1|
+It's scene A. The fact that this text line has "a" identifier is purely coincedential.|#a|
+
+; Bonus content based on time-limited event result previously.
+@gosub .BonusForLimitedChoice
+
+Choose which scene to visit next. This will have major impact on which route (X or Y) you'll allign to.|#b|[skipInput]
+@choice X|#d2-toward-x| goto:C_Day2-2-SceneX
+@choice Y|#d2-toward-y| goto:C_Day2-2-SceneY
+@stop
+
+# BonusForLimitedChoice
+@if bonus!=""
+    Player succeeded in picking limited-time choice yesterday.|#5|
+    @set xPoints+=10 if:bonus="X"
+    @set yPoints+=10 if:bonus="Y"
+    It was |#2|{bonus}.|#3|[i] Good for them.|#4|
+@else
+    Player wasn't able to pick a choice the other day.|#8|
+    Maybe on the next playthrough.|#9|
+@endIf
+@return

@@ -1,0 +1,208 @@
+; English <en> to Japanese <ja> localization document for `DefaultUI` managed text document
+
+; CG GALLERY
+CGGallery.Title: CGギャラリー
+
+; NO
+Confirmation.No: いいえ
+
+; YES
+Confirmation.Yes: はい
+
+; AUTO
+ControlPanel.Auto: 自動
+
+; HIDE
+ControlPanel.Hide: 隠れる
+
+; LOAD
+ControlPanel.Load: ロード
+
+; LOG
+ControlPanel.Log: ログ
+
+; Q.LOAD
+ControlPanel.QuickLoad: Qロード
+
+; Q.SAVE
+ControlPanel.QuickSave: Q保存
+
+; SAVE
+ControlPanel.Save: 保存
+
+; SETTINGS
+ControlPanel.Settings: 設定
+
+; SKIP
+ControlPanel.Skip: スキップ
+
+; TIPS
+ControlPanel.Tips: チップ
+
+; TITLE
+ControlPanel.Title: タイトル
+
+; Select a script to play
+ExternalScriptsBrowser.Info: 再生するスクリプトを選択
+
+; EXTERNAL SCRIPTS
+ExternalScriptsBrowser.Title: 外部スクリプト
+
+; CLOSE
+General.Close: 終了
+
+; RETURN
+General.Return: 戻る
+
+; Are you sure you want to quit to the title screen? Any unsaved game progress will be lost.
+Naninovel.UI.ControlPanelTitleButton.ConfirmationMessage: 終了してタイトル画面に戻りますか? 保存されていないゲームの進行状況は失われます。
+
+; Default
+Naninovel.UI.GameSettingsFontDropdown.DefaultFontName: デフォルト
+
+; Default
+Naninovel.UI.GameSettingsFontSizeDropdown.Default: デフォルト
+
+; Extra Large
+Naninovel.UI.GameSettingsFontSizeDropdown.ExtraLarge: 特大
+
+; Large
+Naninovel.UI.GameSettingsFontSizeDropdown.Large: 大きい
+
+; Small
+Naninovel.UI.GameSettingsFontSizeDropdown.Small: 小さい
+
+; Very Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption1: とても低い
+
+; Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption2: 低い
+
+; Medium
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption3: 中くらい
+
+; High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption4: 高い
+
+; Very High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption5: すごく高い
+
+; Ultra
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption6: ウルトラ
+
+; Full Screen
+Naninovel.UI.GameSettingsScreenModeDropdown.ExclusiveFullScreen: 全画面表示
+
+; Full Screen Window
+Naninovel.UI.GameSettingsScreenModeDropdown.FullScreenWindow: 全画面ウィンドウ
+
+; Maximized Window
+Naninovel.UI.GameSettingsScreenModeDropdown.MaximizedWindow: 最大化されたウィンドウ
+
+; Windowed
+Naninovel.UI.GameSettingsScreenModeDropdown.Windowed: ウィンドウ付き
+
+; Everything
+Naninovel.UI.GameSettingsSkipModeDropdown.Everything: すべての
+
+; Read Only
+Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly: 読み取り専用
+
+; Empty
+Naninovel.UI.GameStateSlot.EmptySlotLabel: 空
+
+; Are you sure you want to delete save slot?
+Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage: セーブスロットを削除してもよろしいですか?
+
+; Are you sure you want to overwrite save slot?
+Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage: 保存スロットを上書きしてもよろしいですか?
+
+; LOAD
+SaveLoadMenu.Tab.Load: ロード
+
+; Q. LOAD
+SaveLoadMenu.Tab.QuickLoad: Qロード
+
+; SAVE
+SaveLoadMenu.Tab.Save: 保存
+
+; Auto delay:
+SettingsMenu.AutoDelay: 自動遅延：
+
+; Font:
+SettingsMenu.Font: フォント：
+
+; Font size:
+SettingsMenu.FontSize: フォントサイズ：
+
+; Graphics:
+SettingsMenu.Graphics: グラフィック：
+
+; Language:
+SettingsMenu.Language: 言語：
+
+; Message speed:
+SettingsMenu.MessageSpeed: メッセージ速度:
+
+; Preview
+SettingsMenu.Preview: プレビュー
+
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis vitae tellus a pharetra. Aenean vitae ipsum in est lobortis vulputate a blandit ipsum. Nullam in felis purus. 
+SettingsMenu.PreviewText: 斜め七十七度の並びで泣く泣く嘶くナナハン七台難なく並べて長眺め。ばななのなぞは、まだなぞなのだぞ。鹿もカモシカも鹿の仲間, しかしアシカは鹿ではない。蛙ぴょこぴょこ三ぴょこぴょこ合わせてぴょこぴょこ六ぴょこぴょこ。
+
+; Resolution:
+SettingsMenu.Resolution: 解決：
+
+; Screen mode:
+SettingsMenu.ScreenMode: 画面モード：
+
+; Skip mode:
+SettingsMenu.SkipMode: スキップモード：
+
+; BASIC
+SettingsMenu.Tab.Basic: ベーシック
+
+; SOUND
+SettingsMenu.Tab.Sound: 音
+
+; TEXT
+SettingsMenu.Tab.Text: 文章
+
+; Voice language:
+SettingsMenu.VoiceLanguage: 音声言語：
+
+; Effects volume:
+SettingsMenu.VolumeEffects: 効果量：
+
+; Master volume:
+SettingsMenu.VolumeMaster: マスターボリューム：
+
+; Music volume:
+SettingsMenu.VolumeMusic: 音楽の音量：
+
+; Voice volume:
+SettingsMenu.VolumeVoice: 声の大きさ：
+
+; CG GALLERY
+TitleMenu.CGGallery: CGギャラリー
+
+; CONTINUE
+TitleMenu.Continue: 継続する
+
+; EXIT
+TitleMenu.Exit: 出口
+
+; EXTERNAL SCRIPTS
+TitleMenu.ExternalScripts: 外部スクリプト
+
+; NEW GAME
+TitleMenu.NewGame: 新しいゲーム
+
+; SETTINGS
+TitleMenu.Settings: 設定
+
+; TIPS
+TitleMenu.Tips: チップ
+
+; SUBMIT
+VariableInput.Submit: 送信

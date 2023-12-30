@@ -1,0 +1,10 @@
+@char h.Default time:0
+@char s.Default time:0
+
+Now removing all actors, live2d models should be destroyed.
+
+@hideAll remove:true
+
+Removed.
+
+@stop

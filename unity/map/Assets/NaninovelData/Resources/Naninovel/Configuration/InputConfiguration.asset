@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152a604f7ea004245b5569f53d69586e, type: 3}
+  m_Name: InputConfiguration
+  m_EditorClassIdentifier: 
+  SpawnEventSystem: 1
+  CustomEventSystem: {fileID: 0}
+  SpawnInputModule: 1
+  CustomInputModule: {fileID: 0}
+  ProcessLegacyBindings: 1
+  TouchFrequencyLimit: 0.1
+  TouchDistanceLimit: 25
+  DetectInputMode: 1
+  Bindings:
+  - Name: Submit
+    AlwaysProcess: 1
+    Keys: 0d0000004a010000
+    Axes: []
+    Swipes: []
+  - Name: Cancel
+    AlwaysProcess: 1
+    Keys: 1b0000004b010000
+    Axes: []
+    Swipes: []
+  - Name: Delete
+    AlwaysProcess: 1
+    Keys: 7f00000051010000
+    Axes: []
+    Swipes: []
+  - Name: NavigateX
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: NavigateY
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: ScrollY
+    AlwaysProcess: 1
+    Keys: 
+    Axes:
+    - AxisName: Vertical
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    Swipes: []
+  - Name: Page
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: Tab
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: Continue
+    AlwaysProcess: 0
+    Keys: 0d0000000f0100004a010000
+    Axes:
+    - AxisName: Mouse ScrollWheel
+      TriggerMode: 2
+      TriggerTolerance: 0.001
+    Swipes:
+    - Direction: 2
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
+  - Name: Pause
+    AlwaysProcess: 0
+    Keys: 0800000051010000
+    Axes: []
+    Swipes: []
+  - Name: Skip
+    AlwaysProcess: 0
+    Keys: 32010000310100004b010000
+    Axes: []
+    Swipes: []
+  - Name: ToggleSkip
+    AlwaysProcess: 0
+    Keys: 0900000053010000
+    Axes: []
+    Swipes: []
+  - Name: AutoPlay
+    AlwaysProcess: 0
+    Keys: 610000004c010000
+    Axes: []
+    Swipes: []
+  - Name: ToggleUI
+    AlwaysProcess: 0
+    Keys: 200000004d010000
+    Axes: []
+    Swipes:
+    - Direction: 1
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
+  - Name: ShowBacklog
+    AlwaysProcess: 0
+    Keys: 6c0000004f010000
+    Axes: []
+    Swipes:
+    - Direction: 0
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
+  - Name: Rollback
+    AlwaysProcess: 0
+    Keys: 4e010000
+    Axes:
+    - AxisName: Mouse ScrollWheel
+      TriggerMode: 1
+      TriggerTolerance: 0.001
+    Swipes:
+    - Direction: 3
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
+  - Name: CameraLookX
+    AlwaysProcess: 0
+    Keys: 
+    Axes:
+    - AxisName: Horizontal
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    - AxisName: Mouse X
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    Swipes: []
+  - Name: CameraLookY
+    AlwaysProcess: 0
+    Keys: 
+    Axes:
+    - AxisName: Vertical
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    - AxisName: Mouse Y
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    Swipes: []
+  - Name: ToggleConsole
+    AlwaysProcess: 1
+    Keys: 60000000
+    Axes: []
+    Swipes: []

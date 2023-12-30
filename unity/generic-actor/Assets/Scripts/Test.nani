@@ -1,0 +1,26 @@
+@back Default id:Beach
+@char k
+
+# Start
+
+k.Default: Default Kohaku pose.
+
+@char k.Pose1 look:right pos:25
+k: Pose1 looking right.
+
+@char k.Pose2 look:left pos:75
+k: Pose2 looking left.
+
+@char k.Pose3 look:center pos:50
+k: Pose3 looking center.
+
+k: Now testing lip sync [lipSync k.false]this text should be printed without speaking indicator enabled[lipSync k.true] and this text should be printed with speaking indicator enabled.
+
+@hide k
+Now going to test generic background animation.
+@back Reveal id:Beach
+The background should switch to `Reveal` state.
+@back Default id:Beach
+The background should switch back to `Default` state.
+
+@goto .Start

@@ -1,0 +1,12 @@
+@back Rain time:0
+@spawn Rain wait:false
+
+Test custom transition 1.
+@back Beach.Custom1 time:3
+Test custom transition 2.
+@back Rain.Custom2 time:3
+
+# Time
+Test time of day.
+@hour 70 duration:15
+@goto .Time

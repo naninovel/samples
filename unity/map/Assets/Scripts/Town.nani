@@ -1,0 +1,28 @@
+@back Town
+Finally! Now find a place to rest.
+But I'm broke...[i] What to do?[skipInput]
+@choice "That wagon looks comfy. Sneak inside." goto:.Wagon
+@choice "Just break into inn and sleep." goto:.Inn
+@stop
+
+# Wagon
+@spawn Blur wait:false
+You spend the night inside the wagon.
+@hide MainBackground
+@despawn Blur wait:false
+When you wake up it's already noon. The wagon is so comfy you can't force yourself to get out...[i] Wait, it is moving!
+While you were sleeping the wagon took off and now you're in the canyon.
+@set mountainAvailable=false;townAvailable=false;canyonAvailable=true
+@save
+@goto Map
+
+# Inn
+@spawn ShakeCamera wait:false
+You storm into the inn starling the folks inside. Your disgusting appearance and creepy behavior makes them stay away and you rest till the morning.
+@hide MainBackground
+The next day, however, you're thrown away from the town.
+The town is no longer available, but the journey continues!
+@set townAvailable=false;lakeAvailable=true;forestAvailable=true
+@save
+@toast "Forest and lake are now available!"
+@goto Map

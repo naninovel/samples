@@ -1,0 +1,100 @@
+; English <en> to Russian <ru> localization document for `Script001` naninovel script
+
+# 1
+; Lorem ipsum dolor sit amet, 
+Суждение последовательно. Угловое расстояние, 
+
+# 2
+;  consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.
+  на первый взгляд, <tip="VN">визуальаный роман</tip> транспонирует трагический здравый смысл, хотя это явно видно на фотогpафической пластинке, полученной с помощью 1.2-метpового телескопа.
+
+# 3
+;  Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
+ Звезда на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах, недоступно решает непреложный натуральный логарифм. Наряду с этим газопылевое облако многопланово гасит даосизм, изменяя привычную реальность.
+
+# 4
+; Praesent nec euismod ante. Sed sit amet pellentesque mauris. Sed viverra est nibh, vitae rhoncus lacus venenatis at. Mauris eget posuere urna, a dignissim nisl.
+Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако ощущение мира колеблет интеллект. Даосизм философски творит популяционный индекс, но кольца видны только при 40–66.
+
+# 5
+; Mauris sit
+Антропосоциология творит параметр.
+
+# 18
+; <br>
+<br>
+
+
+# 6
+;  amet lorem
+ Суждение преобразует
+
+# 7
+;  sit amet nulla malesuada pulvinar.
+ экваториальный перигелий.
+
+# 8
+; Quisque.;; Test no-space source with spaced translation.
+Почти каждый.
+
+# 9
+; Quisque.
+Почти каждый.
+
+# a
+; Ut et quam a dui imperdiet eleifend vitae eget neque.
+Адживика, как принято считать, порождена временем.
+
+# b
+;  Vestibulum sollicitudin et tortor sed dignissim.
+ Ощущение мира точно притягивает сложный зенит, отрицая очевидное.
+
+# c
+; <br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
+<br>
+<br>
+После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
+
+# d
+; Donec ut libero rutrum, "porta tortor" ut, volutpat nulla.
+Закон исключённого третьего "перечеркивает" центральный позитивизм.
+
+# e
+; { 
+{ 
+
+# f
+;  }
+ }
+
+# 10
+; Lorem ipsum
+Реликтовый ледник
+
+# 11
+; Test choice
+Тестовый выбор
+
+# 12
+; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
+Страсть ищет гравитационный парадокс. Юлианская дата наблюдаема. Восход , по определению, представляет собой эллиптический предмет деятельности, изменяя привычную реальность.
+
+# 13
+; Value of t_Foo: 
+Значение t_Foo: 
+
+# 14
+; , value of t_Bar: 
+, значениеf t_Bar: 
+
+# 15
+; .
+ .
+
+# 16
+; Untranslated generic line.
+
+
+# 17
+; Untranslated command line.
+

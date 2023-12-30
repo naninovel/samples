@@ -1,0 +1,13 @@
+; English <en> to Russian <ru> localization document for `CharacterNames` managed text document
+
+; b
+b: b
+
+; Kohaku
+k: Кохаку
+
+; Nani-kun
+n: Нани-кун
+
+; John
+John: Жора

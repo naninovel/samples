@@ -1,0 +1,39 @@
+# Loop
+@back Loop
+Perfect loop.
+@goto .Select
+
+# Back
+@back Trees.BandedSwirl time:3
+Trees background with banded swirl transition.
+@back City.DropFade time:3
+City background with drop fade transition.
+@goto .Select
+
+# Char
+@char Ball.Disco
+Ball: I'm a disco ball.
+@char Ball.Sun
+Ball: Now I'm a sun ball.
+@char Ball tint:#ffffffaa
+Ball: Now I'm semi-opaque via tint.
+@char Ball scale:3 pos:25,25
+Ball: Now I'm scaled up and moved.
+@char Ball.Disco tint:white scale:1 pos:50,50 transition:Ripple time:3 easing:EaseOutBounce
+Ball: Back to disco with ripple transition and bounce easing.
+@goto .Select
+
+# Blur
+@blur
+Blurred background.
+@blur power:0
+De-blurred background.
+@goto .Select
+
+# Select
+@hidePrinter
+@choice Loop goto:.Loop
+@choice Backgrounds goto:.Back
+@choice Characters goto:.Char
+@choice Blur goto:.Blur
+@stop

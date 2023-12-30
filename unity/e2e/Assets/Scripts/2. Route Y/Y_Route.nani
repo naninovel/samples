@@ -1,0 +1,248 @@
+@back Forest
+Route Y.|#1|
+Will return to title and set the root as completed.|#2|
+When both X and Y are completed, button to start true route will appear in the title menu.|#3|
+Below is lots of stub commands to simulate long-running scenario.|#4|
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#5|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#6|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#7|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#8|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#9|
+
+@choice "Random Choice 1|#85|"
+@choice "Random Choice 2|#86|"
+@stop
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#10|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#11|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#12|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#13|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#14|
+
+@back Beach
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#15|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#16|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#17|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#18|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#19|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#1a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#1b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#1c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#1d|
+
+@choice "Random Choice 3|#87|"
+@choice "Random Choice 4|#88|"
+@choice "Random Choice 5|#89|"
+@stop
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#1e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#1f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#20|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#21|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#22|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#23|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#24|
+
+@back Canyon
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#25|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#26|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#27|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#28|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#29|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#2a|
+
+@choice "Random Choice 6|#8a|"
+@stop
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#2b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#2c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#2d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#2e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#2f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#30|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#31|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#32|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#33|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#34|
+
+@back Forest
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#35|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#36|
+
+@choice "Random Choice 7|#8b|"
+@choice "Random Choice 8|#8c|"
+@choice "Random Choice 9|#8d|"
+@choice "Random Choice 10|#8e|"
+@stop
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#37|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#38|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#39|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#3a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#3b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#3c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#3d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#3e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#3f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#40|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#41|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#42|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#43|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#44|
+
+@back Lake
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#45|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#46|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#47|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#48|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#49|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#4a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#4b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#4c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#4d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#4e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#4f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#50|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#51|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#52|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#53|
+
+@choice "Random Choice 11|#8f|"
+@choice "Random Choice 12|#90|"
+@stop
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#54|
+
+@back Mountain
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#55|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#56|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#57|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#58|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#59|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#5a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#5b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#5c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#5d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#5e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#5f|
+
+@choice "Random Choice 13|#91|"
+@choice "Random Choice 14|#92|"
+@stop
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#60|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#61|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#62|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#63|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#64|
+
+@back Rain
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#65|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#66|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#67|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#68|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#69|
+
+@choice "Random Choice 15|#93|"
+@choice "Random Choice 16|#94|"
+@choice "Random Choice 17|#95|"
+@stop
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#6a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#6b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#6c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#6d|
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#6e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#6f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#70|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#71|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#72|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#73|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#74|
+
+@back Snow
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.|#75|[i] Quisque vitae nisi ac arcu bibendum aliquam. Vestibulum ullamcorper ornare mattis. Suspendisse ornare elit et elit tempor, et viverra massa molestie.|#76|
+
+Quisque congue, augue id sollicitudin consequat, nunc nunc lobortis mauris, ut sodales massa elit et justo. Aenean quis ornare nulla. Donec id aliquet quam. Ut commodo eleifend sapien eget pretium. Etiam facilisis eu ipsum eget gravida.|#77|
+
+Aenean quis tortor arcu. Phasellus bibendum, augue et malesuada tristique, nulla libero pulvinar nibh, eget vestibulum sapien quam et mauris. Aenean et turpis semper libero blandit porta in nec dolor. Donec semper nulla laoreet, porttitor nisi et, hendrerit ex. Aliquam erat volutpat.|#78|[i] Duis tristique posuere nibh eget lobortis. Nulla facilisi. Praesent eget ligula sapien.|#79|
+
+Sed felis magna, rhoncus et nisl sit amet, aliquet ullamcorper elit. Donec faucibus vitae ligula vel congue. Nam rutrum ipsum et magna pellentesque, in maximus velit aliquet. Aenean ligula augue, efficitur at nisi bibendum, vulputate elementum libero. Vivamus vitae dui ac lacus dapibus commodo eget in erat. Mauris congue porta nibh convallis dictum.|#7a|
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dignissim lorem in tellus aliquet mollis. Integer iaculis leo mi, sit amet dapibus magna aliquet eget. Nam faucibus et turpis sit amet interdum. Quisque nec urna justo. Curabitur quis feugiat quam.|#7b|
+
+Quisque iaculis nisi convallis sapien pharetra, eget iaculis est tincidunt. Donec iaculis ante id sem venenatis venenatis.|#7c|[i] Donec suscipit auctor orci lacinia imperdiet. Mauris pretium efficitur justo quis efficitur. Fusce at libero ipsum.|#7d|
+
+@choice "Random Choice 18|#96|"
+@stop
+
+Maecenas vehicula arcu sit amet leo facilisis, vel lacinia metus convallis. Nulla suscipit eros non orci vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer diam diam, tincidunt sit amet nunc nec, vehicula sodales lectus.|#7e|[i] Nam volutpat, enim non vehicula ullamcorper, massa ante gravida massa, vel imperdiet erat libero eu arcu. Morbi vestibulum erat ut mauris sagittis convallis.|#7f|
+
+Donec volutpat elit non erat cursus, vitae sodales eros tempus. Pellentesque ut mi ac enim blandit fringilla et non lectus.|#80|
+
+Mauris vitae lectus porta, fringilla ligula a, imperdiet ipsum. Integer ultricies, leo quis commodo finibus, enim diam ornare erat, sed faucibus tellus risus ut turpis. Duis porta ullamcorper nisl sit amet semper. Quisque consectetur justo quis lorem iaculis pellentesque. Mauris tempor iaculis sem et facilisis.|#81|
+
+Mauris imperdiet, urna semper aliquam rutrum, arcu ipsum vestibulum justo, at aliquam justo lacus vitae metus.|#82|
+
+Quisque ornare nibh orci, eu elementum lacus blandit vel. Vivamus euismod dui in erat porta, sit amet faucibus velit ultricies. Phasellus commodo congue scelerisque.|#83|
+
+Praesent eget tellus non magna ornare vestibulum nec id justo. Aenean sit amet tempus libero. Donec eu convallis turpis, ut dignissim ante. Morbi at lorem a tortor gravida viverra. Aenean tincidunt dolor non nisl placerat molestie. Nunc interdum laoreet bibendum. Suspendisse potenti. Praesent id nunc convallis, interdum ante ac, maximus tellus.|#84|
+
+@set g_completedY=true
+@title

@@ -1,0 +1,13 @@
+@back Beach
+Beginning day 1 of common route.|#1|
+
+If player manages to pick a choice in the limited time frame they get bonus content later.|#4|
+; We're using custom text identifiers here to reference them in tests
+; independent of the localization, as the actual choice text will differ.
+@choice "Quick Time Event X|#d1-qte-x|" set:bonus="X"
+@choice "Quick Time Event Y|#d1-qte-y|" set:bonus="Y"
+@wait 0.5
+@clearChoice *
+
+End of day 2 of common route.|#2|
+@goto C_Day2-1-SceneA

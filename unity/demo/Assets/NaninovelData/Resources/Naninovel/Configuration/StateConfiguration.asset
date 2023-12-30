@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4a73676509e3e448cf1bc5c83f9963, type: 3}
+  m_Name: StateConfiguration
+  m_EditorClassIdentifier: 
+  SaveFolderName: Saves
+  DefaultSettingsSlotId: Settings
+  DefaultGlobalSlotId: GlobalSave
+  SaveSlotMask: GameSave{0:000}
+  QuickSaveSlotMask: GameQuickSave{0:000}
+  SaveSlotLimit: 99
+  QuickSaveSlotLimit: 18
+  BinarySaveFiles: 1
+  LoadStartDelay: 0.3
+  ResetOnGoto: 1
+  EnableStateRollback: 1
+  StateRollbackSteps: 1024
+  SavedRollbackSteps: 128
+  GameStateHandler: Naninovel.PlayerPrefsGameStateSlotManager, Elringus.Naninovel.Runtime,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  GlobalStateHandler: Naninovel.PlayerPrefsGlobalStateSlotManager, Elringus.Naninovel.Runtime,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  SettingsStateHandler: Naninovel.PlayerPrefsSettingsSlotManager, Elringus.Naninovel.Runtime,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

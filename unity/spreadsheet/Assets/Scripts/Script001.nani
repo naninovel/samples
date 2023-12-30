@@ -1,0 +1,31 @@
+@printer Fullscreen
+Lorem ipsum dolor sit amet, |#1|{ Random(0, 11) } consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.|#2|[i] Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.|#3|
+Praesent nec euismod ante. Sed sit amet pellentesque mauris. Sed viverra est nibh, vitae rhoncus lacus venenatis at. Mauris eget posuere urna, a dignissim nisl.|#4|
+@spawn Rain wait:false
+Mauris sit|#5|<br>|#18|[i] amet lorem|#6|[spawn ShakePrinter params:,1 wait:false] sit amet nulla malesuada pulvinar.|#7|[skipInput]
+
+; Test no-space source with spaced translation.
+Quisque.|#8|
+@print Quisque.|#9|
+
+# TestLabel
+@resetText 
+; Test comment.
+@printer Wide time:0
+k: Ut et quam a dui imperdiet eleifend vitae eget neque.|#a|[i] Vestibulum sollicitudin et tortor sed dignissim.|#b|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.|#c|
+@print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla.|#d|" speed:0.5 default:false
+@print "\{ |#e|{ Random(0, 10) } \}|#f|"
+@char Kohaku pos:10,50,-1
+@toast "Lorem ipsum|#10|" time:1
+@choice "Test choice|#11|" pos:10,50
+@stop
+
+@despawn Rain wait:false
+y.Default: Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.|#12|
+
+Value of t_Foo: |#13|{t_Foo}, value of t_Bar: |#14|{t_Bar}.|#15|
+
+Untranslated generic line.|#16|
+@print "Untranslated command line.|#17|"
+
+@goto Script002

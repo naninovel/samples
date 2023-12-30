@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b776810ebfa374d7ba8f0fb5ed6e3265, type: 3}
+  m_Name: SettingsManager
+  m_EditorClassIdentifier: 
+  separateEditorSaveFiles: 0
+  saveFileName: AdventureCreator_Demo2D
+  saveTimeDisplay: 0
+  customSaveFormat: MMMM dd, yyyy
+  takeSaveScreenshots: 0
+  saveScreenshots: 0
+  screenshotResolutionFactor: 1
+  useProfiles: 0
+  maxSaves: 8
+  orderSavesByUpdateTime: 0
+  reloadSceneWhenLoading: 0
+  saveWithThreading: 0
+  saveAssetReferencesWithAddressables: 0
+  saveLabels:
+    defaultSaveLabel: Save
+    saveLabelID: -1
+    defaultImportLabel: Import
+    importLabelID: -1
+    defaultAutosaveLabel: Autosave
+    autosaveLabelID: -1
+  referenceScenesInSave: 0
+  sceneAttributes: []
+  actionListOnStart: {fileID: 0}
+  blackOutWhenSkipping: 0
+  playerSwitching: 1
+  player: {fileID: 11400004, guid: 8e7dc85006b744a6d807e68c58a9812b, type: 3}
+  players: []
+  movementMethod: 0
+  inputMethod: 0
+  simulatedCursorMoveSpeed: 4
+  interactionMethod: 2
+  selectInteractions: 0
+  autoHideInteractionIcons: 1
+  cancelInteractions: 0
+  seeInteractions: 0
+  closeInteractionMenuIfTapHotspot: 1
+  stopPlayerOnClickHotspot: 0
+  cycleInventoryCursors: 1
+  scaleCursorSpeedWithScreen: 1
+  autoCycleWhenInteract: 0
+  showHoverInteractionInHotspotLabel: 0
+  allowDefaultinteractions: 0
+  alwaysCloseInteractionMenus: 1
+  whenReselectHotspot: 0
+  lockCursorOnStart: 0
+  hideLockedCursor: 0
+  disableFreeAimWhenDragging: 0
+  disableFreeAimWhenDraggingPickUp: 0
+  runConversationsWithKeys: 0
+  clickUpInteractions: 0
+  defaultMouseClicks: 1
+  allowGameplayDuringConversations: 0
+  walkToHotspotMarkers: 1
+  dragThreshold: 0
+  shareInventory: 0
+  inventoryDragDrop: 0
+  dragDropThreshold: 0
+  allowInventoryInteractionsDuringConversations: 0
+  inventoryDropLook: 0
+  inventoryDropLookNoDrag: 0
+  inventoryInteractions: 1
+  inventoryDisableLeft: 1
+  allowDefaultInventoryInteractions: 0
+  inventoryDisableUnhandled: 1
+  inventoryDisableDefined: 1
+  inventoryInteractionsHaltPlayer: 0
+  activeWhenHover: 0
+  inventoryActiveEffect: 1
+  inventoryPulseSpeed: 1
+  activeWhenUnhandled: 1
+  canReorderItems: 0
+  selectInventoryDisplay: 0
+  rightClickInventory: 0
+  reverseInventoryCombinations: 0
+  canMoveWhenActive: 1
+  selectInvWithUnhandled: 0
+  selectInvWithIconID: 0
+  giveInvWithUnhandled: 0
+  giveInvWithIconID: 0
+  autoDisableUnhandledHotspots: 0
+  clickPrefab: {fileID: 0}
+  clickMarkerPosition: 0
+  walkableClickRange: 0.5
+  navMeshSearchDirection: 0
+  ignoreOffScreenNavMesh: 1
+  doubleClickMovement: 0
+  magnitudeAffectsDirect: 0
+  directTurnsInstantly: 1
+  stopTurningWhenReleaseInput: 0
+  disableMovementWhenInterationMenusAreOpen: 0
+  directMovementType: 0
+  limitDirectMovement: 0
+  cameraLockSnapAngleThreshold: 5
+  directMovementPerspective: 0
+  destinationAccuracy: 0.9
+  experimentalAccuracy: 0
+  unityUIClicksAlwaysBlocks: 0
+  pathfindUpdateFrequency: 0
+  verticalReductionFactor: 0.7
+  rotationsAffectedByVerticalReduction: 1
+  jumpSpeed: 4
+  singleTapStraight: 0
+  singleTapStraightPathfind: 0
+  clickHoldSeparationStraight: 0.3
+  useFPCamDuringConversations: 1
+  onlyInteractWhenCursorUnlocked: 0
+  freeAimSmoothSpeed: 50
+  firstPersonMovementSmoothing: 1
+  assumeInputsDefined: 0
+  activeInputs: []
+  freeAimTouchSpeed: 0.1
+  dragWalkThreshold: 5
+  dragRunThreshold: 20
+  drawDragLine: 1
+  dragLineWidth: 3
+  dragLineColor: {r: 1, g: 1, b: 1, a: 1}
+  offsetTouchCursor: 0
+  doubleTapHotspots: 0
+  firstPersonTouchScreen: 1
+  directTouchScreen: 0
+  touchUpWhenPaused: 0
+  touchUpInteractScene: 0
+  forceAspectRatio: 0
+  aspectRatioEnforcement: 1
+  wantedAspectRatio: 1.5
+  maxAspectRatio: 2.39
+  renderBorderCamera: 1
+  landscapeModeOnly: 0
+  cameraPerspective: 0
+  cacheCameraMain: 0
+  linearColorTextures: 0
+  movingTurning: 3
+  hotspotDetection: 0
+  closeInteractionMenusIfPlayerLeavesVicinity: 0
+  placeDistantHotspotsOnSeparateLayer: 1
+  hotspotsInVicinity: 0
+  hotspotIconDisplay: 0
+  hotspotIcon: 1
+  hotspotIconTexture: {fileID: 0}
+  hotspotIconGraphic:
+    texture: {fileID: 0}
+    isAnimated: 0
+    numFrames: 1
+    numRows: 1
+    numCols: 1
+    size: 0.04
+    animSpeed: 4
+    endAnimOnLastFrame: 0
+    skipFirstFrameWhenLooping: 0
+    clickOffset: {x: 0, y: 0}
+    frameSpeeds: []
+    alwaysAnimate: 0
+  highlightMaterialPropertyOverride: 
+  hotspotIconSize: 0.04
+  playerFacesHotspots: 0
+  onlyFaceHotspotOnSelect: 0
+  scaleHighlightWithMouseProximity: 0
+  highlightProximityFactor: 4
+  occludeIcons: 0
+  hideIconUnderInteractionMenu: 0
+  hotspotDrawing: 0
+  hideUnhandledHotspots: 0
+  navMeshRaycastLength: 100
+  hotspotRaycastLength: 100
+  moveableRaycastLength: 30
+  hotspotLayer: Default
+  distantHotspotLayer: DistantHotspot
+  navMeshLayer: NavMesh
+  backgroundImageLayer: BackgroundImage
+  deactivatedLayer: Ignore Raycast
+  useLoadingScreen: 0
+  manualSceneActivation: 0
+  loadingSceneIs: 0
+  loadScenesFromAddressable: 0
+  loadingSceneName: 
+  loadingScene: 0
+  useAsyncLoading: 0
+  loadingDelay: 0
+  blackOutWhenInitialising: 1
+  spawnPersistentEnginePrefab: 1
+  playMusicWhilePaused: 0
+  playAmbienceWhilePaused: 0
+  musicStorages: []
+  ambienceStorages: []
+  loadAmbienceFadeTime: 0
+  crossfadeAmbienceWhenLoading: 0
+  restartAmbienceTrackWhenLoading: 0
+  loadMusicFadeTime: 0
+  crossfadeMusicWhenLoading: 0
+  restartMusicTrackWhenLoading: 0
+  autoEndOtherMusicWhenPlayed: 1
+  volumeControl: 0
+  musicMixerGroup: {fileID: 0}
+  sfxMixerGroup: {fileID: 0}
+  speechMixerGroup: {fileID: 0}
+  musicAttentuationParameter: musicVolume
+  sfxAttentuationParameter: sfxVolume
+  speechAttentuationParameter: speechVolume
+  defaultLanguage: 0
+  defaultVoiceLanguage: 0
+  defaultShowSubtitles: 0
+  defaultSfxVolume: 0.9
+  defaultMusicVolume: 0.6
+  defaultSpeechVolume: 1
+  showDebugLogs: 0
+  printActionCommentsInConsole: 0
+  actionCommentLogging: 0
+  showActiveActionLists: 0

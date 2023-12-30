@@ -1,0 +1,45 @@
+
+Testing custom choice message with date.
+@printer Chat
+Kohaku: (10:05) Good morning!
+Yuko: (22:14) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis felis lobortis purus facilisis malesuada.
+
+@printer Dialogue
+Testing custom choice handler.
+@choice "Glow Test"
+@stop
+
+Testing custom choice button with pointer enter/exit events.
+@choice  button:ChoiceButtons/TestButton pos:0,0 handler:ButtonArea
+@stop
+@showPrinter Dialogue
+
+Testing TMPro emoji <sprite=0>.
+Testing TMPro <font="Calligraph">font variant</font>.
+
+Unlocking `PureAdrenaline` track in the music gallery.
+@unlock Music/PureAdrenaline
+
+Now going to show the calendar.
+@showUI Calendar
+Now setting the date.
+@set day=12;month=1
+The date should be January 12th.
+@set day++
+The day should increase by one.
+@set month=2
+The month should change to February.
+Now hiding the calendar.
+@hideUI Calendar
+
+Now starting the month loop.
+@showUI Calendar
+
+# Loop
+
+@set month++
+@set month=1 if:month>12
+
+Next month.
+
+@goto .Loop

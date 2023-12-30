@@ -1,0 +1,32 @@
+; Enter novel mode.
+@novel
+@back Landscape time:0
+@spawn SunShafts
+
+@printer Novel
+Ut velit nulla, maximus non est non, sagittis elementum dui. Mauris at eros nulla. Duis id sem nibh. Phasellus tempor commodo urna vulputate rutrum. Mauris gravida, mauris id tincidunt lacinia, erat ante mattis tellus, quis iaculis odio quam id urna. Nam aliquet dolor a finibus efficitur. Ut nec elit enim. 
+Sed rhoncus, orci et ullamcorper hendrerit, eros massa placerat justo, sodales tristique turpis nulla in arcu. Donec in finibus erat. 
+Nulla maximus lectus non magna ultrices, at lobortis est tincidunt. Nullam ante turpis, eleifend lobortis lorem eu, rutrum vestibulum sem. Mauris tellus lectus, sollicitudin vitae nulla vitae, suscipit ultricies arcu. In vestibulum enim pulvinar lectus euismod, nec rhoncus eros viverra. Vivamus vel rutrum nunc. Sed quis lacinia mauris.
+
+@printer Adventure
+@char k.Happy visible:true
+k: Duis eros ante, accumsan in lacus vel, porttitor fermentum risus.
+@char y visible:true
+y: Proin odio dolor, iaculis non consectetur a, egestas at lectus.[char y.Sad wait:false] Nunc rhoncus pulvinar risus, in fringilla dolor laoreet viverra. In hac habitasse platea dictumst. 
+y.Default: Suspendisse eu mi rutrum, auctor erat in, tristique orci. Mauris et scelerisque ante, a congue velit. Nullam eu nisl quis elit rutrum ornare imperdiet eu sapien.
+k.Default: Accumsan in lacus vel.
+
+@hideChars
+@printer Novel wait:false
+@resetText
+Nulla hendrerit, nunc et iaculis tempus, turpis ex condimentum orci, quis elementum purus turpis sed ante. Aliquam iaculis erat nec maximus iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non semper leo. Vivamus venenatis nibh ut felis pretium, non finibus ex efficitur. Maecenas id justo at ipsum luctus viverra at a dui. Mauris id ipsum rutrum, varius nisi et, faucibus purus.
+Fusce sed enim at diam molestie commodo. Suspendisse tempor ante et sollicitudin pharetra. Nunc tincidunt mi a accumsan cursus. Praesent mattis et libero vitae fringilla. Suspendisse auctor tristique mattis. Curabitur eu fermentum ligula, non mattis enim. Sed ex magna, semper vel eleifend sed, imperdiet ut augue. 
+@resetText
+Phasellus vel venenatis erat. Mauris fermentum nunc at eros scelerisque, vel eleifend tortor facilisis. Nulla maximus lectus non magna ultrices, at lobortis est tincidunt. Nullam ante turpis, eleifend lobortis lorem eu, rutrum vestibulum sem. Mauris tellus lectus, sollicitudin vitae nulla vitae, suscipit ultricies arcu. In vestibulum enim pulvinar lectus euismod, nec rhoncus eros viverra. Vivamus vel rutrum nunc. Sed quis lacinia mauris.
+Mauris gravida, mauris id tincidunt lacinia, erat ante mattis tellus, quis iaculis odio quam id urna. Nam aliquet dolor a finibus efficitur. Ut nec elit enim. Sed rhoncus, orci et ullamcorper hendrerit, eros massa placerat justo, sodales tristique turpis nulla in arcu. Donec in finibus erat.  
+
+@hidePrinter
+@wait 1
+
+; Return to adventure mode.
+@adventure

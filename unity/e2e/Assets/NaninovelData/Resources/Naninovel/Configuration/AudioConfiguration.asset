@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8ed7263ec7b9b42bb639f721ed7dfd, type: 3}
+  m_Name: AudioConfiguration
+  m_EditorClassIdentifier: 
+  AudioLoader:
+    PathPrefix: Audio
+    ProviderTypes:
+    - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  VoiceLoader:
+    PathPrefix: Voice
+    ProviderTypes:
+    - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  AudioPlayer: Naninovel.AudioPlayer, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  DefaultMasterVolume: 1
+  DefaultBgmVolume: 1
+  DefaultSfxVolume: 1
+  DefaultVoiceVolume: 1
+  EnableAutoVoicing: 0
+  AutoVoiceMode: 1
+  VoiceOverlapPolicy: 1
+  VoiceLocales: []
+  DefaultFadeDuration: 0.35
+  CustomAudioMixer: {fileID: 0}
+  MasterGroupPath: Master
+  MasterVolumeHandleName: Master Volume
+  BgmGroupPath: Master/BGM
+  BgmVolumeHandleName: BGM Volume
+  SfxGroupPath: Master/SFX
+  SfxVolumeHandleName: SFX Volume
+  VoiceGroupPath: Master/Voice
+  VoiceVolumeHandleName: Voice Volume

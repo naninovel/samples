@@ -1,0 +1,5 @@
+@back Snow time:0
+@char k time:0
+k: Hello!
+@bolt object:ExampleEvent name:MyEvent args:ExampleMessage,Script002
+@stop

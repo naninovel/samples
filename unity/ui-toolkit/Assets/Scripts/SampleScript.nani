@@ -1,0 +1,6 @@
+# Start
+@showUI CustomUI
+Showed custom UI Toolkit document.
+@hideUI CustomUI
+Hid custom UI Toolkit document.
+@goto .Start

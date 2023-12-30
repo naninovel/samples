@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53311cd2a4c0d432f9d69d13b8cbad48, type: 3}
+  m_Name: ACEditorPrefs
+  m_EditorClassIdentifier: 
+  hierarchyIconOffset: 0
+  hotspotGizmoColor: {r: 1, g: 1, b: 0, a: 0.6}
+  triggerGizmoColor: {r: 1, g: 0.3, b: 0, a: 0.8}
+  collisionGizmoColor: {r: 0, g: 1, b: 1, a: 0.8}
+  pathGizmoColor: {r: 0, g: 0, b: 1, a: 1}
+  menuItemsBeforeScroll: 15
+  csvFormat: 0
+  showHierarchyIcons: 1
+  editorLabelWidth: 0
+  actionNodeWidth: 300
+  disableInstaller: 0
+  installPath: Assets/AdventureCreator
+  autosaveActionListsInterval: 10

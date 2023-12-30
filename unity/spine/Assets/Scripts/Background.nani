@@ -1,0 +1,12 @@
+@hideAll remove:true
+@back animation01 id:Tree
+Testing spine background.
+@back animation02 id:Tree
+Switched to animation02.
+@back id:Tree tint:yellow
+Tinted background.
+@char Boy 
+Added spine character.
+@spawn Blur params:Tree,1
+Blurred background.
+@stop

@@ -1,0 +1,31 @@
+@back Lake
+
+@if vibrating
+    You dive into the lake.[spawn ShakeCamera]
+    ...
+    @spawn ShakeCamera params:,0,0.07,,0.1
+    The fungus vibrations are repelling the water![i] You can actually walk on the water!
+    @choice "Cross the lake."
+    @stop
+    You start running.
+    Water feels nice.
+
+    @set count=0
+    # Loop
+    Splash.
+    @set count++;
+    @despawn ShakeCamera
+    @camera zoom:{count*0.1} offset:,-{count*0.5}
+    @spawn ShakeCamera params:,0,{0.07+count*0.05},,{0.1-count*0.01}
+    @goto .Loop if:count<5
+
+    ...
+    Am I going down?[i] The fungus repelling effect is wearing off! Am I going to drown?
+    @choice F do:@title play:false
+    @stop
+
+@else
+    The lake is huge. How do I cross it?
+    No idea... Maybe try going somewhere else for now?
+    @goto Map
+@endIf

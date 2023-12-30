@@ -1,0 +1,7 @@
+; English <en> to Japanese <ja> localization document for `CharacterNames` managed text document
+
+; Kohaku
+k: 琥珀
+
+; Yuko
+y: 優子

@@ -1,0 +1,17 @@
+# Yuko
+y: Lorem ipsum dolor sit amet, consectetur adipiscing elit.[i] Quisque sed massa a dolor vehicula scelerisque. Fusce quis tortor nec nunc dignissim hendrerit.
+k: Cras dapibus...[i] Massa pulvinar fermentum venenatis!
+y: Cras ut ex augue?[skipInput]
+@choice "Go to novel mode" goto:Novel
+@choice "Nevermind"
+@stop
+y: See ya!
+@adventure reset:false
+
+# Misaki
+m: Suspendisse potenti in faucibus orci.
+k: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+m: Maecenas diam sapien...[i][char m.Surprise wait:false] Lacinia vel urna!
+k: Curabitur auctor vehicula eros, vitae congue diam tempus sed.
+m.Default: Ipsum primis in faucibus.
+@adventure reset:false

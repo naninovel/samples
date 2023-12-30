@@ -1,0 +1,6 @@
+
+; Show true route button when both X and Y routes are completed.
+@showUI TrueRoute if:g_completedX&g_completedY
+; Show special background when completed true route.
+@back { g_completedTrue ? "Snow" : "Mountain" }
+@stop

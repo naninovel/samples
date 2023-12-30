@@ -1,0 +1,7 @@
+; English <en> to Russian <ru> localization document for `CharacterNames` managed text document
+
+; Kohaku
+k: Кохан
+
+; Yuko
+y: Её Величество Юко

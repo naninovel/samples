@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: b4bffd0322930b54ba0001e1827bc780
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_maxConcurrentWebRequests: 500
+  m_ContiguousBundles: 0
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: b6b4ecb0a8f54be4fa283c21468ff883, type: 2}
+  - {fileID: 11400000, guid: a7eae96631205ff4b9eb8fd61c1de666, type: 2}
+  - {fileID: 11400000, guid: 417cbd011d794244289cc2445b3a7389, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 609cdbfb58e96044b99ec677e8394729
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 2b95aa427a19187419e9effc7ee5ca49
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: c8b68b9248d96524081ffe9b20c8112d
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: cdc121e279e8353429814f2f9bfb57f6
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 792145945480e124f877f98f2dfed310
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 8c663af7678974648a6de4850e8e6dbe
+        m_Value: https://naninovel.com/addressable/[BuildTarget]
+    m_ProfileEntryNames:
+    - m_Id: 2b95aa427a19187419e9effc7ee5ca49
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: c8b68b9248d96524081ffe9b20c8112d
+      m_Name: LocalBuildPath
+      m_InlineUsage: 0
+    - m_Id: cdc121e279e8353429814f2f9bfb57f6
+      m_Name: LocalLoadPath
+      m_InlineUsage: 0
+    - m_Id: 792145945480e124f877f98f2dfed310
+      m_Name: RemoteBuildPath
+      m_InlineUsage: 0
+    - m_Id: 8c663af7678974648a6de4850e8e6dbe
+      m_Name: RemoteLoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Naninovel
+    - EP1
+    - EP2
+    - EP3
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: da90319e88a2f6a43af8cbcecdf7f025, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: edc61ef92e34a7e45a68904f1e438dcf, type: 2}
+  - {fileID: 11400000, guid: 06d66019de1fec14eba2cc6f08cb9d86, type: 2}
+  - {fileID: 11400000, guid: ba062eb7463137b44af82b4146fb96cd, type: 2}
+  - {fileID: 11400000, guid: 3708c00bbb699894a86fc4e99db9f771, type: 2}
+  m_ActiveProfileId: 609cdbfb58e96044b99ec677e8394729
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []

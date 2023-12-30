@@ -1,0 +1,70 @@
+﻿#,;;,en,ja,ru
+CGGallery.Title,,CG GALLERY,CGギャラリー,ГАЛЕРЕЯ
+Confirmation.No,,NO,いいえ,НЕТ
+Confirmation.Yes,,YES,はい,ДА
+ControlPanel.Auto,,AUTO,自動,АВТО
+ControlPanel.Hide,,HIDE,隠れる,СКРЫТЬ
+ControlPanel.Load,,LOAD,ロード,ЗАГРУЗИТЬ
+ControlPanel.Log,,LOG,ログ,ЖУРНАЛ
+ControlPanel.QuickLoad,,Q.LOAD,Qロード,Б.ЗАГРУЗКА
+ControlPanel.QuickSave,,Q.SAVE,Q保存,Б.СОХРАНЕНИЕ
+ControlPanel.Save,,SAVE,保存,СОХРАНИТЬ
+ControlPanel.Settings,,SETTINGS,設定,НАСТРОЙКИ
+ControlPanel.Skip,,SKIP,スキップ,ПРОПУСК
+ControlPanel.Tips,,TIPS,チップ,ЗАМЕТКИ
+ControlPanel.Title,,TITLE,タイトル,МЕНЮ
+ExternalScriptsBrowser.Info,,Select a script to play,再生するスクリプトを選択,Select a script to play
+ExternalScriptsBrowser.Title,,EXTERNAL SCRIPTS,外部スクリプト,EXTERNAL SCRIPTS
+General.Close,,CLOSE,終了,ЗАКРЫТЬ
+General.Return,,RETURN,戻る,НАЗАД
+Naninovel.UI.ControlPanelTitleButton.ConfirmationMessage,,Are you sure you want to quit to the title screen? Any unsaved game progress will be lost.,終了してタイトル画面に戻りますか? 保存されていないゲームの進行状況は失われます。,Уверены что хотите выйти? Несохранённый прогресс будет утерян.
+Naninovel.UI.GameSettingsFontDropdown.DefaultFontName,,Default,デフォルト,Стандартный
+Naninovel.UI.GameSettingsFontSizeDropdown.Default,,Default,デフォルト,Стандартный
+Naninovel.UI.GameSettingsFontSizeDropdown.ExtraLarge,,Extra Large,特大,Очень крупный
+Naninovel.UI.GameSettingsFontSizeDropdown.Large,,Large,大きい,Крупный
+Naninovel.UI.GameSettingsFontSizeDropdown.Small,,Small,小さい,Мелкий
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption1,,Very Low,とても低い,Очень низкое
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption2,,Low,低い,Низкое
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption3,,Medium,中くらい,Среднее
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption4,,High,高い,Высокое
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption5,,Very High,すごく高い,Очень высокое
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption6,,Ultra,ウルトラ,Ультра
+Naninovel.UI.GameSettingsScreenModeDropdown.ExclusiveFullScreen,,Full Screen,全画面表示,Полноэкранный
+Naninovel.UI.GameSettingsScreenModeDropdown.FullScreenWindow,,Full Screen Window,全画面ウィンドウ,Полноэкранное Окно
+Naninovel.UI.GameSettingsScreenModeDropdown.MaximizedWindow,,Maximized Window,最大化されたウィンドウ,Увеличенное Окно
+Naninovel.UI.GameSettingsScreenModeDropdown.Windowed,,Windowed,ウィンドウ付き,Оконный
+Naninovel.UI.GameSettingsSkipModeDropdown.Everything,,Everything,すべての,Всё
+Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly,,Read Only,読み取り専用,Прочитанное
+Naninovel.UI.GameStateSlot.EmptySlotLabel,,Empty,空,Пусто
+Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage,,Are you sure you want to delete save slot?,セーブスロットを削除してもよろしいですか?,Вы уверены что хотите удалить слот?
+Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage,,Are you sure you want to overwrite save slot?,保存スロットを上書きしてもよろしいですか?,Вы уврены что хотите переписать слот?
+SaveLoadMenu.Tab.Load,,LOAD,ロード,ЗАГРУЗИТЬ
+SaveLoadMenu.Tab.QuickLoad,,Q. LOAD,Qロード,Б. ЗАГРУЗКА
+SaveLoadMenu.Tab.Save,,SAVE,保存,СОХРАНИТЬ
+SettingsMenu.AutoDelay,,Auto delay:,自動遅延：,Авто-задержка:
+SettingsMenu.Font,,Font:,フォント：,Шрифт:
+SettingsMenu.FontSize,,Font size:,フォントサイズ：,Размер шрифта:
+SettingsMenu.Graphics,,Graphics:,グラフィック：,Графика:
+SettingsMenu.Language,,Language:,言語：,Язык:
+SettingsMenu.MessageSpeed,,Message speed:,メッセージ速度:,Скорость печати:
+SettingsMenu.Preview,,Preview,プレビュー,Preview
+SettingsMenu.PreviewText,,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis vitae tellus a pharetra. Aenean vitae ipsum in est lobortis vulputate a blandit ipsum. Nullam in felis purus. ","斜め七十七度の並びで泣く泣く嘶くナナハン七台難なく並べて長眺め。ばななのなぞは、まだなぞなのだぞ。鹿もカモシカも鹿の仲間, しかしアシカは鹿ではない。蛙ぴょこぴょこ三ぴょこぴょこ合わせてぴょこぴょこ六ぴょこぴょこ。","Шла Саша по шоссе и сосала сушку. Дело было в сентябре, было ей не скушно. Сушка жесткою была, чуть солоновата."
+SettingsMenu.Resolution,,Resolution:,解決：,Разрешение:
+SettingsMenu.ScreenMode,,Screen mode:,画面モード：,Режим экрана:
+SettingsMenu.SkipMode,,Skip mode:,スキップモード：,Режима пропуска:
+SettingsMenu.Tab.Basic,,BASIC,ベーシック,ОСНОВНЫЕ
+SettingsMenu.Tab.Sound,,SOUND,音,ЗВУК
+SettingsMenu.Tab.Text,,TEXT,文章,ТЕКСТ
+SettingsMenu.VoiceLanguage,,Voice language:,音声言語：,Озвучка:
+SettingsMenu.VolumeEffects,,Effects volume:,効果量：,Эффекты:
+SettingsMenu.VolumeMaster,,Master volume:,マスターボリューム：,Общая:
+SettingsMenu.VolumeMusic,,Music volume:,音楽の音量：,Музыка:
+SettingsMenu.VolumeVoice,,Voice volume:,声の大きさ：,Голос:
+TitleMenu.CGGallery,,CG GALLERY,CGギャラリー,ГАЛЕРЕЯ
+TitleMenu.Continue,,CONTINUE,継続する,ПРОДОЛЖИТЬ
+TitleMenu.Exit,,EXIT,出口,ВЫХОД
+TitleMenu.ExternalScripts,,EXTERNAL SCRIPTS,外部スクリプト,EXTERNAL SCRIPTS
+TitleMenu.NewGame,,NEW GAME,新しいゲーム,НОВАЯ ИГРА
+TitleMenu.Settings,,SETTINGS,設定,НАСТРОЙКИ
+TitleMenu.Tips,,TIPS,チップ,ЗАМЕТКИ
+VariableInput.Submit,,SUBMIT,送信,ВВОД

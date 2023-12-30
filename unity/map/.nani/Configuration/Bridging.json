@@ -1,0 +1,10 @@
+{
+  "AutoConnect": false,
+  "PreferredPort": 41016,
+  "ScanRange": 3,
+  "ScanInterval": 1,
+  "ScanTimeout": 1,
+  "SyncMetadata": true,
+  "CacheMetadata": true,
+  "FocusPlayedLines": true
+}

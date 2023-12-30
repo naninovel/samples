@@ -1,0 +1,65 @@
+CGGallery.Title: CG GALLERY
+Confirmation.No: NO
+Confirmation.Yes: YES
+ControlPanel.Auto: AUTO
+ControlPanel.Hide: HIDE
+ControlPanel.Load: LOAD
+ControlPanel.Log: LOG
+ControlPanel.QuickLoad: Q.LOAD
+ControlPanel.QuickSave: Q.SAVE
+ControlPanel.Save: SAVE
+ControlPanel.Settings: SETTINGS
+ControlPanel.Skip: SKIP
+ControlPanel.Tips: TIPS
+ControlPanel.Title: TITLE
+ExternalScriptsBrowser.Info: Select a script to play
+ExternalScriptsBrowser.Title: EXTERNAL SCRIPTS
+General.Close: CLOSE
+General.Return: RETURN
+Naninovel.UI.ControlPanelTitleButton.ConfirmationMessage: Are you sure you want to quit to the title screen? Any unsaved game progress will be lost.
+Naninovel.UI.GameSettingsFontDropdown.DefaultFontName: Default
+Naninovel.UI.GameSettingsFontSizeDropdown.Default: Default
+Naninovel.UI.GameSettingsFontSizeDropdown.ExtraLarge: Extra Large
+Naninovel.UI.GameSettingsFontSizeDropdown.Large: Large
+Naninovel.UI.GameSettingsFontSizeDropdown.Small: Small
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption1: Very Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption2: Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption3: Medium
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption4: High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption5: Very High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption6: Ultra
+Naninovel.UI.GameSettingsScreenModeDropdown.ExclusiveFullScreen: Full Screen
+Naninovel.UI.GameSettingsScreenModeDropdown.FullScreenWindow: Full Screen Window
+Naninovel.UI.GameSettingsScreenModeDropdown.MaximizedWindow: Maximized Window
+Naninovel.UI.GameSettingsScreenModeDropdown.Windowed: Windowed
+Naninovel.UI.GameSettingsSkipModeDropdown.Everything: Everything
+Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly: Read Only
+Naninovel.UI.GameStateSlot.EmptySlotLabel: Empty
+Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage: Are you sure you want to delete save slot?
+Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage: Are you sure you want to overwrite save slot?
+SaveLoadMenu.Tab.Load: LOAD
+SaveLoadMenu.Tab.QuickLoad: Q. LOAD
+SaveLoadMenu.Tab.Save: SAVE
+SettingsMenu.AutoDelay: Auto delay:
+SettingsMenu.Font: Font:
+SettingsMenu.FontSize: Font size:
+SettingsMenu.Graphics: Graphics:
+SettingsMenu.Language: Language:
+SettingsMenu.MessageSpeed: Message speed:
+SettingsMenu.Preview: Preview
+SettingsMenu.PreviewText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis vitae tellus a pharetra. Aenean vitae ipsum in est lobortis vulputate a blandit ipsum. Nullam in felis purus. 
+SettingsMenu.Resolution: Resolution:
+SettingsMenu.ScreenMode: Screen mode:
+SettingsMenu.SkipMode: Skip mode:
+SettingsMenu.Tab.Basic: BASIC
+SettingsMenu.Tab.Sound: SOUND
+SettingsMenu.Tab.Text: TEXT
+SettingsMenu.VoiceLanguage: Voice language:
+SettingsMenu.VolumeEffects: Effects volume:
+SettingsMenu.VolumeMaster: Master volume:
+SettingsMenu.VolumeMusic: Music volume:
+SettingsMenu.VolumeVoice: Voice volume:
+TitleMenu.Continue: CONTINUE
+TitleMenu.Exit: EXIT
+TitleMenu.Settings: SETTINGS
+VariableInput.Submit: SUBMIT

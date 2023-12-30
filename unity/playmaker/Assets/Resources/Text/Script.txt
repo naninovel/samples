@@ -1,0 +1,1 @@
+T_TestRecord: The value from the managed text document.

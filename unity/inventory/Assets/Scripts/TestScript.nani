@@ -1,0 +1,23 @@
+@back Landscape time:0
+
+# Start
+
+Select an action.[skipInput]
+
+@choice "Pick up sword" if:!ItemExist("Sword") do:"@addItem Sword, @toast \"+50 MORALE\", @goto .Adventure"
+@choice "Pick up armor" if:!ItemExist("Armor") do:"@addItem Armor, @toast \"+25 MORALE\",  @goto .Adventure"
+@choice "Adventure awaits, venture forth!"
+@stop
+
+# Adventure
+
+@if ItemExist("Sword")
+	@set monstersSlayed="{ItemExist("Armor") ? Random(3,5) : 2}"
+	@addItem Food amount:{monstersSlayed}
+	You've encountered and slayed {monstersSlayed} monsters with your sword.[if !ItemExist("Armor")] You could've been more productive with an armor, though.[endif][i][showUI Inventory wait:false] Check your inventory for the loot!
+	@goto .Start
+@else
+	But you don't have a weapon! You've been beaten by the monsters.[if ItemExist("Armor")] At least it didn't hurt that much, thanks to the armor.[endif] Let's prepare better next time.
+	@goto .Start
+@endif
+

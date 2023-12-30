@@ -1,0 +1,10 @@
+# Start
+
+Test input value.|#1|
+
+@input i summary:"Test summary|#2|" value:"Test value|#3|"
+@stop
+
+You've entered: \[`|#4|{i}`\].|#5|
+
+@goto Script003

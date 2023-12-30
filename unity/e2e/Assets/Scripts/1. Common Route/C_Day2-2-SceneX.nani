@@ -1,0 +1,4 @@
+@back tint:magenta
+Common route.|#1|[i] Day 2.|#2|[i] Scene X.|#3|
+@set xPoints+=3;healthPoints++
+@goto C_Day2-3-SceneB

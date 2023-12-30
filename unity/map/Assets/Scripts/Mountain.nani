@@ -1,0 +1,45 @@
+@back Mountain
+
+@if clearedMountain
+	Wha, you want me to climb the damn mountains again?[i] NO WAY.[i] I'M OUT OF HERE![skipInput]
+	@goto Map
+@endif
+
+It's getting harder to move.[i] Hate this place. Have to get back to the town.
+Should I take the shortcut and roll down the cliff?[skipInput]
+
+@choice "Sure, let's roll!" goto:.Roll
+@choice "No. Choose longer, but safe route." goto:.LongRoute
+@stop
+
+# Roll
+@camera zoom:0.25 offset:-2,-1 easing:EaseOutBack time:1 wait:false
+Yay, no more walking![i] GO![skipInput]
+@hidePrinter wait:false
+@camera zoom:0.6 offset:0,0 time:0.2 wait:false
+
+@set rollCount=0
+# RollLoop
+@spawn ShakeBackground wait:false
+@camera roll:{rollCount%2==0?180:0} easing:EaseInBounce time:{Random(0.5,1.0)}
+@set rollCount++
+@goto .RollLoop if:rollCount<5
+@back tint:red wait:false time:3
+@camera zoom:0.4 time:3 wait:false
+@choice F do:@title play:false time:4
+@stop
+
+# LongRoute
+Fiiine, let's walk...
+@hidePrinter wait:false
+
+@set stepCount=1
+# WalkLoop
+@choice Step
+@stop
+@camera zoom:{stepCount*0.1} easing:EaseOutElastic time:{stepCount/2}
+@set stepCount++
+@goto .WalkLoop if:stepCount<6
+@set clearedMountain=true;townAvailable=true
+@save
+@goto Map

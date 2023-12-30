@@ -1,0 +1,22 @@
+@back Snow time:0
+@spawn Snow params:,0
+@char k time:0
+1
+2
+3
+Now showing input rebinding UI.
+@showUI InputRebindUI
+@wait i
+Test choices.
+@choice 1
+@choice 2
+@stop
+Test after choice.
+@set a=""
+@input a summary:"Test input" value:Default
+@stop
+You've set {a}.
+k: Testing camera look: move camera with mouse, right gamepad stick or by rotating a mobile device with gyroscope.[skipInput]
+@camera offset:,1 zoom:0.5
+@look
+@stop

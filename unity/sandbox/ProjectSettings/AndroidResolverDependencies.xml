@@ -1,0 +1,11 @@
+<dependencies>
+  <packages>
+    <package>net.openid:appauth:0.7.0</package>
+  </packages>
+  <files>
+    <file>Assets/Plugins/Android/com.android.support.customtabs-25.3.1.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.support-annotations-25.3.1.jar</file>
+    <file>Assets/Plugins/Android/com.android.support.support-compat-25.3.1.aar</file>
+    <file>Assets/Plugins/Android/net.openid.appauth-0.7.0.aar</file>
+  </files>
+</dependencies>

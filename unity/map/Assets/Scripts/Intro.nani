@@ -1,0 +1,9 @@
+@showUI Map
+Welcome to the map example!
+All the map locations are locked at the moment, hence they're not responding to hover or click events.
+The locations will be unlocked (and locked again) depending on the choices you make.
+We will now unlock the mountains, so you can start the journey.
+@set mountainAvailable=true
+@save
+@hidePrinter
+@stop

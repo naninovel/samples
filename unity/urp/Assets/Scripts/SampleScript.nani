@@ -1,0 +1,27 @@
+@back Snow time:0
+@spawn Snow params:,0
+Layered background.
+@back id:Particles
+Layered particles default.
+@back >Red.RadialWiggle id:Particles time:2 scale:0.25
+Layered particles red.
+@back >Blue.Swirl id:Particles time:2 scale:0.5 pos:85,85
+Layered partices blue.
+@char y wait:false
+@char s wait:false
+@char m wait:false
+@char f
+Start test.
+y.Sad: Yuko sad.
+m.Sport: Misaki sport.
+s.death: Spine death.
+@despawn Snow params:0
+@hidePrinter wait:false
+@hideChars
+@spawn SunShafts params:,0
+@back Beach.DropFade time:3
+@char n
+@spawn Blur params:,1,3 wait:false
+@camera zoom:0.5 offset:,1 time:3
+n.Confidence: End test.
+@stop

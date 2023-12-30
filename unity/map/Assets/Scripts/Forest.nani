@@ -1,0 +1,27 @@
+@back Forest
+You stumble upon a suspiciously looking mushroom. It's glowing green and vibrating.[skipInput]
+@choice "Snack time!" goto:.Snack
+@choice "Kick the mushroom." goto:.Kick
+@stop
+
+# Snack
+You take a bite.[spawn DigitalGlitch] It tastes like shrimp and continues vibrating inside your mouth.[i] You swallow.[i][spawn ShakeCamera params:,0,,,0.01] It continues vibrating in your stomach and makes you feel energized.
+@choice "Take another bite."
+@stop
+@spawn DigitalGlitch wait:false
+@spawn ShakeCamera params:,0,0.07,,0.1
+You can't stop yourself from finishing the treat.
+You feel the fungus vibrations inside you. The whole body is vibrating and you're heating!
+Hurry to the lake, cool it off!
+@set forestAvailable=false;mountainAvailable=false;vibrating=true
+@save
+@goto Map
+
+# Kick
+@spawn ShakeCamera wait:false
+@back tint:green time:2 easing:EaseOutBounce
+Mushroom explodes covering you in glowing sticky spores accompanied by atrocious odor.
+The odor lures local bees.[i] They are killing bees, actually.
+F?
+@choice F do:@title play:false
+@stop

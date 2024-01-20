@@ -27,6 +27,6 @@ This way when you click a button to start a specific episode in the title menu, 
 
 The built project for WebGL: https://naninovel.com/addressable 
 
-Actual assets uploaded to the host: https://github.com/Naninovel/Documentation/tree/gh-pages/addressable
+Actual assets uploaded to the host: https://github.com/naninovel/docs/tree/master/docs/public/addressable
 
 If you have any Naninovel-specific questions or issues, [contact the support](https://naninovel.com/support). Be aware, that we're not providing any tutorials or support for Unity's addressable asset system itself, like setting up a remote web hosting for you assets or other deploy/serving scenarios.

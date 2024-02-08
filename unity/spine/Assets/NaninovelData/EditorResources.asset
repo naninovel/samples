@@ -28,36 +28,11 @@ MonoBehaviour:
     - name: Wide
       pathPrefix: TextPrinters
       guid: 781828b806deb1e4cbf50ef9de41da10
-  - Id: TextPrinters/8aa09447-1c13-4d00-ba75-302b8de07a6c
-    Resources:
-    - name: Chat
-      pathPrefix: TextPrinters
-      guid: 0126b92e4ff0f564aaa7a38eae3ef6e7
   - Id: TextPrinters/a2c37eea-c1ca-4f6a-a5cd-042aa36d5665
     Resources:
     - name: Bubble
       pathPrefix: TextPrinters
       guid: b47d9659b2be5ee4e95a776f213c9d4b
-  - Id: TextPrinters/7c079994-1430-4dc1-9be5-d592d96ea8cc
-    Resources:
-    - name: TMProDialogue
-      pathPrefix: TextPrinters
-      guid: 5838611042eaced44954639c4ea4d81e
-  - Id: TextPrinters/e0dce9c2-ff23-40ed-822a-e2fa4a8fd016
-    Resources:
-    - name: TMProFullscreen
-      pathPrefix: TextPrinters
-      guid: a2aaa417785eeca409e78c404f333ee5
-  - Id: TextPrinters/4a186552-c418-4781-a7c3-e81263b5ae29
-    Resources:
-    - name: TMProWide
-      pathPrefix: TextPrinters
-      guid: 7860ef40eae6a3341be02586f7edd980
-  - Id: TextPrinters/f112c4b6-96d4-42b5-bf72-7a30078fd45f
-    Resources:
-    - name: TMProBubble
-      pathPrefix: TextPrinters
-      guid: 18cfa78b5fc89b745ba69d51a6a8629a
   - Id: ChoiceHandlers/314181e8-65ea-431b-b390-2a7dd355bcdd
     Resources:
     - name: ButtonList
@@ -175,7 +150,7 @@ MonoBehaviour:
     Resources:
     - name: AvatarPrinter
       pathPrefix: TextPrinters
-      guid: 279c659fd240f5d4fbd4265caa308007
+      guid: c3325015c6c5b0b42b25672521a84f84
   - Id: Backgrounds/b6cd7b04-c273-4f28-afc0-f9d8eef7f785
     Resources:
     - name: Lab

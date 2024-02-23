@@ -1,4 +1,5 @@
 ﻿using Naninovel.Commands;
+using UnityEngine;
 
 namespace Naninovel
 {
@@ -10,14 +11,14 @@ namespace Naninovel
     {
         public CharacterLookDirection LookDirection
         {
-            get => TransitionalRenderer.GetLookDirection(ActorMetadata.BakedLookDirection);
-            set => TransitionalRenderer.SetLookDirection(value, ActorMetadata.BakedLookDirection);
+            get => TransitionalRenderer.GetLookDirection(ActorMeta.BakedLookDirection);
+            set => TransitionalRenderer.SetLookDirection(value, ActorMeta.BakedLookDirection);
         }
 
         protected virtual CharacterLipSyncer LipSyncer { get; private set; }
 
-        public SpineCharacter (string id, CharacterMetadata metadata)
-            : base(id, metadata) { }
+        public SpineCharacter (string id, CharacterMetadata meta, EmbeddedAppearanceLoader<GameObject> loader)
+            : base(id, meta, loader) { }
 
         public override async UniTask InitializeAsync ()
         {
@@ -31,13 +32,13 @@ namespace Naninovel
             base.Dispose();
         }
 
-        public UniTask ChangeLookDirectionAsync (CharacterLookDirection lookDirection, float duration,
+        public virtual UniTask ChangeLookDirectionAsync (CharacterLookDirection lookDirection, float duration,
             EasingType easingType = default, AsyncToken asyncToken = default)
         {
             return TransitionalRenderer.ChangeLookDirectionAsync(lookDirection,
-                ActorMetadata.BakedLookDirection, duration, easingType, asyncToken);
+                ActorMeta.BakedLookDirection, duration, easingType, asyncToken);
         }
 
-        public void AllowLipSync (bool active) => LipSyncer.SyncAllowed = active;
+        public virtual void AllowLipSync (bool active) => LipSyncer.SyncAllowed = active;
     }
 }

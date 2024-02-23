@@ -24,20 +24,22 @@ namespace Naninovel
         protected virtual TransitionalRenderer TransitionalRenderer { get; private set; }
         protected virtual SpineDrawer Drawer { get; private set; }
 
-        private LocalizableResourceLoader<GameObject> prefabLoader;
+        private readonly LocalizableResourceLoader<GameObject> prefabLoader;
         private string appearance;
         private bool visible;
 
-        protected SpineActor (string id, TMeta metadata)
-            : base(id, metadata) { }
+        protected SpineActor (string id, TMeta meta, EmbeddedAppearanceLoader<GameObject> loader)
+            : base(id, meta)
+        {
+            prefabLoader = loader;
+        }
 
         public override async UniTask InitializeAsync ()
         {
             await base.InitializeAsync();
 
-            prefabLoader = InitializeLoader(ActorMetadata);
-            Controller = await InitializeControllerAsync(prefabLoader, Id, Transform);
-            TransitionalRenderer = TransitionalRenderer.CreateFor(ActorMetadata, GameObject, true);
+            Controller = await InitializeControllerAsync();
+            TransitionalRenderer = TransitionalRenderer.CreateFor(ActorMeta, GameObject, true);
             Drawer = new SpineDrawer(Controller);
 
             SetVisibility(false);
@@ -54,10 +56,10 @@ namespace Naninovel
 
             base.Dispose();
 
-            prefabLoader?.UnloadAll();
+            prefabLoader?.ReleaseAll(this);
         }
 
-        public UniTask BlurAsync (float duration, float intensity, EasingType easingType = default, AsyncToken asyncToken = default)
+        public virtual UniTask BlurAsync (float duration, float intensity, EasingType easingType = default, AsyncToken asyncToken = default)
         {
             return TransitionalRenderer.BlurAsync(duration, intensity, easingType, asyncToken);
         }
@@ -96,23 +98,16 @@ namespace Naninovel
             TransitionalRenderer.TintColor = tintColor;
         }
 
-        protected virtual void DrawSpine () => Drawer.DrawTo(TransitionalRenderer, ActorMetadata.PixelsPerUnit);
+        protected virtual void DrawSpine () => Drawer.DrawTo(TransitionalRenderer, ActorMeta.PixelsPerUnit);
 
-        private static LocalizableResourceLoader<GameObject> InitializeLoader (ActorMetadata actorMetadata)
+        protected virtual async Task<SpineController> InitializeControllerAsync ()
         {
-            var providerManager = Engine.GetService<IResourceProviderManager>();
-            var localizationManager = Engine.GetService<ILocalizationManager>();
-            return actorMetadata.Loader.CreateLocalizableFor<GameObject>(providerManager, localizationManager);
-        }
-
-        private static async Task<SpineController> InitializeControllerAsync (IResourceLoader<GameObject> loader, string actorId, Transform transform)
-        {
-            var prefabResource = await loader.LoadAsync(actorId);
+            var prefabResource = await prefabLoader.LoadAsync(Id);
             if (!prefabResource.Valid)
-                throw new Exception($"Failed to load Spine prefab for `{actorId}` actor. Make sure the resource is set up correctly in the actor configuration.");
+                throw new Exception($"Failed to load Spine prefab for `{Id}` actor. Make sure the resource is set up correctly in the actor configuration.");
             var controller = Engine.Instantiate(prefabResource.Object).GetComponent<SpineController>();
-            controller.gameObject.name = actorId;
-            controller.transform.SetParent(transform);
+            controller.gameObject.name = Id;
+            controller.transform.SetParent(Transform);
             return controller;
         }
     }

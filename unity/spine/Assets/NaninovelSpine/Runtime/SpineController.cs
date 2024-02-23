@@ -24,8 +24,12 @@ namespace Naninovel
         public virtual void ChangeAppearance (string appearance, float duration = 0,
             EasingType easingType = default, Transition? transition = default)
         {
-            if (!string.IsNullOrEmpty(appearance))
-                onAppearanceChanged?.Invoke(appearance);
+            if (string.IsNullOrEmpty(appearance) || onAppearanceChanged is null) return;
+
+            if (appearance.IndexOf(',') >= 0)
+                foreach (var part in appearance.Split(','))
+                    onAppearanceChanged.Invoke(part);
+            else onAppearanceChanged.Invoke(appearance);
         }
 
         public virtual void ChangeIsSpeaking (bool speaking)

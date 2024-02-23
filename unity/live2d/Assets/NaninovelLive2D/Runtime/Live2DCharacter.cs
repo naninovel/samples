@@ -27,21 +27,23 @@ namespace Naninovel
         protected virtual Live2DDrawer Drawer { get; private set; }
         protected virtual CharacterLipSyncer LipSyncer { get; private set; }
 
-        private LocalizableResourceLoader<GameObject> prefabLoader;
+        private readonly LocalizableResourceLoader<GameObject> prefabLoader;
         private string appearance;
         private bool visible;
         private CharacterLookDirection lookDirection;
 
-        public Live2DCharacter (string id, CharacterMetadata metadata)
-            : base(id, metadata) { }
+        public Live2DCharacter (string id, CharacterMetadata meta, EmbeddedAppearanceLoader<GameObject> loader)
+            : base(id, meta)
+        {
+            prefabLoader = loader;
+        }
 
         public override async UniTask InitializeAsync ()
         {
             await base.InitializeAsync();
 
-            prefabLoader = InitializeLoader(ActorMetadata);
-            Controller = await InitializeControllerAsync(prefabLoader, Id, Transform);
-            Renderer = TransitionalRenderer.CreateFor(ActorMetadata, GameObject, true);
+            Controller = await InitializeControllerAsync(Id, Transform);
+            Renderer = TransitionalRenderer.CreateFor(ActorMeta, GameObject, true);
             Drawer = new Live2DDrawer(Controller);
             LipSyncer = new CharacterLipSyncer(Id, Controller.SetIsSpeaking);
 
@@ -60,10 +62,10 @@ namespace Naninovel
 
             base.Dispose();
 
-            prefabLoader?.UnloadAll();
+            prefabLoader?.ReleaseAll(this);
         }
 
-        public UniTask BlurAsync (float duration, float intensity, EasingType easingType = default, AsyncToken asyncToken = default)
+        public virtual UniTask BlurAsync (float duration, float intensity, EasingType easingType = default, AsyncToken asyncToken = default)
         {
             return Renderer.BlurAsync(duration, intensity, easingType, asyncToken);
         }
@@ -83,23 +85,24 @@ namespace Naninovel
             await Renderer.FadeToAsync(visible ? TintColor.a : 0, duration, easingType, asyncToken);
         }
 
-        public UniTask ChangeLookDirectionAsync (CharacterLookDirection lookDirection, float duration, EasingType easingType = default,
+        public virtual UniTask ChangeLookDirectionAsync (CharacterLookDirection lookDirection, float duration, EasingType easingType = default,
             AsyncToken asyncToken = default)
         {
             SetLookDirection(lookDirection);
             return UniTask.CompletedTask;
         }
 
-        public void AllowLipSync (bool active) => LipSyncer.SyncAllowed = active;
+        public virtual void AllowLipSync (bool active) => LipSyncer.SyncAllowed = active;
 
         protected virtual void SetAppearance (string appearance)
         {
             this.appearance = appearance;
+            if (!Controller || string.IsNullOrEmpty(appearance)) return;
 
-            if (string.IsNullOrEmpty(appearance)) return;
-
-            if (Controller)
-                Controller.SetAppearance(appearance);
+            if (appearance.IndexOf(',') >= 0)
+                foreach (var part in appearance.Split(','))
+                    Controller.SetAppearance(part);
+            else Controller.SetAppearance(appearance);
         }
 
         protected virtual void SetVisibility (bool visible) => ChangeVisibilityAsync(visible, 0).Forget();
@@ -121,18 +124,11 @@ namespace Naninovel
                 Controller.SetLookDirection(lookDirection);
         }
 
-        protected virtual void DrawLive2D () => Drawer.DrawTo(Renderer, ActorMetadata.PixelsPerUnit);
+        protected virtual void DrawLive2D () => Drawer.DrawTo(Renderer, ActorMeta.PixelsPerUnit);
 
-        private static LocalizableResourceLoader<GameObject> InitializeLoader (ActorMetadata actorMetadata)
+        protected virtual async Task<Live2DController> InitializeControllerAsync (string actorId, Transform transform)
         {
-            var providerManager = Engine.GetService<IResourceProviderManager>();
-            var localizationManager = Engine.GetService<ILocalizationManager>();
-            return actorMetadata.Loader.CreateLocalizableFor<GameObject>(providerManager, localizationManager);
-        }
-
-        private static async Task<Live2DController> InitializeControllerAsync (LocalizableResourceLoader<GameObject> loader, string actorId, Transform transform)
-        {
-            var prefabResource = await loader.LoadAsync(actorId);
+            var prefabResource = await prefabLoader.LoadAndHoldAsync(actorId, this);
             if (!prefabResource.Valid)
                 throw new Exception($"Failed to load Live2D model prefab for `{actorId}` character. Make sure the resource is set up correctly in the character configuration.");
             var controller = Engine.Instantiate(prefabResource.Object).GetComponent<Live2DController>();

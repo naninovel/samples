@@ -6,15 +6,13 @@ The project shows how to make a custom inventory UI with grid layout, pagination
 
 ![](https://i.gyazo.com/24aa1969752034266f0fac7a9769b390.png)
 
-You can [clone the project repository with a Git client](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or [download it as a zip archive](https://github.com/Elringus/NaninovelDemo/archive/master.zip). 
+You can [clone the project repository with a Git client](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or [download it as a zip archive](https://github.com/naninovel/samples/archive/refs/heads/main.zip). 
 
 Be aware, that Naninovel package is not distributed with the project, hence compilation errors will be produced after opening it for the first time; import Naninovel from the Asset Store to resolve the issues.
 
 ## Installation
 
-To setup inventory extension on top of an existing Unity project use [UPM](https://docs.unity3d.com/Manual/upm-ui.html) to install the package via the following git URL: `https://github.com/Elringus/NaninovelInventory.git?path=Assets/NaninovelInventory` or download and import [NaninovelInventory.unitypackage](https://github.com/Elringus/NaninovelInventory/raw/master/NaninovelInventory.unitypackage) manually.
-
-![](https://i.gyazo.com/b54e9daa9a483d9bf7f74f0e94b2d38a.gif)
+To setup inventory extension on top of an existing Unity project download and import [NaninovelInventory.unitypackage](https://github.com/naninovel/samples/raw/main/unity/inventory/NaninovelInventory.unitypackage).
 
 After importing the package, add `Elringus.NaninovelInventory.Runtime` and `Elringus.NaninovelInventory.Editor` records to the `Type Assemblies` list property found in the engine configuration menu and restart Unity editor (otherwise the custom implementation types under the assemblies won't be accessible by Naninovel).
 

@@ -16,17 +16,52 @@ MonoBehaviour:
   CustomEventSystem: {fileID: 0}
   SpawnInputModule: 1
   CustomInputModule: {fileID: 0}
-  TouchFrequencyLimit: 0.1
   ProcessLegacyBindings: 1
+  TouchFrequencyLimit: 0.1
+  TouchDistanceLimit: 25
+  DetectInputMode: 1
   Bindings:
   - Name: Submit
-    AlwaysProcess: 0
+    AlwaysProcess: 1
     Keys: 0d0000004a010000
     Axes: []
     Swipes: []
   - Name: Cancel
     AlwaysProcess: 1
     Keys: 1b0000004b010000
+    Axes: []
+    Swipes: []
+  - Name: Delete
+    AlwaysProcess: 1
+    Keys: 7f00000051010000
+    Axes: []
+    Swipes: []
+  - Name: NavigateX
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: NavigateY
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: ScrollY
+    AlwaysProcess: 1
+    Keys: 
+    Axes:
+    - AxisName: Vertical
+      TriggerMode: 0
+      TriggerTolerance: 0.001
+    Swipes: []
+  - Name: Page
+    AlwaysProcess: 1
+    Keys: 
+    Axes: []
+    Swipes: []
+  - Name: Tab
+    AlwaysProcess: 1
+    Keys: 
     Axes: []
     Swipes: []
   - Name: Continue
@@ -39,7 +74,8 @@ MonoBehaviour:
     Swipes:
     - Direction: 2
       FingerCount: 1
-      MinimumSpeed: 2
+      MinimumDistance: 50
+      ActivateOnMove: 0
   - Name: Pause
     AlwaysProcess: 0
     Keys: 0800000051010000
@@ -48,6 +84,11 @@ MonoBehaviour:
   - Name: Skip
     AlwaysProcess: 0
     Keys: 32010000310100004b010000
+    Axes: []
+    Swipes: []
+  - Name: ToggleSkip
+    AlwaysProcess: 0
+    Keys: 0900000053010000
     Axes: []
     Swipes: []
   - Name: AutoPlay
@@ -59,12 +100,20 @@ MonoBehaviour:
     AlwaysProcess: 0
     Keys: 200000004d010000
     Axes: []
-    Swipes: []
+    Swipes:
+    - Direction: 1
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
   - Name: ShowBacklog
     AlwaysProcess: 0
     Keys: 6c0000004f010000
     Axes: []
-    Swipes: []
+    Swipes:
+    - Direction: 0
+      FingerCount: 1
+      MinimumDistance: 50
+      ActivateOnMove: 0
   - Name: Rollback
     AlwaysProcess: 0
     Keys: 4e010000
@@ -75,7 +124,8 @@ MonoBehaviour:
     Swipes:
     - Direction: 3
       FingerCount: 1
-      MinimumSpeed: 2
+      MinimumDistance: 50
+      ActivateOnMove: 0
   - Name: CameraLookX
     AlwaysProcess: 0
     Keys: 
@@ -97,4 +147,9 @@ MonoBehaviour:
     - AxisName: Mouse Y
       TriggerMode: 0
       TriggerTolerance: 0.001
+    Swipes: []
+  - Name: ToggleConsole
+    AlwaysProcess: 1
+    Keys: 60000000
+    Axes: []
     Swipes: []

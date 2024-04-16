@@ -19,11 +19,11 @@ public class CustomGameStateSlot : GameStateSlot
         // Find state of the first printer actor that is visible and has something printed.
         var printerState = State
             ?.GetState<ActorManager<ITextPrinterActor, TextPrinterState, TextPrinterMetadata, TextPrintersConfiguration>.GameState>()
-            ?.ActorsMap.Values.FirstOrDefault(s => s.Visible && !string.IsNullOrWhiteSpace(s.Text));
+            ?.ActorsMap.Values.FirstOrDefault(s => s.Visible && !s.Text.IsEmpty);
         if (printerState is null) return null;
         // Prepend actor display name in case printed text has an author.
         if (string.IsNullOrEmpty(printerState.AuthorId)) return printerState.Text;
-        else return $"{GetDisplayName(printerState.AuthorId)}: {printerState.Text}";
+        return $"{GetDisplayName(printerState.AuthorId)}: {(string)printerState.Text}";
     }
 
     private string GetDisplayName (string authorId)

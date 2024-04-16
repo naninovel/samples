@@ -38,26 +38,6 @@ MonoBehaviour:
     - name: Bubble
       pathPrefix: TextPrinters
       guid: b47d9659b2be5ee4e95a776f213c9d4b
-  - Id: TextPrinters/487cd1ea-cddb-4cc6-b10a-1f2fe0c8561a
-    Resources:
-    - name: TMProDialogue
-      pathPrefix: TextPrinters
-      guid: 5838611042eaced44954639c4ea4d81e
-  - Id: TextPrinters/6c514c0d-4b1f-4a0b-a44e-d495b8f81c49
-    Resources:
-    - name: TMProFullscreen
-      pathPrefix: TextPrinters
-      guid: a2aaa417785eeca409e78c404f333ee5
-  - Id: TextPrinters/20bedfbc-7da6-4c1f-a966-e7f260236eb9
-    Resources:
-    - name: TMProWide
-      pathPrefix: TextPrinters
-      guid: 7860ef40eae6a3341be02586f7edd980
-  - Id: TextPrinters/f95254f7-af48-4eb5-bed0-e53784351982
-    Resources:
-    - name: TMProBubble
-      pathPrefix: TextPrinters
-      guid: 18cfa78b5fc89b745ba69d51a6a8629a
   - Id: ChoiceHandlers/d9c21029-d07f-4919-84d6-258be3a1cb47
     Resources:
     - name: ButtonList

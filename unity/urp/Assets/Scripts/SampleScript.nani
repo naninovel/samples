@@ -5,7 +5,7 @@ Layered background.
 Layered background 2.
 @back id:Particles2 pos:0
 Hiding second layered background.
-@hide Particles2 remove:true
+@hide Particles2
 Layered background 3.
 @back id:Particles3 pos:100
 Layered particles default.

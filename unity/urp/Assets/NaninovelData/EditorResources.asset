@@ -201,3 +201,13 @@ MonoBehaviour:
     - name: Particles
       pathPrefix: Backgrounds
       guid: 80965542e9f2700429601a073e9329b9
+  - Id: Backgrounds/e914d536-b8eb-4feb-a152-7781468a4598
+    Resources:
+    - name: Particles2
+      pathPrefix: Backgrounds
+      guid: 80965542e9f2700429601a073e9329b9
+  - Id: Backgrounds/a2a3295a-dc3c-41dc-9956-92f5d706a341
+    Resources:
+    - name: Particles3
+      pathPrefix: Backgrounds
+      guid: 80965542e9f2700429601a073e9329b9

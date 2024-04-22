@@ -2,6 +2,12 @@
 @spawn Snow params:,0
 Layered background.
 @back id:Particles
+Layered background 2.
+@back id:Particles2 pos:0
+Hiding second layered background.
+@hide Particles2 remove:true
+Layered background 3.
+@back id:Particles3 pos:100
 Layered particles default.
 @back >Red.RadialWiggle id:Particles time:2 scale:0.25
 Layered particles red.

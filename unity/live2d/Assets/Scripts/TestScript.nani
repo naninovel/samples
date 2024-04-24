@@ -1,28 +1,61 @@
-@back Beach
-@spawn SunShafts params:0.25 wait:false
-
 # Start
 
-@printer Bubble.Right pos:30,80 time:0
-@char h.Default pos:50,-25 scale:1 look:center wait:false
+@await
+    @sun time:0.33
+    @back Beach
+    @printer Bubble.Right pos:30,80 time:0
+
+@char h.Default pos:50,-25 scale:1 look:center
 h: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium porta sapien. Vivamus sit amet fermentum nisi.
-@hidePrinter wait:false
+
+@hidePrinter
 @char h.Happy pos:35,-55 scale:1.3 look:right
 @printer Bubble.Left pos:58,80
 h: Nunc sem felis!
-@hidePrinter wait:false
+
 @arrange h.75
+@hidePrinter
 @printer Bubble.Right pos:52,80
 h.Angry: Cras sed dictum turpis...
 
 @printer Bubble.Right pos:58,43 time:0
-@char h.Surprise wait:false
+@char h.Surprise
 s.Default: Mauris et nulla facilisis, facilisis libero eget, dictum nisl.
-@char h.Happy wait:false
+
+@char h.Happy
 @printer Bubble.Right pos:58,50 time:0
 s.Sing: Integer venenatis ac lectus eu facilisis. Aliquam bibendum consectetur nisl, vitae gravida nisi venenatis in. Praesent orci arcu, convallis quis mattis vulputate, tempus quis turpis. Vestibulum tincidunt vehicula ipsum, id vehicula felis euismod eu.
 s.Sleep: Etiam lacinia eros interdum accumsan luctus.
 
-@hideChars wait:false
-@hidePrinter
+
+# Billboard
+
+Testing billboard script.
+
+@startTrans
+@hidePrinter time:0
+@sun power:0 time:0
+@hide MainBackground time:0
+@camera ortho:false offset:,,40 time:0
+@char s pos:75,-15,82 time:0
+@loadScene Island additive:true
+@finishTrans
+
+@wait i2
+
+@camera offset:5,,60 rotation:,-90 easing:EaseInQuad time:3 wait!
+
+@wait i2
+
+@camera offset:-5,-10,86 rotation:-30,60 easing:EaseInQuad time:3 wait!
+
+@wait i2
+
+@camera offset:0,,40 rotation:0,0 easing:EaseOutQuad time:3 wait!
+
+@wait i
+
+@hideChars time:0
+@camera ortho:true offset:0,0,0 time:0
+@unloadScene Island
 @goto .Start

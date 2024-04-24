@@ -9,7 +9,9 @@
 .gradle*
 /Assets/AssetStoreTools*
 /Assets/ThirdParty/*
+!/Assets/ThirdParty/TextMesh Pro*
 !/Assets/ThirdParty/Live2D*
+!/Assets/ThirdParty/Snowconesolid Assets*
 !/Assets/ThirdParty/NaninovelData*
 /Assets/ThirdParty/NaninovelData/Saves*
 

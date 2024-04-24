@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3be34281d83bad429e22787cd3c8069, type: 3}
   m_Name: CharactersConfiguration
   m_EditorClassIdentifier: 
+  DefaultDuration: 0.35
   DefaultEasing: 1
   AutoShowOnModify: 1
   SceneOrigin: {x: 0.5, y: 0}
   ZOffset: 50
   ZStep: 0.1
   AutoArrangeOnAdd: 1
+  ArrangeRange: {x: 0, y: 1}
   DefaultMetadata:
     Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -31,23 +33,31 @@ MonoBehaviour:
     PixelsPerUnit: 100
     EnableDepthPass: 1
     DepthAlphaCutoff: 0.5
-    CustomShader: {fileID: 0}
+    CustomTextureShader: {fileID: 0}
+    CustomSpriteShader: {fileID: 0}
     RenderTexture: {fileID: 0}
-    CorrectRenderAspect: 1
+    RenderRectangle:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
     BakedLookDirection: 1
+    HasName: 1
     DisplayName: 
     UseCharacterColor: 0
     NameColor: {r: 1, g: 1, b: 1, a: 1}
     MessageColor: {r: 1, g: 1, b: 1, a: 1}
     HighlightWhenSpeaking: 0
     HighlightCharacterCount: 0
-    SpeakingTint: {r: 1, g: 1, b: 1, a: 1}
-    NotSpeakingTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    SpeakingPose: 
+    NotSpeakingPose: 
     PlaceOnTop: 1
     HighlightDuration: 0.35
     HighlightEasing: 1
     MessageSound: 
-    ClipMessageSound: 1
+    MessageSoundPlayback: 0
+    VoiceSource: {fileID: 0}
     LinkedPrinter: 
     Poses: []
   Metadata:
@@ -73,23 +83,32 @@ MonoBehaviour:
       PixelsPerUnit: 100
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
-      CustomShader: {fileID: 0}
+      CustomTextureShader: {fileID: 0}
+      CustomSpriteShader: {fileID: 4800000, guid: 9aed463510a9fc947bfd1b4c07a0331b,
+        type: 3}
       RenderTexture: {fileID: 0}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: Hiyori
       UseCharacterColor: 0
       NameColor: {r: 0.28773582, g: 0.7510815, b: 1, a: 1}
       MessageColor: {r: 0.8726415, g: 0.9559144, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
-      SpeakingTint: {r: 1, g: 1, b: 1, a: 1}
-      NotSpeakingTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      SpeakingPose: 
+      NotSpeakingPose: 
       PlaceOnTop: 1
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
+      VoiceSource: {fileID: 0}
       LinkedPrinter: 
       Poses: []
     - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
@@ -108,23 +127,31 @@ MonoBehaviour:
       PixelsPerUnit: 100
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
-      CustomShader: {fileID: 0}
+      CustomTextureShader: {fileID: 0}
+      CustomSpriteShader: {fileID: 0}
       RenderTexture: {fileID: 8400000, guid: 5605299017d6b4843b7e950864fc66c0, type: 2}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: Hiyori
       UseCharacterColor: 1
       NameColor: {r: 0.28773582, g: 0.7510815, b: 1, a: 1}
       MessageColor: {r: 0.8726415, g: 0.9559144, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
-      SpeakingTint: {r: 1, g: 1, b: 1, a: 1}
-      NotSpeakingTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      SpeakingPose: 
+      NotSpeakingPose: 
       PlaceOnTop: 1
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
+      VoiceSource: {fileID: 0}
       LinkedPrinter: HiyoriPrinter
       Poses: []
     - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
@@ -143,23 +170,32 @@ MonoBehaviour:
       PixelsPerUnit: 100
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
-      CustomShader: {fileID: 0}
+      CustomTextureShader: {fileID: 0}
+      CustomSpriteShader: {fileID: 4800000, guid: 9aed463510a9fc947bfd1b4c07a0331b,
+        type: 3}
       RenderTexture: {fileID: 0}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: Senko
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
-      SpeakingTint: {r: 1, g: 1, b: 1, a: 1}
-      NotSpeakingTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      SpeakingPose: 
+      NotSpeakingPose: 
       PlaceOnTop: 1
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
+      VoiceSource: {fileID: 0}
       LinkedPrinter: 
       Poses: []
     - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
@@ -178,23 +214,31 @@ MonoBehaviour:
       PixelsPerUnit: 100
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
-      CustomShader: {fileID: 0}
+      CustomTextureShader: {fileID: 0}
+      CustomSpriteShader: {fileID: 0}
       RenderTexture: {fileID: 8400000, guid: b87e2238e7826dc47a631d52a7d26466, type: 2}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: Senko
       UseCharacterColor: 1
       NameColor: {r: 1, g: 0.40315855, b: 0, a: 1}
       MessageColor: {r: 1, g: 0.9015908, b: 0.8349056, a: 1}
       HighlightWhenSpeaking: 0
       HighlightCharacterCount: 0
-      SpeakingTint: {r: 1, g: 1, b: 1, a: 1}
-      NotSpeakingTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      SpeakingPose: 
+      NotSpeakingPose: 
       PlaceOnTop: 1
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
+      VoiceSource: {fileID: 0}
       LinkedPrinter: SenkoPrinter
       Poses: []
   AvatarLoader:
@@ -204,6 +248,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  SharedPoses: []
   references:
     version: 1
     00000000:

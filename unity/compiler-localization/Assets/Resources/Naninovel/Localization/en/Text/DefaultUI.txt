@@ -1,0 +1,238 @@
+; Russian <ru> to English <en> localization document for `DefaultUI` managed text document
+
+; CG GALLERY
+CGGallery.Title: 
+
+; NO
+Confirmation.No: 
+
+; YES
+Confirmation.Yes: 
+
+; AUTO
+ControlPanel.Auto: 
+
+; CONT.
+ControlPanel.Continue: 
+
+; HIDE
+ControlPanel.Hide: 
+
+; LOAD
+ControlPanel.Load: 
+
+; LOG
+ControlPanel.Log: 
+
+; MENU
+ControlPanel.Menu: 
+
+; Q.LOAD
+ControlPanel.QuickLoad: 
+
+; Q.SAVE
+ControlPanel.QuickSave: 
+
+; BACK
+ControlPanel.Rollback: 
+
+; SAVE
+ControlPanel.Save: 
+
+; SETTINGS
+ControlPanel.Settings: 
+
+; SKIP
+ControlPanel.Skip: 
+
+; TIPS
+ControlPanel.Tips: 
+
+; TITLE
+ControlPanel.Title: 
+
+; Select a script to play
+ExternalScriptsBrowser.Info: 
+
+; EXTERNAL SCRIPTS
+ExternalScriptsBrowser.Title: 
+
+; CLOSE
+General.Close: 
+
+; DELETE
+General.Delete: 
+
+; NAV.
+General.Navigate: 
+
+; PAGE
+General.Page: 
+
+; RETURN
+General.Return: 
+
+; SCROLL
+General.Scroll: 
+
+; SELECT
+General.Select: 
+
+; TAB
+General.Tab: 
+
+; VIEW
+General.View: 
+
+; Are you sure you want to quit to the title screen?<br>Any unsaved game progress will be lost.
+Naninovel.UI.ControlPanelTitleButton.ConfirmationMessage: 
+
+; Default
+Naninovel.UI.GameSettingsFontDropdown.DefaultFontName: 
+
+; Default
+Naninovel.UI.GameSettingsFontSizeDropdown.Default: 
+
+; Extra Large
+Naninovel.UI.GameSettingsFontSizeDropdown.ExtraLarge: 
+
+; Large
+Naninovel.UI.GameSettingsFontSizeDropdown.Large: 
+
+; Small
+Naninovel.UI.GameSettingsFontSizeDropdown.Small: 
+
+; Very Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption1: 
+
+; Low
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption2: 
+
+; Medium
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption3: 
+
+; High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption4: 
+
+; Very High
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption5: 
+
+; Ultra
+Naninovel.UI.GameSettingsGraphicsDropdown.GraphicOption6: 
+
+; Full Screen
+Naninovel.UI.GameSettingsScreenModeDropdown.ExclusiveFullScreen: 
+
+; Full Screen Window
+Naninovel.UI.GameSettingsScreenModeDropdown.FullScreenWindow: 
+
+; Maximized Window
+Naninovel.UI.GameSettingsScreenModeDropdown.MaximizedWindow: 
+
+; Windowed
+Naninovel.UI.GameSettingsScreenModeDropdown.Windowed: 
+
+; Everything
+Naninovel.UI.GameSettingsSkipModeDropdown.Everything: 
+
+; Read Only
+Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly: 
+
+; Empty
+Naninovel.UI.GameStateSlot.EmptySlotLabel: 
+
+; Are you sure you want to delete save slot?
+Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage: 
+
+; Are you sure you want to overwrite save slot?
+Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage: 
+
+; LOAD
+SaveLoadMenu.Tab.Load: 
+
+; Q. LOAD
+SaveLoadMenu.Tab.QuickLoad: 
+
+; SAVE
+SaveLoadMenu.Tab.Save: 
+
+; Auto delay
+SettingsMenu.AutoDelay: 
+
+; Font
+SettingsMenu.Font: 
+
+; Font size
+SettingsMenu.FontSize: 
+
+; Graphics
+SettingsMenu.Graphics: 
+
+; Language
+SettingsMenu.Language: 
+
+; Message speed
+SettingsMenu.MessageSpeed: 
+
+; Preview
+SettingsMenu.Preview: 
+
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis vitae tellus a pharetra. Aenean vitae ipsum in est lobortis vulputate.
+SettingsMenu.PreviewText: 
+
+; Resolution
+SettingsMenu.Resolution: 
+
+; Screen mode
+SettingsMenu.ScreenMode: 
+
+; Skip mode
+SettingsMenu.SkipMode: 
+
+; BASIC
+SettingsMenu.Tab.Basic: 
+
+; SOUND
+SettingsMenu.Tab.Sound: 
+
+; TEXT
+SettingsMenu.Tab.Text: 
+
+; Voice language
+SettingsMenu.VoiceLanguage: 
+
+; Effects volume
+SettingsMenu.VolumeEffects: 
+
+; Master volume
+SettingsMenu.VolumeMaster: 
+
+; Music volume
+SettingsMenu.VolumeMusic: 
+
+; Voice volume
+SettingsMenu.VolumeVoice: 
+
+; CG GALLERY
+TitleMenu.CGGallery: 
+
+; CONTINUE
+TitleMenu.Continue: 
+
+; EXIT
+TitleMenu.Exit: 
+
+; EXTERNAL SCRIPTS
+TitleMenu.ExternalScripts: 
+
+; NEW GAME
+TitleMenu.NewGame: 
+
+; SETTINGS
+TitleMenu.Settings: 
+
+; TIPS
+TitleMenu.Tips: 
+
+; SUBMIT
+VariableInput.Submit: 

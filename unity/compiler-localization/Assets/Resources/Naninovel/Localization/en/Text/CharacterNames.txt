@@ -1,0 +1,4 @@
+; Russian <ru> to English <en> localization document for `CharacterNames` managed text document
+
+; Саня
+саня: Alex

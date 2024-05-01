@@ -1,0 +1,21 @@
+; Russian <ru> to English <en> localization document for `Скрипт` naninovel script
+
+# ~968183be
+; Russian <ru> to English <en> localization document for `Скрипт` naninovel script; :выбор Учиться !lock play! show!Учиться
+Study
+
+# ~48a5d177
+; ;     саня.уныл: …Скукота...
+Boring...
+
+# ~b47fa39e
+; ; :выбор Гулять !lock play! show!Гулять
+Party
+
+# ~3d0e1892
+; ;     саня.весел: …Юху!
+Yey!
+
+# ~8f068d43
+; ;     саня.уныл: …Вот такие пироги...
+Story of my life...

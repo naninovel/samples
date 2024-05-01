@@ -1,0 +1,1080 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4376a87ff645beb74ce0726bf667f9, type: 3}
+  m_Name: CompilerRu
+  m_EditorClassIdentifier: 
+  CommentLine: ;
+  LabelLine: '%'
+  CommandLine: ':'
+  AuthorAssign: ': '
+  AuthorAppearance: .
+  ExpressionOpen: '{'
+  ExpressionClose: '}'
+  InlinedOpen: (
+  InlinedClose: )
+  ParameterAssign: ':'
+  ListDelimiter: ','
+  NamedDelimiter: .
+  TextIdOpen: '|#'
+  TextIdClose: '|'
+  BooleanFlag: '!'
+  True: "\u0434\u0430"
+  False: "\u043D\u0435\u0442"
+  GlobalVariablePrefix: "\u0433_"
+  TextVariablePrefix: "\u0442_"
+  Commands:
+  - Id: AddChoice
+    Alias: "\u0432\u044B\u0431\u043E\u0440"
+    Parameters:
+    - Id: AutoPlay
+      Alias: 
+    - Id: ButtonPath
+      Alias: 
+    - Id: ButtonPosition
+      Alias: 
+    - Id: ChoiceSummary
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: GosubPath
+      Alias: 
+    - Id: GotoPath
+      Alias: 
+    - Id: HandlerId
+      Alias: 
+    - Id: Lock
+      Alias: 
+    - Id: SetExpression
+      Alias: 
+    - Id: ShowHandler
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: AnimateActor
+    Alias: 
+    Parameters:
+    - Id: ActorIds
+      Alias: 
+    - Id: Appearance
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: Loop
+      Alias: 
+    - Id: PositionZ
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePositionX
+      Alias: 
+    - Id: ScenePositionY
+      Alias: 
+    - Id: TintColor
+      Alias: 
+    - Id: Transition
+      Alias: 
+    - Id: Visibility
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: AppendLineBreak
+    Alias: 
+    Parameters:
+    - Id: AuthorId
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Count
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: AppendText
+    Alias: 
+    Parameters:
+    - Id: AuthorId
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: Text
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ArrangeCharacters
+    Alias: 
+    Parameters:
+    - Id: CharacterPositions
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: LookAtOrigin
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: AutoSave
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Await
+    Alias: "\u043E\u0436\u0438\u0434\u0430\u0439"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: BeginIf
+    Alias: "\u0435\u0441\u043B\u0438"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Expression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: CameraLook
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Enable
+      Alias: 
+    - Id: Gravity
+      Alias: 
+    - Id: LookSpeed
+      Alias: 
+    - Id: LookZone
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ClearBacklog
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ClearChoiceHandler
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: HandlerId
+      Alias: 
+    - Id: Hide
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: CustomCommand
+    Alias: 
+    Parameters:
+    - Id: Bool
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Enum
+      Alias: 
+    - Id: Float
+      Alias: 
+    - Id: Int
+      Alias: 
+    - Id: String
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Delay
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Seconds
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: DestroyAllSpawned
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: DestroySpawned
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Params
+      Alias: 
+    - Id: Path
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Else
+    Alias: "\u0438\u043D\u0430\u0447\u0435"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: EndIf
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ExitToTitle
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: FinishSceneTransition
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DissolveTexturePath
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: Transition
+      Alias: 
+    - Id: TransitionParams
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Gosub
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Path
+      Alias: 
+    - Id: ResetState
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Goto
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Hold
+      Alias: 
+    - Id: Path
+      Alias: 
+    - Id: Release
+      Alias: 
+    - Id: ResetState
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Group
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: HideActors
+    Alias: 
+    Parameters:
+    - Id: ActorIds
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Remove
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: HideAllActors
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Remove
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: HideAllCharacters
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Remove
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: HidePrinter
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: HideUI
+    Alias: 
+    Parameters:
+    - Id: AllowToggle
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: UINames
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: InputCustomVariable
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: PlayOnSubmit
+      Alias: 
+    - Id: PredefinedValue
+      Alias: 
+    - Id: Summary
+      Alias: 
+    - Id: VariableName
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: LipSync
+    Alias: 
+    Parameters:
+    - Id: CharIdAndAllow
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: LoadScene
+    Alias: 
+    Parameters:
+    - Id: Additive
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: SceneName
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Lock
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Id
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: MockCommand
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ModifyBackground
+    Alias: "\u0444\u043E\u043D"
+    Parameters:
+    - Id: Appearance
+      Alias: 
+    - Id: AppearanceAndTransition
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DissolveTexturePath
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: Id
+      Alias: 
+    - Id: Pose
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: TintColor
+      Alias: 
+    - Id: Transition
+      Alias: 
+    - Id: TransitionParams
+      Alias: 
+    - Id: Visible
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ModifyCamera
+    Alias: "\u043A\u0430\u043C\u0435\u0440\u0430"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: Offset
+      Alias: 
+    - Id: Orthographic
+      Alias: 
+    - Id: Roll
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: SetTypeNames
+      Alias: 
+    - Id: ToggleTypeNames
+      Alias: 
+    - Id: Wait
+      Alias: "\u0436\u0434\u0438"
+    - Id: Zoom
+      Alias: "\u0444\u043E\u043A\u0443\u0441"
+  - Id: ModifyCharacter
+    Alias: "\u043F\u0435\u0440\u0441"
+    Parameters:
+    - Id: Appearance
+      Alias: 
+    - Id: AvatarTexturePath
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DissolveTexturePath
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: Id
+      Alias: 
+    - Id: IdAndAppearance
+      Alias: 
+    - Id: LookDirection
+      Alias: 
+    - Id: Pose
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: TintColor
+      Alias: 
+    - Id: Transition
+      Alias: 
+    - Id: TransitionParams
+      Alias: 
+    - Id: Visible
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ModifyTextPrinter
+    Alias: 
+    Parameters:
+    - Id: Appearance
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DissolveTexturePath
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: HideOther
+      Alias: 
+    - Id: Id
+      Alias: 
+    - Id: IdAndAppearance
+      Alias: 
+    - Id: MakeDefault
+      Alias: 
+    - Id: Pose
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: TintColor
+      Alias: 
+    - Id: Transition
+      Alias: 
+    - Id: TransitionParams
+      Alias: 
+    - Id: Visible
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: OpenURL
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Target
+      Alias: 
+    - Id: URL
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ParametrizeGeneric
+    Alias: 
+    Parameters:
+    - Id: AuthorId
+      Alias: 
+    - Id: AuthorLabel
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Join
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: RevealSpeed
+      Alias: 
+    - Id: SkipWaitingInput
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PickRandom
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+    - Id: Weight
+      Alias: 
+  - Id: PlayBgm
+    Alias: "\u043C\u0443\u0437\u044B\u043A\u0430"
+    Parameters:
+    - Id: BgmPath
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: FadeInDuration
+      Alias: 
+    - Id: GroupPath
+      Alias: 
+    - Id: IntroBgmPath
+      Alias: 
+    - Id: Loop
+      Alias: 
+    - Id: Volume
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PlayMovie
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: MovieName
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PlaySfx
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: FadeInDuration
+      Alias: 
+    - Id: GroupPath
+      Alias: 
+    - Id: Loop
+      Alias: 
+    - Id: SfxPath
+      Alias: 
+    - Id: Volume
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PlaySfxFast
+    Alias: 
+    Parameters:
+    - Id: Additive
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: GroupPath
+      Alias: 
+    - Id: Restart
+      Alias: 
+    - Id: SfxPath
+      Alias: 
+    - Id: Volume
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PlayVoice
+    Alias: 
+    Parameters:
+    - Id: AuthorId
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: GroupPath
+      Alias: 
+    - Id: VoicePath
+      Alias: 
+    - Id: Volume
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PrintText
+    Alias: 
+    Parameters:
+    - Id: AuthorId
+      Alias: 
+    - Id: AuthorLabel
+      Alias: 
+    - Id: ChangeVisibilityDuration
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DefaultPrinter
+      Alias: 
+    - Id: LineBreaks
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: ResetPrinter
+      Alias: 
+    - Id: RevealSpeed
+      Alias: 
+    - Id: Text
+      Alias: 
+    - Id: Wait
+      Alias: 
+    - Id: WaitForInput
+      Alias: 
+  - Id: ProcessInput
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: InputEnabled
+      Alias: 
+    - Id: SetEnabled
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: PurgeRollback
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ResetState
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Exclude
+      Alias: 
+    - Id: Only
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ResetText
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: ResetAuthor
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Return
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: ResetState
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SetCustomVariable
+    Alias: "\u043F\u043E\u043C\u043D\u0438"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Expression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SetTextStyle
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: TextStyles
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ShowActors
+    Alias: 
+    Parameters:
+    - Id: ActorIds
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ShowPrinter
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: PrinterId
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ShowToastUI
+    Alias: 
+    Parameters:
+    - Id: Appearance
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Text
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: ShowUI
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: UINames
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Skip
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Enable
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SlideActor
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: EasingTypeName
+      Alias: 
+    - Id: FromPosition
+      Alias: 
+    - Id: IdAndAppearance
+      Alias: 
+    - Id: ToPosition
+      Alias: 
+    - Id: Visible
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Spawn
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Params
+      Alias: 
+    - Id: Path
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnBlur
+    Alias: 
+    Parameters:
+    - Id: ActorId
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeDuration
+      Alias: 
+    - Id: Intensity
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnBokeh
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: FocalLength
+      Alias: 
+    - Id: FocusDistance
+      Alias: 
+    - Id: FocusObjectName
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnGlitch
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Duration
+      Alias: 
+    - Id: Intensity
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnRain
+    Alias: "\u0434\u043E\u0436\u0434\u044C"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeDuration
+      Alias: 
+    - Id: Intensity
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: Wait
+      Alias: 
+    - Id: XVelocity
+      Alias: 
+    - Id: YVelocity
+      Alias: 
+  - Id: SpawnShake
+    Alias: 
+    Parameters:
+    - Id: ActorId
+      Alias: 
+    - Id: AmplitudeVariation
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: DurationVariation
+      Alias: 
+    - Id: ShakeAmplitude
+      Alias: 
+    - Id: ShakeCount
+      Alias: 
+    - Id: ShakeDuration
+      Alias: 
+    - Id: ShakeHorizontally
+      Alias: 
+    - Id: ShakeVertically
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnSnow
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeDuration
+      Alias: 
+    - Id: Intensity
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: SpawnSun
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeDuration
+      Alias: 
+    - Id: Intensity
+      Alias: 
+    - Id: Position
+      Alias: 
+    - Id: Rotation
+      Alias: 
+    - Id: Scale
+      Alias: 
+    - Id: ScenePosition
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: StartSceneTransition
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Stop
+    Alias: "\u0441\u0442\u043E\u043F"
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: StopBgm
+    Alias: 
+    Parameters:
+    - Id: BgmPath
+      Alias: 
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeOutDuration
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: StopSfx
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: FadeOutDuration
+      Alias: 
+    - Id: SfxPath
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: StopVoice
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: UnloadScene
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: SceneName
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Unlock
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Id
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: Wait
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+    - Id: WaitMode
+      Alias: 
+  - Id: WaitForInput
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Wait
+      Alias: 
+  - Id: While
+    Alias: 
+    Parameters:
+    - Id: ConditionalExpression
+      Alias: 
+    - Id: Expression
+      Alias: 
+    - Id: Wait
+      Alias: 

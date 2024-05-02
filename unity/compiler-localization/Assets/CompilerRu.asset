@@ -1078,3 +1078,16 @@ MonoBehaviour:
       Alias: 
     - Id: Wait
       Alias: 
+  Functions:
+  - MethodName: CalculateProgress
+    Alias: 
+  - MethodName: GetName
+    Alias: 
+  - MethodName: HasPlayed
+    Alias: 
+  - MethodName: IsUnlocked
+    Alias: 
+  - MethodName: Random
+    Alias: "\u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E"
+  - MethodName: ToUpper
+    Alias: 

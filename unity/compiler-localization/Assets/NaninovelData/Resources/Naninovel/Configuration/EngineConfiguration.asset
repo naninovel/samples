@@ -25,7 +25,7 @@ MonoBehaviour:
   SceneIndependent: 1
   ShowInitializationUI: 1
   CustomInitializationUI: {fileID: 0}
-  EnableBridging: 0
+  EnableBridging: 1
   ServerPort: 41016
   AutoGenerateMetadata: 1
   EnableDevelopmentConsole: 1

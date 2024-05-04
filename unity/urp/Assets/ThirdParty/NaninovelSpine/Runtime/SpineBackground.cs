@@ -1,4 +1,6 @@
-﻿namespace Naninovel
+﻿using UnityEngine;
+
+namespace Naninovel
 {
     /// <summary>
     /// A <see cref="IBackgroundActor"/> implementation using <see cref="SpineController"/> to represent the actor.
@@ -8,13 +10,13 @@
     {
         private BackgroundMatcher matcher;
 
-        public SpineBackground (string id, BackgroundMetadata metadata)
-            : base(id, metadata) { }
+        public SpineBackground (string id, BackgroundMetadata meta, EmbeddedAppearanceLoader<GameObject> loader)
+            : base(id, meta, loader) { }
 
         public override async UniTask InitializeAsync ()
         {
             await base.InitializeAsync();
-            matcher = BackgroundMatcher.CreateFor(ActorMetadata, TransitionalRenderer);
+            matcher = BackgroundMatcher.CreateFor(ActorMeta, TransitionalRenderer);
         }
 
         public override void Dispose ()

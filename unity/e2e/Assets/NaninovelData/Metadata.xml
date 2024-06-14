@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
 <Content xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <MessageType>Naninovel.Bridging.UpdateMetadata, Naninovel.Common, Version=2023.8.1.2130, Culture=neutral, PublicKeyToken=null</MessageType>
+  <MessageType>Naninovel.Bridging.UpdateMetadata, Naninovel.Common, Version=2023.9.16.1857, Culture=neutral, PublicKeyToken=null</MessageType>
   <SerializedMessage>&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;UpdateMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;Metadata&gt;

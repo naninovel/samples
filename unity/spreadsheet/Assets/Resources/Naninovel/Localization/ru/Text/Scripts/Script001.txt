@@ -1,7 +1,7 @@
 ; English <en> to Russian <ru> localization document for `Script001` naninovel script
 
 # 1
-; Lorem ipsum dolor sit amet, 
+; English <en> to Russian <ru> localization document for `Script001` naninovel script; …{ Random(0, 11) }…[i]…Lorem ipsum dolor sit amet, 
 Суждение последовательно. Угловое расстояние, 
 
 # 2
@@ -17,7 +17,7 @@
 Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако ощущение мира колеблет интеллект. Даосизм философски творит популяционный индекс, но кольца видны только при 40–66.
 
 # 5
-; Mauris sit
+; ; …[i]…[spawn ShakePrinter params:,1 !wait]…[< skip!]Mauris sit
 Антропосоциология творит параметр.
 
 # 18
@@ -34,15 +34,15 @@
  экваториальный перигелий.
 
 # 8
-; Quisque.;; Test no-space source with spaced translation.
+; ; Test no-space source with spaced translation.Quisque.
 Почти каждый.
 
 # 9
-; Quisque.
+; ; @print Quisque.Quisque.
 Почти каждый.
 
 # a
-; Ut et quam a dui imperdiet eleifend vitae eget neque.
+; ; k: …[i]……Ut et quam a dui imperdiet eleifend vitae eget neque.
 Адживика, как принято считать, порождена временем.
 
 # b
@@ -56,11 +56,11 @@
 После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
 
 # d
-; Donec ut libero rutrum, "porta tortor" ut, volutpat nulla.
+; ; @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla." speed:0.5 !defaultDonec ut libero rutrum, "porta tortor" ut, volutpat nulla.
 Закон исключённого третьего "перечеркивает" центральный позитивизм.
 
 # e
-; { 
+; ; @print "\{ { Random(0, 10) } \}"{ 
 { 
 
 # f
@@ -68,19 +68,19 @@
  }
 
 # 10
-; Lorem ipsum
+; ; @toast "Lorem ipsum" time:1Lorem ipsum
 Реликтовый ледник
 
 # 11
-; Test choice
+; ; @choice "Test choice" pos:10,50Test choice
 Тестовый выбор
 
 # 12
-; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
+; ; y.Default: …Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 Страсть ищет гравитационный парадокс. Юлианская дата наблюдаема. Восход , по определению, представляет собой эллиптический предмет деятельности, изменяя привычную реальность.
 
 # 13
-; Value of t_Foo: 
+; ; …{t_Foo}…Value of t_Foo: 
 Значение t_Foo: 
 
 # 14
@@ -96,5 +96,5 @@
 
 
 # 17
-; Untranslated command line.
+; ; @print "Untranslated command line."Untranslated command line.
 

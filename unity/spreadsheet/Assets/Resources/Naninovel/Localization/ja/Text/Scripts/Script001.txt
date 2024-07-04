@@ -1,7 +1,7 @@
 ; English <en> to Japanese <ja> localization document for `Script001` naninovel script
 
 # 1
-; Lorem ipsum dolor sit amet, 
+; English <en> to Japanese <ja> localization document for `Script001` naninovel script; …{ Random(0, 11) }…[i]…Lorem ipsum dolor sit amet, 
 取オキ氏給てのぱお名販り冬投夜ワ半,
 
 # 2
@@ -17,7 +17,7 @@
 児ワトリ本務3本ドぽ開敷さえトは委2左くんみッ同切キルエヤ行愛ぐぴあ肝持砥ヘ場外をご全輝案オセ口泉節急しふかと取自七俊亮凱ざちくゆ。
 
 # 5
-; Mauris sit
+; ; …[i]…[spawn ShakePrinter params:,1 !wait]…[< skip!]Mauris sit
 作4振きせ治無づけ
 
 # 18
@@ -34,15 +34,15 @@
 りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
 
 # 8
-; Quisque.;; Test no-space source with spaced translation.
+; ; Test no-space source with spaced translation.Quisque.
 全員。
 
 # 9
-; Quisque.
+; ; @print Quisque.Quisque.
 全員。
 
 # a
-; Ut et quam a dui imperdiet eleifend vitae eget neque.
+; ; k: …[i]……Ut et quam a dui imperdiet eleifend vitae eget neque.
 済供際ナ社県わさ真囲イ須生備ミ京5準
 
 # b
@@ -56,11 +56,11 @@
 よな触努ゆづげさ<tip="Lorenz">ローレンツ方程式</tip>び。
 
 # d
-; Donec ut libero rutrum, "porta tortor" ut, volutpat nulla.
+; ; @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla." speed:0.5 !defaultDonec ut libero rutrum, "porta tortor" ut, volutpat nulla.
 側チ輸富ハ鉄青フ堂購ソホ権文「ぞゅゆょ収港」すなおで問9断まりつ詐経ざ一
 
 # e
-; { 
+; ; @print "\{ { Random(0, 10) } \}"{ 
 {
 
 # f
@@ -68,19 +68,19 @@
 }
 
 # 10
-; Lorem ipsum
+; ; @toast "Lorem ipsum" time:1Lorem ipsum
 遺物氷河
 
 # 11
-; Test choice
+; ; @choice "Test choice" pos:10,50Test choice
 速らな設
 
 # 12
-; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
+; ; y.Default: …Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 話声コ真禁選またでば車地ょにべ学裏モヒヘ量併ろてう江供ユネスナ止人エケラナ下月京ど新84郷たリ秘最ヲラレ刊行ほひ風国つみしろ馬証ウテ皇馬るぶ。
 
 # 13
-; Value of t_Foo: 
+; ; …{t_Foo}…Value of t_Foo: 
 t_Fooの値：
 
 # 14
@@ -96,5 +96,5 @@ t_Fooの値：
 
 
 # 17
-; Untranslated command line.
+; ; @print "Untranslated command line."Untranslated command line.
 

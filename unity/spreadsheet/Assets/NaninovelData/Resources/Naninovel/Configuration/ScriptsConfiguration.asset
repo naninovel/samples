@@ -19,8 +19,10 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  ScriptParser: Naninovel.ScriptParser, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+  ScriptParser: Naninovel.ScriptAssetParser, Elringus.Naninovel.Runtime, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
+  CompilerLocalization: {fileID: 11400000, guid: ecfd5703894a0fa4d828e75ccc400869,
+    type: 2}
   StableIdentification: 1
   InitializationScript: 
   TitleScript: 
@@ -36,6 +38,10 @@ MonoBehaviour:
   SelectPlayedScript: 1
   InsertLineKey: 32
   InsertLineModifier: 2
+  IndentLineKey: 275
+  IndentLineModifier: 2
+  UnindentLineKey: 276
+  UnindentLineModifier: 2
   SaveScriptKey: 115
   SaveScriptModifier: 2
   RewindMouseButton: 0

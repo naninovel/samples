@@ -2,7 +2,7 @@
 Lorem ipsum dolor sit amet, |#1|{ Random(0, 11) } consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.|#2|[i] Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.|#3|
 Praesent nec euismod ante. Sed sit amet pellentesque mauris. Sed viverra est nibh, vitae rhoncus lacus venenatis at. Mauris eget posuere urna, a dignissim nisl.|#4|
 @spawn Rain wait:false
-Mauris sit|#5|<br>|#18|[i] amet lorem|#6|[spawn ShakePrinter params:,1 wait:false] sit amet nulla malesuada pulvinar.|#7|[skipInput]
+Mauris sit|#5|<br>|#18|[i] amet lorem|#6|[spawn ShakePrinter params:,1 wait:false] sit amet nulla malesuada pulvinar.|#7|[< skip!]
 
 ; Test no-space source with spaced translation.
 Quisque.|#8|

@@ -1,11 +1,11 @@
 ; English <en> to Japanese <ja> localization document for `Script002` naninovel script
 
 # 1
-; Test input value.
+; English <en> to Japanese <ja> localization document for `Script002` naninovel scriptTest input value.
 座洗ヤルチ型枠まんらと。
 
 # 2
-; Test summary
+; ; @input i summary:"Test summary" value:"Test value"Test summary
 冬投夜ワ半
 
 # 3
@@ -13,7 +13,7 @@
 ごず楽乗ヤケレ
 
 # 4
-; You've entered: [`
+; ; You've entered: \[`You've entered: [`
 まんらと[`
 
 # 5

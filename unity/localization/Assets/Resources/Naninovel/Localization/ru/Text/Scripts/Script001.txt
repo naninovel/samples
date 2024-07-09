@@ -12,7 +12,8 @@
 # 5|18|6|7
 ; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
 ; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
-Антропосоциология творит параметр.|<br>| Суждение преобразует| экваториальный перигелий.
+Антропосоциология творит параметр.|<br>
+| Суждение преобразует| экваториальный перигелий.
 
 # 8
 ; > Test no-space source with spaced translation.
@@ -27,7 +28,9 @@
 # a|b|c
 ; > k: …|#a|[i]…|#b|…|#c|
 ; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
-Адживика, как принято считать, порождена временем.| Ощущение мира точно притягивает сложный зенит, отрицая очевидное.|<br><br>После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
+Адживика, как принято считать, порождена временем.| Ощущение мира точно притягивает сложный зенит, отрицая очевидное.|<br>
+<br>
+После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
 
 # d
 ; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla.|#d|" speed:0.5 !default

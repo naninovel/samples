@@ -12,7 +12,8 @@
 # 5|18|6|7
 ; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
 ; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
-作4振きせ治無づけ|<br>| 次王サミ阪7企っげ真理ノユ恐3手| りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
+作4振きせ治無づけ|<br>
+| 次王サミ阪7企っげ真理ノユ恐3手| りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
 
 # 8
 ; > Test no-space source with spaced translation.
@@ -27,7 +28,9 @@
 # a|b|c
 ; > k: …|#a|[i]…|#b|…|#c|
 ; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
-済供際ナ社県わさ真囲イ須生備ミ京5準| ネユホ刺三進ょ浜共エサヘ要万ヨムスサ分岡じ言重著菱ラロ農生|<br><br>よな触努ゆづげさ<tip="Lorenz">ローレンツ方程式</tip>び。
+済供際ナ社県わさ真囲イ須生備ミ京5準| ネユホ刺三進ょ浜共エサヘ要万ヨムスサ分岡じ言重著菱ラロ農生|<br>
+<br>
+よな触努ゆづげさ<tip="Lorenz">ローレンツ方程式</tip>び。
 
 # d
 ; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla.|#d|" speed:0.5 !default

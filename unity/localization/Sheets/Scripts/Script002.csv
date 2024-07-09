@@ -1,6 +1,4 @@
-﻿#,;;,en,ja,ru
+﻿key,annotation,en,ja,ru
 1,,Test input value.,座洗ヤルチ型枠まんらと。,Тест инпута.
-2,"@input i summary:""Test summary"" value:""Test value""",Test summary,冬投夜ワ半,Тестовое заглавие
-3,,Test value,ごず楽乗ヤケレ,Тестовое значение
-4,You've entered: \[`,You've entered: [`,まんらと[`,Вы ввели: [`
-5,,`].,`]。,`].
+2|3,"@input i summary:""…|#2|"" value:""…|#3|""",Test summary|Test value,冬投夜ワ半|ごず楽乗ヤケレ,Тестовое заглавие|Тестовое значение
+4|5,You've entered: \[`|#4|{i}`\].|#5|,You've entered: [`|`].,まんらと[`|`]。,Вы ввели: [`|`].

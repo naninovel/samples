@@ -5,7 +5,7 @@
 Тест инпута.
 
 # 2
-; ; @input i summary:"Test summary" value:"Test value"Test summary
+; > @input i summary:"Test summary" value:"Test value"Test summary
 Тестовое заглавие
 
 # 3
@@ -13,7 +13,7 @@
 Тестовое значение
 
 # 4
-; ; You've entered: \[`You've entered: [`
+; > You've entered: \[`You've entered: [`
 Вы ввели: [`
 
 # 5

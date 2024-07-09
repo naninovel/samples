@@ -1,4 +1,4 @@
-; English <en> to Russian <ru> localization document for `DefaultUI` managed text document
+; English <en> to Russian <ru> localization document for 'DefaultUI' managed text document
 
 ; CG GALLERY
 CGGallery.Title: ГАЛЕРЕЯ

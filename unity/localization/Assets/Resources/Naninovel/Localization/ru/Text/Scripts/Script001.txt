@@ -1,100 +1,69 @@
-; English <en> to Russian <ru> localization document for `Script001` naninovel script
+; English <en> to Russian <ru> localization document for 'Script001' naninovel script
 
-# 1
-; English <en> to Russian <ru> localization document for `Script001` naninovel script; …{ Random(0, 11) }…[i]…Lorem ipsum dolor sit amet, 
-Суждение последовательно. Угловое расстояние, 
-
-# 2
-;  consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.
-  на первый взгляд, <tip="VN">визуальаный роман</tip> транспонирует трагический здравый смысл, хотя это явно видно на фотогpафической пластинке, полученной с помощью 1.2-метpового телескопа.
-
-# 3
-;  Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
- Звезда на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах, недоступно решает непреложный натуральный логарифм. Наряду с этим газопылевое облако многопланово гасит даосизм, изменяя привычную реальность.
+# 1|2|3
+; > …|#1|{ Random(0, 11) }…|#2|[i]…|#3|
+; Lorem ipsum dolor sit amet, | consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.| Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
+Суждение последовательно. Угловое расстояние, | на первый взгляд, <tip="VN">визуальаный роман</tip> транспонирует трагический здравый смысл, хотя это явно видно на фотогpафической пластинке, полученной с помощью 1.2-метpового телескопа.| Звезда на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах, недоступно решает непреложный натуральный логарифм. Наряду с этим газопылевое облако многопланово гасит даосизм, изменяя привычную реальность.
 
 # 4
 ; Praesent nec euismod ante. Sed sit amet pellentesque mauris. Sed viverra est nibh, vitae rhoncus lacus venenatis at. Mauris eget posuere urna, a dignissim nisl.
 Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако ощущение мира колеблет интеллект. Даосизм философски творит популяционный индекс, но кольца видны только при 40–66.
 
-# 5
-; > …[i]…[spawn ShakePrinter params:,1 !wait]…[< skip!]Mauris sit
-Антропосоциология творит параметр.
-
-# 18
-; <br>
-<br>
-
-
-# 6
-;  amet lorem
- Суждение преобразует
-
-# 7
-;  sit amet nulla malesuada pulvinar.
- экваториальный перигелий.
+# 5|18|6|7
+; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
+; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
+Антропосоциология творит параметр.|<br>| Суждение преобразует| экваториальный перигелий.
 
 # 8
-; > Test no-space source with spaced translation.Quisque.
+; > Test no-space source with spaced translation.
+; Quisque.
 Почти каждый.
 
 # 9
-; > @print Quisque.Quisque.
+; > @print …|#9|
+; Quisque.
 Почти каждый.
 
-# a
-; > k: …[i]……Ut et quam a dui imperdiet eleifend vitae eget neque.
-Адживика, как принято считать, порождена временем.
-
-# b
-;  Vestibulum sollicitudin et tortor sed dignissim.
- Ощущение мира точно притягивает сложный зенит, отрицая очевидное.
-
-# c
-; <br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
-<br>
-<br>
-После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
+# a|b|c
+; > k: …|#a|[i]…|#b|…|#c|
+; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
+Адживика, как принято считать, порождена временем.| Ощущение мира точно притягивает сложный зенит, отрицая очевидное.|<br><br>После того как тема сформулирована, <tip="Lorenz">Закон Лоренца</tip> оценивает трагический реликтовый ледник.
 
 # d
-; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla." speed:0.5 !defaultDonec ut libero rutrum, "porta tortor" ut, volutpat nulla.
+; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla.|#d|" speed:0.5 !default
+; Donec ut libero rutrum, "porta tortor" ut, volutpat nulla.
 Закон исключённого третьего "перечеркивает" центральный позитивизм.
 
-# e
-; > @print "\{ { Random(0, 10) } \}"{ 
-{ 
-
-# f
-;  }
- }
+# e|f
+; > @print "\…|#e|…Random(0, 10)… \}|#f|"
+; { | }
+{ | }
 
 # 10
-; > @toast "Lorem ipsum" time:1Lorem ipsum
+; > @toast "…|#10|" time:1
+; Lorem ipsum
 Реликтовый ледник
 
 # 11
-; > @choice "Test choice" pos:10,50Test choice
+; > @choice "…|#11|" pos:10,50
+; Test choice
 Тестовый выбор
 
 # 12
-; > y.Default: …Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
+; > y.Default: …|#12|
+; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 Страсть ищет гравитационный парадокс. Юлианская дата наблюдаема. Восход , по определению, представляет собой эллиптический предмет деятельности, изменяя привычную реальность.
 
-# 13
-; > …{t_Foo}…Value of t_Foo: 
-Значение t_Foo: 
-
-# 14
-; , value of t_Bar: 
-, значениеf t_Bar: 
-
-# 15
-; .
- .
+# 13|14|15
+; > …|#13|{t_Foo}…|#14|{t_Bar}…|#15|
+; Value of t_Foo: |, value of t_Bar: |.
+Значение t_Foo: |, значение t_Bar: |.
 
 # 16
 ; Untranslated generic line.
 
 
 # 17
-; > @print "Untranslated command line."Untranslated command line.
+; > @print "…|#17|"
+; Untranslated command line.
 

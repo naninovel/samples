@@ -1,4 +1,4 @@
-; English <en> to Japanese <ja> localization document for `CharacterNames` managed text document
+; English <en> to Japanese <ja> localization document for 'CharacterNames' managed text document
 
 ; Kohaku
 k: 琥珀

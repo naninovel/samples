@@ -1,4 +1,4 @@
-; English <en> to Russian <ru> localization document for `Script` managed text document
+; English <en> to Russian <ru> localization document for 'Script' managed text document
 
 ; Foo
 t_Foo: Фу

@@ -1,5 +1,5 @@
-; English <en> to Japanese <ja> localization document for `Script003` naninovel script
+; English <en> to Japanese <ja> localization document for 'Script003' naninovel script
 
 # 1
-; English <en> to Japanese <ja> localization document for `Script003` naninovel scriptTest script in subfolder.
+; Test script in subfolder.
 サブフォルダーでスクリプトをテストします。

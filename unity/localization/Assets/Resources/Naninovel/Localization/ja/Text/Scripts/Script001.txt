@@ -1,100 +1,69 @@
-; English <en> to Japanese <ja> localization document for `Script001` naninovel script
+; English <en> to Japanese <ja> localization document for 'Script001' naninovel script
 
-# 1
-; English <en> to Japanese <ja> localization document for `Script001` naninovel script; …{ Random(0, 11) }…[i]…Lorem ipsum dolor sit amet, 
-取オキ氏給てのぱお名販り冬投夜ワ半,
-
-# 2
-;  consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.
-度えね連開えすむ脳防演ぜ投定携青稿ひーむか梯郵イどで者<tip="VN">ビジュアルノベル</tip>のろざり君二学ヱレ合中クミユオ属抽綱ざきに。米レツチネ必果で利83知ごず楽乗ヤケレ願全スごぴ裏3裸どひン決意表ユノ度将ウアカ子道ち告分びがスゃ内演ぼざゅわ。
-
-# 3
-;  Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
-答サマ下清ぽーた張街どなに枚展フ子索トク騰文サヤマ背用使シルヌウ藤集ロチヤ失背へ座洗ヤルチ型枠イエス稿69那卓捨縦まんらと。
+# 1|2|3
+; > …|#1|{ Random(0, 11) }…|#2|[i]…|#3|
+; Lorem ipsum dolor sit amet, | consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.| Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
+取オキ氏給てのぱお名販り冬投夜ワ半, | 度えね連開えすむ脳防演ぜ投定携青稿ひーむか梯郵イどで者<tip="VN">ビジュアルノベル</tip>のろざり君二学ヱレ合中クミユオ属抽綱ざきに。米レツチネ必果で利83知ごず楽乗ヤケレ願全スごぴ裏3裸どひン決意表ユノ度将ウアカ子道ち告分びがスゃ内演ぼざゅわ。| 答サマ下清ぽーた張街どなに枚展フ子索トク騰文サヤマ背用使シルヌウ藤集ロチヤ失背へ座洗ヤルチ型枠イエス稿69那卓捨縦まんらと。
 
 # 4
 ; Praesent nec euismod ante. Sed sit amet pellentesque mauris. Sed viverra est nibh, vitae rhoncus lacus venenatis at. Mauris eget posuere urna, a dignissim nisl.
 児ワトリ本務3本ドぽ開敷さえトは委2左くんみッ同切キルエヤ行愛ぐぴあ肝持砥ヘ場外をご全輝案オセ口泉節急しふかと取自七俊亮凱ざちくゆ。
 
-# 5
-; > …[i]…[spawn ShakePrinter params:,1 !wait]…[< skip!]Mauris sit
-作4振きせ治無づけ
-
-# 18
-; <br>
-<br>
-
-
-# 6
-;  amet lorem
-次王サミ阪7企っげ真理ノユ恐3手
-
-# 7
-;  sit amet nulla malesuada pulvinar.
-りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
+# 5|18|6|7
+; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
+; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
+作4振きせ治無づけ|<br>| 次王サミ阪7企っげ真理ノユ恐3手| りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
 
 # 8
-; > Test no-space source with spaced translation.Quisque.
+; > Test no-space source with spaced translation.
+; Quisque.
 全員。
 
 # 9
-; > @print Quisque.Quisque.
+; > @print …|#9|
+; Quisque.
 全員。
 
-# a
-; > k: …[i]……Ut et quam a dui imperdiet eleifend vitae eget neque.
-済供際ナ社県わさ真囲イ須生備ミ京5準
-
-# b
-;  Vestibulum sollicitudin et tortor sed dignissim.
-ネユホ刺三進ょ浜共エサヘ要万ヨムスサ分岡じ言重著菱ラロ農生
-
-# c
-; <br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
-<br>
-<br>
-よな触努ゆづげさ<tip="Lorenz">ローレンツ方程式</tip>び。
+# a|b|c
+; > k: …|#a|[i]…|#b|…|#c|
+; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
+済供際ナ社県わさ真囲イ須生備ミ京5準| ネユホ刺三進ょ浜共エサヘ要万ヨムスサ分岡じ言重著菱ラロ農生|<br><br>よな触努ゆづげさ<tip="Lorenz">ローレンツ方程式</tip>び。
 
 # d
-; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla." speed:0.5 !defaultDonec ut libero rutrum, "porta tortor" ut, volutpat nulla.
+; > @print "Donec ut libero rutrum, \"porta tortor\" ut, volutpat nulla.|#d|" speed:0.5 !default
+; Donec ut libero rutrum, "porta tortor" ut, volutpat nulla.
 側チ輸富ハ鉄青フ堂購ソホ権文「ぞゅゆょ収港」すなおで問9断まりつ詐経ざ一
 
-# e
-; > @print "\{ { Random(0, 10) } \}"{ 
-{
-
-# f
-;  }
-}
+# e|f
+; > @print "\…|#e|…Random(0, 10)… \}|#f|"
+; { | }
+{ | }
 
 # 10
-; > @toast "Lorem ipsum" time:1Lorem ipsum
+; > @toast "…|#10|" time:1
+; Lorem ipsum
 遺物氷河
 
 # 11
-; > @choice "Test choice" pos:10,50Test choice
+; > @choice "…|#11|" pos:10,50
+; Test choice
 速らな設
 
 # 12
-; > y.Default: …Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
+; > y.Default: …|#12|
+; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 話声コ真禁選またでば車地ょにべ学裏モヒヘ量併ろてう江供ユネスナ止人エケラナ下月京ど新84郷たリ秘最ヲラレ刊行ほひ風国つみしろ馬証ウテ皇馬るぶ。
 
-# 13
-; > …{t_Foo}…Value of t_Foo: 
-t_Fooの値：
-
-# 14
-; , value of t_Bar: 
-巴t_Barの値：
-
-# 15
-; .
-。
+# 13|14|15
+; > …|#13|{t_Foo}…|#14|{t_Bar}…|#15|
+; Value of t_Foo: |, value of t_Bar: |.
+t_Fooの値： |,巴t_Barの値： |。
 
 # 16
 ; Untranslated generic line.
 
 
 # 17
-; > @print "Untranslated command line."Untranslated command line.
+; > @print "…|#17|"
+; Untranslated command line.
 

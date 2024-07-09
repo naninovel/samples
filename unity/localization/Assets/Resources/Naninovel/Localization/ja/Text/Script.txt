@@ -1,4 +1,4 @@
-; English <en> to Japanese <ja> localization document for `Script` managed text document
+; English <en> to Japanese <ja> localization document for 'Script' managed text document
 
 ; Foo
 t_Foo: ふぉお

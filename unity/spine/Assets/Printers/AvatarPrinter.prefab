@@ -424,6 +424,7 @@ MonoBehaviour:
   length: 10
   slackOpacity: 1
   slackDuration: 0.5
+  supportCustomOpacity: 0
 --- !u!114 &5449061806003021755
 MonoBehaviour:
   m_ObjectHideFlags: 0

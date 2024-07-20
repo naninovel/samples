@@ -16,9 +16,10 @@ MonoBehaviour:
   CustomEventSystem: {fileID: 0}
   SpawnInputModule: 1
   CustomInputModule: {fileID: 0}
+  ProcessLegacyBindings: 1
   TouchFrequencyLimit: 0.1
   TouchDistanceLimit: 25
-  ProcessLegacyBindings: 1
+  DetectInputMode: 1
   Bindings:
   - Name: Submit
     AlwaysProcess: 0
@@ -108,4 +109,9 @@ MonoBehaviour:
     - AxisName: Mouse Y
       TriggerMode: 0
       TriggerTolerance: 0.001
+    Swipes: []
+  - Name: ToggleConsole
+    AlwaysProcess: 1
+    Keys: 60000000
+    Axes: []
     Swipes: []

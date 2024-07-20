@@ -6,19 +6,19 @@
 
 # Start
 @char Boy pos:0,82 scale:1 rotation:,,0 time:0
-@slide Boy.death to:25,0 easing:EaseOutBounce time:1 wait:false
+@slide Boy.death to:25,0 easing:EaseOutBounce time:1
 @wait 0.3
-@spawn ShakeCamera
+@shake Camera
 @wait 2
-@slide Boy.jump to:60
+@slide Boy.jump to:60 wait!
 @char Boy.idlebag
 Avatar.idle: Mission start!
-@hidePrinter wait:false
-@spawn Blur params:,1 wait:false
-@camera zoom:0.35 offset:2,-1
-@char "Boy.gun toss" time:2
-@despawn Blur wait:false
-@camera zoom:0 offset:0,0
-@char Boy.jump pos:85,82 scale:0.75 rotation:,,90 time:2 easing:EaseInOutElastic
-@slide Boy.run to:10 time:1
+@hidePrinter
+@blur power:1
+@camera zoom:0.35 offset:2,-1 wait!
+@char "Boy.gun toss" time:2 wait!
+@blur power:0
+@camera zoom:0 offset:0,0 wait!
+@char Boy.jump pos:85,82 scale:0.75 rotation:,,90 time:2 easing:EaseInOutElastic wait!
+@slide Boy.run to:10 time:1 wait!
 @goto .Start

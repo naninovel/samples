@@ -7,4 +7,4 @@ Test input value.|#1|
 
 You've entered: \[`|#4|{i}`\].|#5|
 
-@goto Script003
+@goto Subfolder/Script001

@@ -161,7 +161,7 @@ MonoBehaviour:
     - name: Script002
       pathPrefix: Scripts
       guid: efc6b3a87826d23498028f69d474056f
-    - name: Script003
+    - name: Subfolder/Script001
       pathPrefix: Scripts
       guid: 8b2f2ee6f093e2f4098f3fcf950d5d37
   - Id: Characters/e633b4cb-8f96-4d17-859d-6d1f8cb0f13c

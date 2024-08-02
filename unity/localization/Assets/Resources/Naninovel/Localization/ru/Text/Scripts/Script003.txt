@@ -1,5 +1,0 @@
-; English <en> to Russian <ru> localization document for 'Script003' naninovel script
-
-# 1
-; Test script in subfolder.
-Тестовый скрипт в подпапке.

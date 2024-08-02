@@ -1,11 +1,15 @@
-; English <en> to Japanese <ja> localization document for 'Script002' naninovel script
+; English <en> to Japanese <ja> localization document for 'Script002' Naninovel scenario script
+
+# SCRIPT_ID
+; DO NOT REMOVE OR MODIFY THIS RECORD
+efc6b3a87826d23498028f69d474056f
 
 # 1
 ; Test input value.
 座洗ヤルチ型枠まんらと。
 
 # 2|3
-; > @input i summary:"…|#2|" value:"…|#3|"
+; > @input i summary:"|#2|" value:"|#3|"
 ; Test summary|Test value
 冬投夜ワ半|ごず楽乗ヤケレ
 

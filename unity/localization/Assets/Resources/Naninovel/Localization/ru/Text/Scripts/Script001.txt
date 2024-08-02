@@ -1,7 +1,11 @@
-; English <en> to Russian <ru> localization document for 'Script001' naninovel script
+; English <en> to Russian <ru> localization document for 'Script001' Naninovel scenario script
+
+# SCRIPT_ID
+; DO NOT REMOVE OR MODIFY THIS RECORD
+5da049baf6318a34eb94108f80be19ee
 
 # 1|2|3
-; > …|#1|{ Random(0, 11) }…|#2|[i]…|#3|
+; > |#1|{ Random(0, 11) }|#2|[i]|#3|
 ; Lorem ipsum dolor sit amet, | consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.| Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
 Суждение последовательно. Угловое расстояние, | на первый взгляд, <tip="VN">визуальаный роман</tip> транспонирует трагический здравый смысл, хотя это явно видно на фотогpафической пластинке, полученной с помощью 1.2-метpового телескопа.| Звезда на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах, недоступно решает непреложный натуральный логарифм. Наряду с этим газопылевое облако многопланово гасит даосизм, изменяя привычную реальность.
 
@@ -10,7 +14,7 @@
 Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако ощущение мира колеблет интеллект. Даосизм философски творит популяционный индекс, но кольца видны только при 40–66.
 
 # 5|18|6|7
-; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
+; > |#5||#18|[i]|#6|[spawn ShakePrinter params:,1 !wait]|#7|[< skip!]
 ; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
 Антропосоциология творит параметр.|<br>
 | Суждение преобразует| экваториальный перигелий.
@@ -21,12 +25,12 @@
 Почти каждый.
 
 # 9
-; > @print …|#9|
+; > @print |#9|
 ; Quisque.
 Почти каждый.
 
 # a|b|c
-; > k: …|#a|[i]…|#b|…|#c|
+; > k: |#a|[i]|#b||#c|
 ; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
 Адживика, как принято считать, порождена временем.| Ощущение мира точно притягивает сложный зенит, отрицая очевидное.|<br>
 <br>
@@ -38,27 +42,27 @@
 Закон исключённого третьего "перечеркивает" центральный позитивизм.
 
 # e|f
-; > @print "\…|#e|…Random(0, 10)… \}|#f|"
+; > @print "\|#e|{ Random(0, 10) } \}|#f|"
 ; { | }
 { | }
 
 # 10
-; > @toast "…|#10|" time:1
+; > @toast "|#10|" time:1
 ; Lorem ipsum
 Реликтовый ледник
 
 # 11
-; > @choice "…|#11|" pos:10,50
+; > @choice "|#11|" pos:10,50
 ; Test choice
 Тестовый выбор
 
 # 12
-; > y.Default: …|#12|
+; > y.Default: |#12|
 ; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 Страсть ищет гравитационный парадокс. Юлианская дата наблюдаема. Восход , по определению, представляет собой эллиптический предмет деятельности, изменяя привычную реальность.
 
 # 13|14|15
-; > …|#13|{t_Foo}…|#14|{t_Bar}…|#15|
+; > |#13|{t_Foo}|#14|{t_Bar}|#15|
 ; Value of t_Foo: |, value of t_Bar: |.
 Значение t_Foo: |, значение t_Bar: |.
 
@@ -67,6 +71,6 @@
 
 
 # 17
-; > @print "…|#17|"
+; > @print "|#17|"
 ; Untranslated command line.
 

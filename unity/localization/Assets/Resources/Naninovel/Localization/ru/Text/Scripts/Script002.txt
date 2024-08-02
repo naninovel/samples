@@ -1,11 +1,15 @@
-; English <en> to Russian <ru> localization document for 'Script002' naninovel script
+; English <en> to Russian <ru> localization document for 'Script002' Naninovel scenario script
+
+# SCRIPT_ID
+; DO NOT REMOVE OR MODIFY THIS RECORD
+efc6b3a87826d23498028f69d474056f
 
 # 1
 ; Test input value.
 Тест инпута.
 
 # 2|3
-; > @input i summary:"…|#2|" value:"…|#3|"
+; > @input i summary:"|#2|" value:"|#3|"
 ; Test summary|Test value
 Тестовое заглавие|Тестовое значение
 

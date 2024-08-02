@@ -1,7 +1,11 @@
-; English <en> to Japanese <ja> localization document for 'Script001' naninovel script
+; English <en> to Japanese <ja> localization document for 'Script001' Naninovel scenario script
+
+# SCRIPT_ID
+; DO NOT REMOVE OR MODIFY THIS RECORD
+5da049baf6318a34eb94108f80be19ee
 
 # 1|2|3
-; > …|#1|{ Random(0, 11) }…|#2|[i]…|#3|
+; > |#1|{ Random(0, 11) }|#2|[i]|#3|
 ; Lorem ipsum dolor sit amet, | consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.| Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.
 取オキ氏給てのぱお名販り冬投夜ワ半, | 度えね連開えすむ脳防演ぜ投定携青稿ひーむか梯郵イどで者<tip="VN">ビジュアルノベル</tip>のろざり君二学ヱレ合中クミユオ属抽綱ざきに。米レツチネ必果で利83知ごず楽乗ヤケレ願全スごぴ裏3裸どひン決意表ユノ度将ウアカ子道ち告分びがスゃ内演ぼざゅわ。| 答サマ下清ぽーた張街どなに枚展フ子索トク騰文サヤマ背用使シルヌウ藤集ロチヤ失背へ座洗ヤルチ型枠イエス稿69那卓捨縦まんらと。
 
@@ -10,7 +14,7 @@
 児ワトリ本務3本ドぽ開敷さえトは委2左くんみッ同切キルエヤ行愛ぐぴあ肝持砥ヘ場外をご全輝案オセ口泉節急しふかと取自七俊亮凱ざちくゆ。
 
 # 5|18|6|7
-; > …|#5|…|#18|[i]…|#6|[spawn ShakePrinter params:,1 !wait]…|#7|[< skip!]
+; > |#5||#18|[i]|#6|[spawn ShakePrinter params:,1 !wait]|#7|[< skip!]
 ; Mauris sit|<br>| amet lorem| sit amet nulla malesuada pulvinar.
 作4振きせ治無づけ|<br>
 | 次王サミ阪7企っげ真理ノユ恐3手| りあぐし計言りけゅく元職ねけり伝宿もゃ甲生わべ。
@@ -21,12 +25,12 @@
 全員。
 
 # 9
-; > @print …|#9|
+; > @print |#9|
 ; Quisque.
 全員。
 
 # a|b|c
-; > k: …|#a|[i]…|#b|…|#c|
+; > k: |#a|[i]|#b||#c|
 ; Ut et quam a dui imperdiet eleifend vitae eget neque.| Vestibulum sollicitudin et tortor sed dignissim.|<br><br>Aliquam sit amet <tip="Lorenz">Lorenz</tip> sollicitudin, fringilla dui ac, imperdiet elit.
 済供際ナ社県わさ真囲イ須生備ミ京5準| ネユホ刺三進ょ浜共エサヘ要万ヨムスサ分岡じ言重著菱ラロ農生|<br>
 <br>
@@ -38,27 +42,27 @@
 側チ輸富ハ鉄青フ堂購ソホ権文「ぞゅゆょ収港」すなおで問9断まりつ詐経ざ一
 
 # e|f
-; > @print "\…|#e|…Random(0, 10)… \}|#f|"
+; > @print "\|#e|{ Random(0, 10) } \}|#f|"
 ; { | }
 { | }
 
 # 10
-; > @toast "…|#10|" time:1
+; > @toast "|#10|" time:1
 ; Lorem ipsum
 遺物氷河
 
 # 11
-; > @choice "…|#11|" pos:10,50
+; > @choice "|#11|" pos:10,50
 ; Test choice
 速らな設
 
 # 12
-; > y.Default: …|#12|
+; > y.Default: |#12|
 ; Donec ligula nulla, pulvinar a ex suscipit, gravida vulputate orci. Maecenas suscipit nisl vel nibh volutpat varius. Vestibulum turpis sapien, fermentum in tempor in, venenatis vel sapien.
 話声コ真禁選またでば車地ょにべ学裏モヒヘ量併ろてう江供ユネスナ止人エケラナ下月京ど新84郷たリ秘最ヲラレ刊行ほひ風国つみしろ馬証ウテ皇馬るぶ。
 
 # 13|14|15
-; > …|#13|{t_Foo}…|#14|{t_Bar}…|#15|
+; > |#13|{t_Foo}|#14|{t_Bar}|#15|
 ; Value of t_Foo: |, value of t_Bar: |.
 t_Fooの値： |,巴t_Barの値： |。
 
@@ -67,6 +71,6 @@ t_Fooの値： |,巴t_Barの値： |。
 
 
 # 17
-; > @print "…|#17|"
+; > @print "|#17|"
 ; Untranslated command line.
 

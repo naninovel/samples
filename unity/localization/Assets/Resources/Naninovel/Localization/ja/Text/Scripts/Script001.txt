@@ -1,9 +1,5 @@
 ; English <en> to Japanese <ja> localization document for 'Script001' Naninovel scenario script
 
-# SCRIPT_ID
-; DO NOT REMOVE OR MODIFY THIS RECORD
-5da049baf6318a34eb94108f80be19ee
-
 # 1|2|3
 ; > |#1|{ Random(0, 11) }|#2|[i]|#3|
 ; Lorem ipsum dolor sit amet, | consectetur adipiscing elit. Fusce ut mauris sem. Fusce ipsum leo, luctus sit amet quam convallis, suscipit scelerisque dolor! Maecenas <tip="VN">visual novel</tip> pulvinar felis, sed aliquam est. Mauris tincidunt tincidunt sapien non dictum. In quis mauris nibh.| Quisque ipsum eros, lacinia at lobortis vitae, semper ut ante. Sed lobortis id sapien vitae auctor. Quisque consectetur aliquet vulputate. Mauris fringilla neque non bibendum aliquet.

@@ -1,6 +1,4 @@
-﻿// ReSharper disable ArrangeTypeMemberModifiers
-
-using System.Collections;
+﻿using System.Collections;
 using Naninovel;
 using Naninovel.E2E;
 using UnityEngine.TestTools;
@@ -12,13 +10,13 @@ public class Routes
     public IEnumerator CanCompleteCommonRouteWithMaxX () => new E2E()
         .WithTransientState().WithFastForward()
         .StartNew().Play(CommonMaxX)
-        .Once(Script("X_Route")).Ensure(Var("xPoints", 13));
+        .Once(Script("route-2-x/scene-1")).Ensure(Var("xPoints", 13));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithMaxY () => new E2E()
         .WithTransientState().WithFastForward()
         .StartNew().Play(CommonMaxY)
-        .Once(Script("Y_Route")).Ensure(Var("yPoints", 12));
+        .Once(Script("route-2-y/scene-1")).Ensure(Var("yPoints", 12));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithMinX () => new E2E()
@@ -56,9 +54,9 @@ public class Routes
     public IEnumerator WhenTrueRouteCompleteTitleBackChanges () => new E2E()
         .WithTransientState(GlobalStateMap.With(
             new CustomVariableManager.GlobalState {
-                GlobalVariableMap = new SerializableLiteralStringMap {
-                    ["g_completedX"] = "true",
-                    ["g_completedY"] = "true",
+                GlobalVariables = new[] {
+                    new CustomVariable("g_completedX", CustomVariableScope.Global, new CustomVariableValue(true)),
+                    new CustomVariable("g_completedY", CustomVariableScope.Global, new CustomVariableValue(true))
                 }
             }))
         .WithFastForward()

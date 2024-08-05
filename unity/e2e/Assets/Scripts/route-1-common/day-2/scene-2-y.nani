@@ -1,4 +1,4 @@
 @back tint:cyan
 Common route.|#1|[i] Day 2.|#2|[i] Scene Y.|#3|
 @set yPoints+=2
-@goto C_Day2-3-SceneB
+@goto route-1-common/day-2/scene-3

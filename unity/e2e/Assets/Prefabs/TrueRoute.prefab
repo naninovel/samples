@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a93ec42ebe3044abd36de19cc3a880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  category: DefaultUI
+  document: DefaultUI
   key: TitleMenu.TrueRoute
   defaultValue: TRUE ROUTE
   onValueChanged:
@@ -315,12 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptName: 
+  scriptPath: 
   scriptText: '@hideUI TrueRoute
 
     @hideUI TitleUI
 
-    @goto T_Route'
+    @goto route-3-true/scene-1'
   playOnAwake: 0
   disableWaitInput: 0
 --- !u!1 &3947574075996799691
@@ -5198,9 +5198,12 @@ MonoBehaviour:
   hideInThumbnail: 0
   saveVisibilityState: 0
   blockInputWhenVisible: 0
+  adaptToInputMode: 1
   allowedSamplers: []
   modalUI: 1
   modalGroup: Title
+  buttonControls: {fileID: 0}
+  controlsLegend: {fileID: 0}
   fontChangeConfiguration:
   - Object: {fileID: 6306036015961478139}
     IncludeChildren: 1

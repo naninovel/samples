@@ -1,16 +1,16 @@
 @back Rain
 Common route.|#1|[i] Day 3.|#2|[i] Scene A.|#3|
 
-Choose to loose a health or X point.|#4|[skipInput]
+Choose to loose a health or X point.|#4|[< skip!]
 @choice "Loose health|#d3-loose-hp|" set:healthPoints--
 @choice "Loose X|#d3-loose-x|" set:xPoints--
 @stop
 
 If player has no health left, go to dead end.|#5|
-@goto C_Day3-2-DeadEnd if:healthPoints<=0
+@goto route-1-common/day-3/scene-2-dead-end if:healthPoints<=0
 
 If X is more than Y and above 2, go to X route.|#6|
-@goto X_Route if:xPoints>yPoints&xPoints>2
+@goto route-2-x/scene-1 if:xPoints>yPoints&xPoints>2
 
 @if yPoints=2
     @choice "Last chance to get to route Y|#d3-last-y|" set:yPoints++
@@ -19,7 +19,7 @@ If X is more than Y and above 2, go to X route.|#6|
 @endIf
 
 If Y is above 2, go to Y route.|#7|
-@goto Y_Route if:yPoints>2
+@goto route-2-y/scene-1 if:yPoints>2
 
 If neither of the route points is above 2, go to bad end.|#8|
-@goto C_Day3-2-BadEnd
+@goto route-1-common/day-3/scene-2-bad-end

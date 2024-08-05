@@ -5,9 +5,9 @@ It's scene A. The fact that this text line has "a" identifier is purely coincede
 ; Bonus content based on time-limited event result previously.
 @gosub .BonusForLimitedChoice
 
-Choose which scene to visit next. This will have major impact on which route (X or Y) you'll allign to.|#b|[skipInput]
-@choice X|#d2-toward-x| goto:C_Day2-2-SceneX
-@choice Y|#d2-toward-y| goto:C_Day2-2-SceneY
+Choose which scene to visit next. This will have major impact on which route (X or Y) you'll allign to.|#b|[< skip!]
+@choice X|#d2-toward-x| goto:route-1-common/day-2/scene-2-x
+@choice Y|#d2-toward-y| goto:route-1-common/day-2/scene-2-y
 @stop
 
 # BonusForLimitedChoice

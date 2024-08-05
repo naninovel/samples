@@ -10,4 +10,4 @@ If player manages to pick a choice in the limited time frame they get bonus cont
 @clearChoice *
 
 End of day 2 of common route.|#2|
-@goto C_Day2-1-SceneA
+@goto route-1-common/day-2/scene-1

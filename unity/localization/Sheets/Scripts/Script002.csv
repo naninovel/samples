@@ -1,5 +1,4 @@
 ﻿key,annotation,en,ja,ru
-SCRIPT_ID,,DO NOT REMOVE OR MODIFY THIS RECORD,efc6b3a87826d23498028f69d474056f,efc6b3a87826d23498028f69d474056f
 1,,Test input value.,座洗ヤルチ型枠まんらと。,Тест инпута.
 2|3,"@input i summary:""|#2|"" value:""|#3|""",Test summary|Test value,冬投夜ワ半|ごず楽乗ヤケレ,Тестовое заглавие|Тестовое значение
 4|5,You've entered: \[`|#4|{i}`\].|#5|,You've entered: [`|`].,まんらと[`|`]。,Вы ввели: [`|`].

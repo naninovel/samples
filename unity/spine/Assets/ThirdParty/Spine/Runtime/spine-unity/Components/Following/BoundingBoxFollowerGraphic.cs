@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -111,7 +111,7 @@ namespace Spine.Unity {
 			colliderTable.Clear();
 			nameTable.Clear();
 
-			var skeleton = skeletonGraphic.Skeleton;
+			Skeleton skeleton = skeletonGraphic.Skeleton;
 			if (skeleton == null)
 				return;
 			slot = skeleton.FindSlot(slotName);
@@ -123,13 +123,10 @@ namespace Spine.Unity {
 			int slotIndex = slot.Data.Index;
 
 			int requiredCollidersCount = 0;
-			var colliders = GetComponents<PolygonCollider2D>();
+			PolygonCollider2D[] colliders = GetComponents<PolygonCollider2D>();
 			if (this.gameObject.activeInHierarchy) {
-				var canvas = skeletonGraphic.canvas;
-				if (canvas == null) canvas = skeletonGraphic.GetComponentInParent<Canvas>();
-				float scale = canvas != null ? canvas.referencePixelsPerUnit : 100.0f;
-
-				foreach (var skin in skeleton.Data.Skins)
+				float scale = skeletonGraphic.MeshScale;
+				foreach (Skin skin in skeleton.Data.Skins)
 					AddCollidersForSkin(skin, slotIndex, colliders, scale, ref requiredCollidersCount);
 
 				if (skeleton.Skin != null)
@@ -150,19 +147,19 @@ namespace Spine.Unity {
 
 		void AddCollidersForSkin (Skin skin, int slotIndex, PolygonCollider2D[] previousColliders, float scale, ref int collidersCount) {
 			if (skin == null) return;
-			var skinEntries = new List<Skin.SkinEntry>();
+			List<Skin.SkinEntry> skinEntries = new List<Skin.SkinEntry>();
 			skin.GetAttachments(slotIndex, skinEntries);
 
-			foreach (var entry in skinEntries) {
-				var attachment = skin.GetAttachment(slotIndex, entry.Name);
-				var boundingBoxAttachment = attachment as BoundingBoxAttachment;
+			foreach (Skin.SkinEntry entry in skinEntries) {
+				Attachment attachment = skin.GetAttachment(slotIndex, entry.Name);
+				BoundingBoxAttachment boundingBoxAttachment = attachment as BoundingBoxAttachment;
 
 				if (BoundingBoxFollowerGraphic.DebugMessages && attachment != null && boundingBoxAttachment == null)
 					Debug.Log("BoundingBoxFollowerGraphic tried to follow a slot that contains non-boundingbox attachments: " + slotName);
 
 				if (boundingBoxAttachment != null) {
 					if (!colliderTable.ContainsKey(boundingBoxAttachment)) {
-						var bbCollider = collidersCount < previousColliders.Length ?
+						PolygonCollider2D bbCollider = collidersCount < previousColliders.Length ?
 							previousColliders[collidersCount] : gameObject.AddComponent<PolygonCollider2D>();
 						++collidersCount;
 						SkeletonUtility.SetColliderPointsLocal(bbCollider, slot, boundingBoxAttachment, scale);
@@ -188,7 +185,7 @@ namespace Spine.Unity {
 
 		public void ClearState () {
 			if (colliderTable != null)
-				foreach (var col in colliderTable.Values)
+				foreach (PolygonCollider2D col in colliderTable.Values)
 					col.enabled = false;
 
 			currentAttachment = null;
@@ -197,11 +194,11 @@ namespace Spine.Unity {
 		}
 
 		void DisposeExcessCollidersAfter (int requiredCount) {
-			var colliders = GetComponents<PolygonCollider2D>();
+			PolygonCollider2D[] colliders = GetComponents<PolygonCollider2D>();
 			if (colliders.Length == 0) return;
 
 			for (int i = requiredCount; i < colliders.Length; ++i) {
-				var collider = colliders[i];
+				PolygonCollider2D collider = colliders[i];
 				if (collider != null) {
 #if UNITY_EDITOR
 					if (Application.isEditor && !Application.isPlaying)
@@ -221,7 +218,7 @@ namespace Spine.Unity {
 		/// <summary>Sets the current collider to match attachment.</summary>
 		/// <param name="attachment">If the attachment is not a bounding box, it will be treated as null.</param>
 		void MatchAttachment (Attachment attachment) {
-			var bbAttachment = attachment as BoundingBoxAttachment;
+			BoundingBoxAttachment bbAttachment = attachment as BoundingBoxAttachment;
 
 			if (BoundingBoxFollowerGraphic.DebugMessages && attachment != null && bbAttachment == null)
 				Debug.LogWarning("BoundingBoxFollowerGraphic tried to match a non-boundingbox attachment. It will treat it as null.");

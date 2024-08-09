@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
@@ -33,12 +33,13 @@ using UnityEngine;
 
 namespace Spine.Unity {
 
-	[AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
 	public abstract class SpineAttributeBase : PropertyAttribute {
 		public string dataField = "";
 		public string startsWith = "";
 		public bool includeNone = true;
 		public bool fallbackToTextField = false;
+		public bool avoidGenericMenu = false;
 	}
 
 	public class SpineBone : SpineAttributeBase {
@@ -64,7 +65,7 @@ namespace Spine.Unity {
 		}
 
 		public static Spine.BoneData GetBoneData (string boneName, SkeletonDataAsset skeletonDataAsset) {
-			var data = skeletonDataAsset.GetSkeletonData(true);
+			SkeletonData data = skeletonDataAsset.GetSkeletonData(true);
 			return data.FindBone(boneName);
 		}
 	}
@@ -103,11 +104,14 @@ namespace Spine.Unity {
 		/// Valid types are SkeletonDataAsset and SkeletonRenderer (and derivatives)
 		/// If left empty and the script the attribute is applied to is derived from Component, GetComponent<SkeletonRenderer>() will be called as a fallback.
 		/// </param>
-		public SpineAnimation (string startsWith = "", string dataField = "", bool includeNone = true, bool fallbackToTextField = false) {
+		public SpineAnimation (string startsWith = "", string dataField = "",
+			bool includeNone = true, bool fallbackToTextField = false, bool avoidGenericMenu = false) {
+
 			this.startsWith = startsWith;
 			this.dataField = dataField;
 			this.includeNone = includeNone;
 			this.fallbackToTextField = fallbackToTextField;
+			this.avoidGenericMenu = avoidGenericMenu;
 		}
 	}
 
@@ -205,12 +209,15 @@ namespace Spine.Unity {
 
 		public bool defaultAsEmptyString = false;
 
-		public SpineSkin (string startsWith = "", string dataField = "", bool includeNone = true, bool fallbackToTextField = false, bool defaultAsEmptyString = false) {
+		public SpineSkin (string startsWith = "", string dataField = "", bool includeNone = false,
+			bool fallbackToTextField = false, bool defaultAsEmptyString = false, bool avoidGenericMenu = false) {
+
 			this.startsWith = startsWith;
 			this.dataField = dataField;
 			this.includeNone = includeNone;
 			this.fallbackToTextField = fallbackToTextField;
 			this.defaultAsEmptyString = defaultAsEmptyString;
+			this.avoidGenericMenu = avoidGenericMenu;
 		}
 	}
 
@@ -251,7 +258,7 @@ namespace Spine.Unity {
 		}
 
 		public static Spine.Attachment GetAttachment (string attachmentPath, Spine.SkeletonData skeletonData) {
-			var hierarchy = SpineAttachment.GetHierarchy(attachmentPath);
+			SpineAttachment.Hierarchy hierarchy = SpineAttachment.GetHierarchy(attachmentPath);
 			if (string.IsNullOrEmpty(hierarchy.name)) return null;
 
 			SlotData slot = skeletonData.FindSlot(hierarchy.slot);

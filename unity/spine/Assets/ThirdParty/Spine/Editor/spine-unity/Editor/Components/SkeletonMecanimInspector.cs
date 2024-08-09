@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 // Contributed by: Mitch Thompson
@@ -78,9 +78,9 @@ namespace Spine.Unity.Editor {
 		}
 
 		protected void AddRootMotionComponentIfEnabled () {
-			foreach (var t in targets) {
-				var component = t as Component;
-				var animator = component.GetComponent<Animator>();
+			foreach (UnityEngine.Object t in targets) {
+				Component component = t as Component;
+				Animator animator = component.GetComponent<Animator>();
 				if (animator != null && animator.applyRootMotion) {
 					if (component.GetComponent<SkeletonMecanimRootMotion>() == null) {
 						component.gameObject.AddComponent<SkeletonMecanimRootMotion>();
@@ -95,11 +95,11 @@ namespace Spine.Unity.Editor {
 			float widthMixColumn = 84;
 
 			using (new GUILayout.HorizontalScope()) {
-				var rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.singleLineHeight);
+				Rect rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.singleLineHeight);
 				rect.width = widthLayerColumn;
 				EditorGUI.LabelField(rect, SpineInspectorUtility.TempContent("Mecanim Layer"), EditorStyles.boldLabel);
 
-				var savedIndent = EditorGUI.indentLevel;
+				int savedIndent = EditorGUI.indentLevel;
 				EditorGUI.indentLevel = 0;
 
 				rect.position += new Vector2(rect.width, 0);
@@ -115,14 +115,14 @@ namespace Spine.Unity.Editor {
 					using (new GUILayout.HorizontalScope()) {
 						string layerName = i < layerNames.Length ? layerNames[i] : ("Layer " + i);
 
-						var rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.singleLineHeight);
+						Rect rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.singleLineHeight);
 						rect.width = widthLayerColumn;
 						EditorGUI.PrefixLabel(rect, SpineInspectorUtility.TempContent(layerName));
 
-						var savedIndent = EditorGUI.indentLevel;
+						int savedIndent = EditorGUI.indentLevel;
 						EditorGUI.indentLevel = 0;
 
-						var mixMode = layerMixModes.GetArrayElementAtIndex(i);
+						SerializedProperty mixMode = layerMixModes.GetArrayElementAtIndex(i);
 						rect.position += new Vector2(rect.width, 0);
 						rect.width = widthMixColumn;
 						EditorGUI.PropertyField(rect, mixMode, GUIContent.none);
@@ -137,7 +137,7 @@ namespace Spine.Unity.Editor {
 			int maxLayerCount = 0;
 			int maxIndex = 0;
 			for (int i = 0; i < targets.Length; ++i) {
-				var skeletonMecanim = ((SkeletonMecanim)targets[i]);
+				SkeletonMecanim skeletonMecanim = ((SkeletonMecanim)targets[i]);
 				int count = skeletonMecanim.Translator.MecanimLayerCount;
 				if (count > maxLayerCount) {
 					maxLayerCount = count;
@@ -146,7 +146,7 @@ namespace Spine.Unity.Editor {
 			}
 			if (maxLayerCount == 0)
 				return new string[0];
-			var skeletonMecanimMaxLayers = ((SkeletonMecanim)targets[maxIndex]);
+			SkeletonMecanim skeletonMecanimMaxLayers = ((SkeletonMecanim)targets[maxIndex]);
 			return skeletonMecanimMaxLayers.Translator.MecanimLayerNames;
 		}
 	}

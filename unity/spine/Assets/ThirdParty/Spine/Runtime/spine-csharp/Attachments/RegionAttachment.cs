@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,28 +23,25 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
 
 namespace Spine {
 	/// <summary>Attachment that displays a texture region.</summary>
-	public class RegionAttachment : Attachment, IHasRendererObject {
-		public const int BLX = 0;
-		public const int BLY = 1;
-		public const int ULX = 2;
-		public const int ULY = 3;
-		public const int URX = 4;
-		public const int URY = 5;
-		public const int BRX = 6;
-		public const int BRY = 7;
+	public class RegionAttachment : Attachment, IHasTextureRegion {
+		public const int BLX = 0, BLY = 1;
+		public const int ULX = 2, ULY = 3;
+		public const int URX = 4, URY = 5;
+		public const int BRX = 6, BRY = 7;
 
+		internal TextureRegion region;
 		internal float x, y, rotation, scaleX = 1, scaleY = 1, width, height;
-		internal float regionOffsetX, regionOffsetY, regionWidth, regionHeight, regionOriginalWidth, regionOriginalHeight;
 		internal float[] offset = new float[8], uvs = new float[8];
 		internal float r = 1, g = 1, b = 1, a = 1;
+		internal Sequence sequence;
 
 		public float X { get { return x; } set { x = value; } }
 		public float Y { get { return y; } set { y = value; } }
@@ -60,31 +57,81 @@ namespace Spine {
 		public float A { get { return a; } set { a = value; } }
 
 		public string Path { get; set; }
-		public object RendererObject { get; set; }
-		public float RegionOffsetX { get { return regionOffsetX; } set { regionOffsetX = value; } }
-		public float RegionOffsetY { get { return regionOffsetY; } set { regionOffsetY = value; } } // Pixels stripped from the bottom left, unrotated.
-		public float RegionWidth { get { return regionWidth; } set { regionWidth = value; } }
-		public float RegionHeight { get { return regionHeight; } set { regionHeight = value; } } // Unrotated, stripped size.
-		public float RegionOriginalWidth { get { return regionOriginalWidth; } set { regionOriginalWidth = value; } }
-		public float RegionOriginalHeight { get { return regionOriginalHeight; } set { regionOriginalHeight = value; } } // Unrotated, unstripped size.
+		public TextureRegion Region { get { return region; } set { region = value; } }
 
+		/// <summary>For each of the 4 vertices, a pair of <code>x,y</code> values that is the local position of the vertex.</summary>
+		/// <seealso cref="UpdateRegion"/>
 		public float[] Offset { get { return offset; } }
 		public float[] UVs { get { return uvs; } }
+		public Sequence Sequence { get { return sequence; } set { sequence = value; } }
 
 		public RegionAttachment (string name)
 			: base(name) {
 		}
 
-		public void UpdateOffset () {
-			float regionScaleX = width / regionOriginalWidth * scaleX;
-			float regionScaleY = height / regionOriginalHeight * scaleY;
-			float localX = -width / 2 * scaleX + regionOffsetX * regionScaleX;
-			float localY = -height / 2 * scaleY + regionOffsetY * regionScaleY;
-			float localX2 = localX + regionWidth * regionScaleX;
-			float localY2 = localY + regionHeight * regionScaleY;
-			float cos = MathUtils.CosDeg(this.rotation);
-			float sin = MathUtils.SinDeg(this.rotation);
-			float x = this.x, y = this.y;
+		/// <summary>Copy constructor.</summary>
+		public RegionAttachment (RegionAttachment other)
+			: base(other) {
+			region = other.region;
+			Path = other.Path;
+			x = other.x;
+			y = other.y;
+			scaleX = other.scaleX;
+			scaleY = other.scaleY;
+			rotation = other.rotation;
+			width = other.width;
+			height = other.height;
+			Array.Copy(other.uvs, 0, uvs, 0, 8);
+			Array.Copy(other.offset, 0, offset, 0, 8);
+			r = other.r;
+			g = other.g;
+			b = other.b;
+			a = other.a;
+			sequence = other.sequence == null ? null : new Sequence(other.sequence);
+		}
+
+		/// <summary>Calculates the <see cref="Offset"/> and <see cref="UVs"/> using the region and the attachment's transform. Must be called if the
+		/// region, the region's properties, or the transform are changed.</summary>
+		public void UpdateRegion () {
+			float[] uvs = this.uvs;
+			if (region == null) {
+				uvs[BLX] = 0;
+				uvs[BLY] = 0;
+				uvs[ULX] = 0;
+				uvs[ULY] = 1;
+				uvs[URX] = 1;
+				uvs[URY] = 1;
+				uvs[BRX] = 1;
+				uvs[BRY] = 0;
+				return;
+			}
+
+			float width = Width, height = Height;
+			float localX2 = width / 2;
+			float localY2 = height / 2;
+			float localX = -localX2;
+			float localY = -localY2;
+			bool rotated = false;
+			if (region is AtlasRegion) {
+				AtlasRegion region = (AtlasRegion)this.region;
+				localX += region.offsetX / region.originalWidth * width;
+				localY += region.offsetY / region.originalHeight * height;
+				if (region.degrees == 90) {
+					rotated = true;
+					localX2 -= (region.originalWidth - region.offsetX - region.packedHeight) / region.originalWidth * width;
+					localY2 -= (region.originalHeight - region.offsetY - region.packedWidth) / region.originalHeight * height;
+				} else {
+					localX2 -= (region.originalWidth - region.offsetX - region.packedWidth) / region.originalWidth * width;
+					localY2 -= (region.originalHeight - region.offsetY - region.packedHeight) / region.originalHeight * height;
+				}
+			}
+			float scaleX = ScaleX, scaleY = ScaleY;
+			localX *= scaleX;
+			localY *= scaleY;
+			localX2 *= scaleX;
+			localY2 *= scaleY;
+			float r = Rotation * MathUtils.DegRad, cos = (float)Math.Cos(r), sin = (float)Math.Sin(r);
+			float x = X, y = Y;
 			float localXCos = localX * cos + x;
 			float localXSin = localX * sin;
 			float localYCos = localY * cos + y;
@@ -102,39 +149,40 @@ namespace Spine {
 			offset[URY] = localY2Cos + localX2Sin;
 			offset[BRX] = localX2Cos - localYSin;
 			offset[BRY] = localYCos + localX2Sin;
-		}
 
-		public void SetUVs (float u, float v, float u2, float v2, int degrees) {
-			float[] uvs = this.uvs;
-			// UV values differ from spine-libgdx.
-			if (degrees == 90) {
-				uvs[URX] = u;
-				uvs[URY] = v2;
-				uvs[BRX] = u;
-				uvs[BRY] = v;
-				uvs[BLX] = u2;
-				uvs[BLY] = v;
-				uvs[ULX] = u2;
-				uvs[ULY] = v2;
+			if (rotated) {
+				uvs[BLX] = region.u2;
+				uvs[BLY] = region.v;
+				uvs[ULX] = region.u2;
+				uvs[ULY] = region.v2;
+				uvs[URX] = region.u;
+				uvs[URY] = region.v2;
+				uvs[BRX] = region.u;
+				uvs[BRY] = region.v;
 			} else {
-				uvs[ULX] = u;
-				uvs[ULY] = v2;
-				uvs[URX] = u;
-				uvs[URY] = v;
-				uvs[BRX] = u2;
-				uvs[BRY] = v;
-				uvs[BLX] = u2;
-				uvs[BLY] = v2;
+				uvs[BLX] = region.u2;
+				uvs[BLY] = region.v2;
+				uvs[ULX] = region.u;
+				uvs[ULY] = region.v2;
+				uvs[URX] = region.u;
+				uvs[URY] = region.v;
+				uvs[BRX] = region.u2;
+				uvs[BRY] = region.v;
 			}
 		}
 
-		/// <summary>Transforms the attachment's four vertices to world coordinates.</summary>
+		/// <summary>
+		/// Transforms the attachment's four vertices to world coordinates. If the attachment has a <see cref="Sequence"/> the region may
+		/// be changed.</summary>
 		/// <param name="bone">The parent bone.</param>
 		/// <param name="worldVertices">The output world vertices. Must have a length greater than or equal to offset + 8.</param>
 		/// <param name="offset">The worldVertices index to begin writing values.</param>
 		/// <param name="stride">The number of worldVertices entries between the value pairs written.</param>
-		public void ComputeWorldVertices (Bone bone, float[] worldVertices, int offset, int stride = 2) {
+		public void ComputeWorldVertices (Slot slot, float[] worldVertices, int offset, int stride = 2) {
+			if (sequence != null) sequence.Apply(slot, this);
+
 			float[] vertexOffset = this.offset;
+			Bone bone = slot.Bone;
 			float bwx = bone.worldX, bwy = bone.worldY;
 			float a = bone.a, b = bone.b, c = bone.c, d = bone.d;
 			float offsetX, offsetY;
@@ -166,29 +214,7 @@ namespace Spine {
 		}
 
 		public override Attachment Copy () {
-			RegionAttachment copy = new RegionAttachment(this.Name);
-			copy.RendererObject = RendererObject;
-			copy.regionOffsetX = regionOffsetX;
-			copy.regionOffsetY = regionOffsetY;
-			copy.regionWidth = regionWidth;
-			copy.regionHeight = regionHeight;
-			copy.regionOriginalWidth = regionOriginalWidth;
-			copy.regionOriginalHeight = regionOriginalHeight;
-			copy.Path = Path;
-			copy.x = x;
-			copy.y = y;
-			copy.scaleX = scaleX;
-			copy.scaleY = scaleY;
-			copy.rotation = rotation;
-			copy.width = width;
-			copy.height = height;
-			Array.Copy(uvs, 0, copy.uvs, 0, 8);
-			Array.Copy(offset, 0, copy.offset, 0, 8);
-			copy.r = r;
-			copy.g = g;
-			copy.b = b;
-			copy.a = a;
-			return copy;
+			return new RegionAttachment(this);
 		}
 	}
 }

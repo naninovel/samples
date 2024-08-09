@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using Spine.Unity;
@@ -39,22 +39,26 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 	bool _showStencilSettings = false;
 
 	MaterialProperty _OutlineWidth = null;
+	MaterialProperty _UseScreenSpaceOutlineWidth = null;
 	MaterialProperty _OutlineColor = null;
 	MaterialProperty _OutlineReferenceTexWidth = null;
 	MaterialProperty _ThresholdEnd = null;
 	MaterialProperty _OutlineSmoothness = null;
 	MaterialProperty _Use8Neighbourhood = null;
+	MaterialProperty _OutlineOpaqueAlpha = null;
 	MaterialProperty _OutlineMipLevel = null;
 	MaterialProperty _StencilComp = null;
 	MaterialProperty _StencilRef = null;
 
 	static GUIContent _EnableOutlineText = new GUIContent("Outline", "Enable outline rendering. Draws an outline by sampling 4 or 8 neighbourhood pixels at a given distance specified via 'Outline Width'.");
 	static GUIContent _OutlineWidthText = new GUIContent("Outline Width", "");
+	static GUIContent _UseScreenSpaceOutlineWidthText = new GUIContent("Width in Screen Space", "Enable to keep the outline width constant in screen space instead of texture space. Requires more expensive computations.");
 	static GUIContent _OutlineColorText = new GUIContent("Outline Color", "");
 	static GUIContent _OutlineReferenceTexWidthText = new GUIContent("Reference Texture Width", "");
 	static GUIContent _ThresholdEndText = new GUIContent("Outline Threshold", "");
 	static GUIContent _OutlineSmoothnessText = new GUIContent("Outline Smoothness", "");
 	static GUIContent _Use8NeighbourhoodText = new GUIContent("Sample 8 Neighbours", "");
+	static GUIContent _OutlineOpaqueAlphaText = new GUIContent("Opaque Alpha", "If a pixel's alpha value is above this threshold it will not receive any outline color overlay. Use to exclude problematic semi-transparent areas.");
 	static GUIContent _OutlineMipLevelText = new GUIContent("Outline Mip Level", "");
 	static GUIContent _StencilCompText = new GUIContent("Stencil Comparison", "");
 	static GUIContent _StencilRefText = new GUIContent("Stencil Reference", "");
@@ -82,15 +86,16 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 	#endregion
 
 	#region Virtual Interface
-
 	protected virtual void FindProperties (MaterialProperty[] props) {
 
 		_OutlineWidth = FindProperty("_OutlineWidth", props, false);
+		_UseScreenSpaceOutlineWidth = FindProperty("_UseScreenSpaceOutlineWidth", props, false);
 		_OutlineReferenceTexWidth = FindProperty("_OutlineReferenceTexWidth", props, false);
 		_OutlineColor = FindProperty("_OutlineColor", props, false);
 		_ThresholdEnd = FindProperty("_ThresholdEnd", props, false);
 		_OutlineSmoothness = FindProperty("_OutlineSmoothness", props, false);
 		_Use8Neighbourhood = FindProperty("_Use8Neighbourhood", props, false);
+		_OutlineOpaqueAlpha = FindProperty("_OutlineOpaqueAlpha", props, false);
 		_OutlineMipLevel = FindProperty("_OutlineMipLevel", props, false);
 
 		_StencilComp = FindProperty("_StencilComp", props, false);
@@ -130,7 +135,7 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 			EditorGUI.showMixedValue = mixedValue;
 			EditorGUI.BeginChangeCheck();
 
-			var origFontStyle = EditorStyles.label.fontStyle;
+			FontStyle origFontStyle = EditorStyles.label.fontStyle;
 			EditorStyles.label.fontStyle = FontStyle.Bold;
 			isOutlineEnabled = EditorGUILayout.Toggle(_EnableOutlineText, isOutlineEnabled);
 			EditorStyles.label.fontStyle = origFontStyle;
@@ -141,7 +146,7 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 				}
 			}
 		} else {
-			var origFontStyle = EditorStyles.label.fontStyle;
+			FontStyle origFontStyle = EditorStyles.label.fontStyle;
 			EditorStyles.label.fontStyle = FontStyle.Bold;
 			EditorGUILayout.LabelField(_EnableOutlineText);
 			EditorStyles.label.fontStyle = origFontStyle;
@@ -149,6 +154,8 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 
 		if (isOutlineEnabled) {
 			_materialEditor.ShaderProperty(_OutlineWidth, _OutlineWidthText);
+			if (_UseScreenSpaceOutlineWidth != null)
+				_materialEditor.ShaderProperty(_UseScreenSpaceOutlineWidth, _UseScreenSpaceOutlineWidthText);
 			_materialEditor.ShaderProperty(_OutlineColor, _OutlineColorText);
 
 			_showAdvancedOutlineSettings = EditorGUILayout.Foldout(_showAdvancedOutlineSettings, _OutlineAdvancedText);
@@ -158,19 +165,16 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 					_materialEditor.ShaderProperty(_ThresholdEnd, _ThresholdEndText);
 					_materialEditor.ShaderProperty(_OutlineSmoothness, _OutlineSmoothnessText);
 					_materialEditor.ShaderProperty(_Use8Neighbourhood, _Use8NeighbourhoodText);
+					_materialEditor.ShaderProperty(_OutlineOpaqueAlpha, _OutlineOpaqueAlphaText);
 					_materialEditor.ShaderProperty(_OutlineMipLevel, _OutlineMipLevelText);
 				}
 			}
 		}
 	}
 
-	#endregion
+	protected virtual void SwitchShaderToOutlineSettings (Material material, bool enableOutline) {
 
-	#region Private Functions
-
-	void SwitchShaderToOutlineSettings (Material material, bool enableOutline) {
-
-		var shaderName = material.shader.name;
+		string shaderName = material.shader.name;
 		bool isSetToOutlineShader = shaderName.Contains(ShaderOutlineNamePrefix);
 		if (isSetToOutlineShader && !enableOutline) {
 			shaderName = shaderName.Replace(ShaderOutlineNamePrefix, ShaderNormalNamePrefix);
@@ -183,7 +187,7 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 		}
 	}
 
-	static bool IsOutlineEnabled (MaterialEditor editor, out bool mixedValue) {
+	protected static bool IsOutlineEnabled (MaterialEditor editor, out bool mixedValue) {
 		mixedValue = false;
 		bool isAnyEnabled = false;
 		foreach (Material material in editor.targets) {
@@ -196,7 +200,7 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 		return isAnyEnabled;
 	}
 
-	static bool IsShaderWithoutStandardVariantShader (MaterialEditor editor, out bool mixedValue) {
+	protected static bool IsShaderWithoutStandardVariantShader (MaterialEditor editor, out bool mixedValue) {
 		mixedValue = false;
 		bool isAnyShaderWithoutVariant = false;
 		foreach (Material material in editor.targets) {
@@ -209,13 +213,12 @@ public class SpineShaderWithOutlineGUI : ShaderGUI {
 		return isAnyShaderWithoutVariant;
 	}
 
-	static bool BoldToggleField (GUIContent label, bool value) {
+	protected static bool BoldToggleField (GUIContent label, bool value) {
 		FontStyle origFontStyle = EditorStyles.label.fontStyle;
 		EditorStyles.label.fontStyle = FontStyle.Bold;
 		value = EditorGUILayout.Toggle(label, value, EditorStyles.toggle);
 		EditorStyles.label.fontStyle = origFontStyle;
 		return value;
 	}
-
 	#endregion
 }

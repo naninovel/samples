@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3be34281d83bad429e22787cd3c8069, type: 3}
   m_Name: CharactersConfiguration
   m_EditorClassIdentifier: 
+  DefaultDuration: 0.35
   DefaultEasing: 1
   AutoShowOnModify: 1
   SceneOrigin: {x: 0.5, y: 0}
@@ -31,7 +32,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     guid: e4563fc5-5c0b-411f-97a3-daf297db82c7
     customData:
-      id: 0
+      rid: -2
     Pivot: {x: 0.5, y: 0}
     PixelsPerUnit: 100
     EnableDepthPass: 1
@@ -39,8 +40,14 @@ MonoBehaviour:
     CustomTextureShader: {fileID: 0}
     CustomSpriteShader: {fileID: 0}
     RenderTexture: {fileID: 0}
-    CorrectRenderAspect: 1
+    RenderRectangle:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
     BakedLookDirection: 1
+    HasName: 1
     DisplayName: 
     UseCharacterColor: 0
     NameColor: {r: 1, g: 1, b: 1, a: 1}
@@ -53,7 +60,7 @@ MonoBehaviour:
     HighlightDuration: 0.35
     HighlightEasing: 1
     MessageSound: 
-    ClipMessageSound: 1
+    MessageSoundPlayback: 0
     VoiceSource: {fileID: 0}
     LinkedPrinter: 
     Poses: []
@@ -62,7 +69,7 @@ MonoBehaviour:
     - Boy
     - Avatar
     metas:
-    - Implementation: Naninovel.SpineCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.SpineCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -73,7 +80,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: d8579653-c370-464c-a07d-67a97e421b6d
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -81,8 +88,14 @@ MonoBehaviour:
       CustomTextureShader: {fileID: 0}
       CustomSpriteShader: {fileID: 0}
       RenderTexture: {fileID: 0}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: 
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
@@ -95,11 +108,11 @@ MonoBehaviour:
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
       LinkedPrinter: 
       Poses: []
-    - Implementation: Naninovel.SpineCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.SpineCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -110,7 +123,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: a20d2216-9b33-46ea-a1a8-9c331c1da6fd
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -118,8 +131,14 @@ MonoBehaviour:
       CustomTextureShader: {fileID: 0}
       CustomSpriteShader: {fileID: 0}
       RenderTexture: {fileID: 8400000, guid: 2e956d41164c6184aa98fcac4c584981, type: 2}
-      CorrectRenderAspect: 1
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
       BakedLookDirection: 1
+      HasName: 1
       DisplayName: Spine Boy
       UseCharacterColor: 1
       NameColor: {r: 0.1802243, g: 0.6101879, b: 0.8490566, a: 1}
@@ -132,7 +151,7 @@ MonoBehaviour:
       HighlightDuration: 0.35
       HighlightEasing: 1
       MessageSound: 
-      ClipMessageSound: 1
+      MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
       LinkedPrinter: AvatarPrinter
       Poses: []
@@ -143,7 +162,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  SharedPoses: []
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

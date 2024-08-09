@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
@@ -42,21 +42,21 @@ namespace Spine {
 		private readonly Pool<ExposedList<int>> polygonIndicesPool = new Pool<ExposedList<int>>();
 
 		public ExposedList<int> Triangulate (ExposedList<float> verticesArray) {
-			var vertices = verticesArray.Items;
+			float[] vertices = verticesArray.Items;
 			int vertexCount = verticesArray.Count >> 1;
 
-			var indicesArray = this.indicesArray;
+			ExposedList<int> indicesArray = this.indicesArray;
 			indicesArray.Clear();
 			int[] indices = indicesArray.Resize(vertexCount).Items;
 			for (int i = 0; i < vertexCount; i++)
 				indices[i] = i;
 
-			var isConcaveArray = this.isConcaveArray;
+			ExposedList<bool> isConcaveArray = this.isConcaveArray;
 			bool[] isConcave = isConcaveArray.Resize(vertexCount).Items;
 			for (int i = 0, n = vertexCount; i < n; ++i)
 				isConcave[i] = IsConcave(i, vertexCount, vertices, indices);
 
-			var triangles = this.triangles;
+			ExposedList<int> triangles = this.triangles;
 			triangles.Clear();
 			triangles.EnsureCapacity(Math.Max(0, vertexCount - 2) << 2);
 
@@ -122,21 +122,21 @@ namespace Spine {
 		}
 
 		public ExposedList<ExposedList<float>> Decompose (ExposedList<float> verticesArray, ExposedList<int> triangles) {
-			var vertices = verticesArray.Items;
-			var convexPolygons = this.convexPolygons;
+			float[] vertices = verticesArray.Items;
+			ExposedList<ExposedList<float>> convexPolygons = this.convexPolygons;
 			for (int i = 0, n = convexPolygons.Count; i < n; i++)
 				polygonPool.Free(convexPolygons.Items[i]);
 			convexPolygons.Clear();
 
-			var convexPolygonsIndices = this.convexPolygonsIndices;
+			ExposedList<ExposedList<int>> convexPolygonsIndices = this.convexPolygonsIndices;
 			for (int i = 0, n = convexPolygonsIndices.Count; i < n; i++)
 				polygonIndicesPool.Free(convexPolygonsIndices.Items[i]);
 			convexPolygonsIndices.Clear();
 
-			var polygonIndices = polygonIndicesPool.Obtain();
+			ExposedList<int> polygonIndices = polygonIndicesPool.Obtain();
 			polygonIndices.Clear();
 
-			var polygon = polygonPool.Obtain();
+			ExposedList<float> polygon = polygonPool.Obtain();
 			polygon.Clear();
 
 			// Merge subsequent triangles if they form a triangle fan.
@@ -149,7 +149,7 @@ namespace Spine {
 				float x3 = vertices[t3], y3 = vertices[t3 + 1];
 
 				// If the base of the last triangle is the same as this triangle, check if they form a convex polygon (triangle fan).
-				var merged = false;
+				bool merged = false;
 				if (fanBaseIndex == t1) {
 					int o = polygon.Count - 4;
 					float[] p = polygon.Items;
@@ -213,13 +213,13 @@ namespace Spine {
 
 				for (int ii = 0; ii < n; ii++) {
 					if (ii == i) continue;
-					var otherIndices = convexPolygonsIndices.Items[ii];
+					ExposedList<int> otherIndices = convexPolygonsIndices.Items[ii];
 					if (otherIndices.Count != 3) continue;
 					int otherFirstIndex = otherIndices.Items[0];
 					int otherSecondIndex = otherIndices.Items[1];
 					int otherLastIndex = otherIndices.Items[2];
 
-					var otherPoly = convexPolygons.Items[ii];
+					ExposedList<float> otherPoly = convexPolygons.Items[ii];
 					float x3 = otherPoly.Items[otherPoly.Count - 2], y3 = otherPoly.Items[otherPoly.Count - 1];
 
 					if (otherFirstIndex != firstIndex || otherSecondIndex != lastIndex) continue;

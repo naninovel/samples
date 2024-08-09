@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System.Collections;
@@ -42,7 +42,7 @@ namespace Spine.Unity.Editor {
 
 		[MenuItem("CONTEXT/SkeletonDataAsset/Skeleton Baking", false, 5000)]
 		public static void Init (MenuCommand command) {
-			var window = EditorWindow.GetWindow<SkeletonBakingWindow>(IsUtilityWindow);
+			SkeletonBakingWindow window = EditorWindow.GetWindow<SkeletonBakingWindow>(IsUtilityWindow);
 			window.minSize = new Vector2(330f, 530f);
 			window.maxSize = new Vector2(600f, 1000f);
 			window.titleContent = new GUIContent("Skeleton Baking", Icons.spine);
@@ -94,7 +94,7 @@ namespace Spine.Unity.Editor {
 			EditorGUILayout.HelpBox(BakingWarningMessage, MessageType.Info, true);
 
 			EditorGUI.BeginChangeCheck();
-			var skeletonDataAssetProperty = so.FindProperty("skeletonDataAsset");
+			SerializedProperty skeletonDataAssetProperty = so.FindProperty("skeletonDataAsset");
 			EditorGUILayout.PropertyField(skeletonDataAssetProperty, SpineInspectorUtility.TempContent("SkeletonDataAsset", Icons.spine));
 			if (EditorGUI.EndChangeCheck()) {
 				so.ApplyModifiedProperties();
@@ -103,7 +103,7 @@ namespace Spine.Unity.Editor {
 			EditorGUILayout.Space();
 
 			if (skeletonDataAsset == null) return;
-			var skeletonData = skeletonDataAsset.GetSkeletonData(false);
+			SkeletonData skeletonData = skeletonDataAsset.GetSkeletonData(false);
 			if (skeletonData == null) return;
 			bool hasExtraSkins = skeletonData.Skins.Count > 1;
 
@@ -121,7 +121,7 @@ namespace Spine.Unity.Editor {
 					}
 
 					int totalAttachments = 0;
-					foreach (var s in skeletonData.Skins)
+					foreach (Skin s in skeletonData.Skins)
 						totalAttachments += s.Attachments.Count;
 					EditorGUILayout.LabelField(SpineInspectorUtility.TempContent("Total Attachments: " + totalAttachments, Icons.genericAttachment));
 				}
@@ -145,7 +145,7 @@ namespace Spine.Unity.Editor {
 			if (!string.IsNullOrEmpty(skinToBake) && UnityEngine.Event.current.type == EventType.Repaint)
 				bakeSkin = skeletonData.FindSkin(skinToBake) ?? skeletonData.DefaultSkin;
 
-			var prefabIcon = EditorGUIUtility.FindTexture("PrefabModel Icon");
+			Texture2D prefabIcon = EditorGUIUtility.FindTexture("PrefabModel Icon");
 
 			if (hasExtraSkins) {
 				EditorGUI.BeginChangeCheck();

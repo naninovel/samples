@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -110,7 +110,7 @@ namespace Spine.Unity {
 				return;
 			}
 
-			var skeleton = hierarchy.Skeleton;
+			Skeleton skeleton = hierarchy.Skeleton;
 
 			if (bone == null) {
 				if (string.IsNullOrEmpty(boneName)) return;
@@ -124,16 +124,17 @@ namespace Spine.Unity {
 
 			float positionScale = hierarchy.PositionScale;
 
-			var thisTransform = cachedTransform;
+			Transform thisTransform = cachedTransform;
 			float skeletonFlipRotation = Mathf.Sign(skeleton.ScaleX * skeleton.ScaleY);
 			if (mode == Mode.Follow) {
 				switch (phase) {
 				case UpdatePhase.Local:
 					if (position)
-						thisTransform.localPosition = new Vector3(bone.X * positionScale, bone.Y * positionScale, 0);
+						thisTransform.localPosition = new Vector3(bone.X * positionScale, bone.Y * positionScale,
+							zPosition ? 0 : thisTransform.localPosition.z);
 
 					if (rotation) {
-						if (bone.Data.TransformMode.InheritsRotation()) {
+						if (bone.Data.Inherit.InheritsRotation()) {
 							thisTransform.localRotation = Quaternion.Euler(0, 0, bone.Rotation);
 						} else {
 							Vector3 euler = skeletonTransform.rotation.eulerAngles;
@@ -149,10 +150,11 @@ namespace Spine.Unity {
 				case UpdatePhase.World:
 				case UpdatePhase.Complete:
 					if (position)
-						thisTransform.localPosition = new Vector3(bone.AX * positionScale, bone.AY * positionScale, 0);
+						thisTransform.localPosition = new Vector3(bone.AX * positionScale, bone.AY * positionScale,
+							zPosition ? 0 : thisTransform.localPosition.z);
 
 					if (rotation) {
-						if (bone.Data.TransformMode.InheritsRotation()) {
+						if (bone.Data.Inherit.InheritsRotation()) {
 							thisTransform.localRotation = Quaternion.Euler(0, 0, bone.AppliedRotation);
 						} else {
 							Vector3 euler = skeletonTransform.rotation.eulerAngles;
@@ -220,7 +222,7 @@ namespace Spine.Unity {
 		}
 
 		public static bool BoneTransformModeIncompatible (Bone bone) {
-			return !bone.Data.TransformMode.InheritsScale();
+			return !bone.Data.Inherit.InheritsScale();
 		}
 
 		public void AddBoundingBox (string skinName, string slotName, string attachmentName) {

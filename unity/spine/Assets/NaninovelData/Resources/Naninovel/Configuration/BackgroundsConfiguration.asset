@@ -30,7 +30,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     guid: 2d244237-bec8-4a97-a7aa-b96f55e3d04b
     customData:
-      id: 0
+      rid: -2
     Pivot: {x: 0.5, y: 0.5}
     PixelsPerUnit: 100
     EnableDepthPass: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: b6cd7b04-c273-4f28-afc0-f9d8eef7f785
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -80,7 +80,7 @@ MonoBehaviour:
       MatchMode: 0
       CustomMatchRatio: 0
       Poses: []
-    - Implementation: Naninovel.SpineBackground, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.SpineBackground, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Backgrounds
@@ -91,7 +91,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: aa39b7a6-ed2b-4eb8-bc18-aba8c3ff2a33
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -108,7 +108,9 @@ MonoBehaviour:
       MatchMode: 0
       CustomMatchRatio: 0
       Poses: []
+  SharedPoses: []
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

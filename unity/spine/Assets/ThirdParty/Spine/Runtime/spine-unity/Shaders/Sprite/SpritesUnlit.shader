@@ -20,6 +20,9 @@ Shader "Spine/Sprite/Unlit"
 		_BlendTex ("Blend Texture", 2D) = "white" {}
 		_BlendAmount ("Blend", Range(0,1)) = 0.0
 
+		[MaterialToggle(_TINT_BLACK_ON)]  _TintBlack("Tint Black", Float) = 0
+		_Black("Dark Color", Color) = (0,0,0,0)
+
 		[HideInInspector] _SrcBlend ("__src", Float) = 1.0
 		[HideInInspector] _DstBlend ("__dst", Float) = 0.0
 		[HideInInspector] _RenderQueue ("__queue", Float) = 0.0
@@ -29,11 +32,13 @@ Shader "Spine/Sprite/Unlit"
 
 		// Outline properties are drawn via custom editor.
 		[HideInInspector] _OutlineWidth("Outline Width", Range(0,8)) = 3.0
+		[HideInInspector][MaterialToggle(_USE_SCREENSPACE_OUTLINE_WIDTH)] _UseScreenSpaceOutlineWidth("Width in Screen Space", Float) = 0
 		[HideInInspector] _OutlineColor("Outline Color", Color) = (1,1,0,1)
 		[HideInInspector] _OutlineReferenceTexWidth("Reference Texture Width", Int) = 1024
 		[HideInInspector] _ThresholdEnd("Outline Threshold", Range(0,1)) = 0.25
 		[HideInInspector] _OutlineSmoothness("Outline Smoothness", Range(0,1)) = 1.0
 		[HideInInspector][MaterialToggle(_USE8NEIGHBOURHOOD_ON)] _Use8Neighbourhood("Sample 8 Neighbours", Float) = 1
+		[HideInInspector] _OutlineOpaqueAlpha("Opaque Alpha", Range(0,1)) = 1.0
 		[HideInInspector] _OutlineMipLevel("Outline Mip Level", Range(0,3)) = 0
 	}
 
@@ -65,6 +70,7 @@ Shader "Spine/Sprite/Unlit"
 				#pragma shader_feature _TEXTURE_BLEND
 				#pragma shader_feature _COLOR_ADJUST
 				#pragma shader_feature _FOG
+				#pragma shader_feature _TINT_BLACK_ON
 
 				#pragma fragmentoption ARB_precision_hint_fastest
 				#pragma multi_compile_fog

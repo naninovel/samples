@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System.Collections;
@@ -45,13 +45,13 @@ namespace Spine.Unity.Editor {
 		#region Context Menu Item
 		[MenuItem("CONTEXT/SkeletonRenderer/Add PointFollower GameObject")]
 		static void AddBoneFollowerGameObject (MenuCommand cmd) {
-			var skeletonRenderer = cmd.context as SkeletonRenderer;
-			var go = EditorInstantiation.NewGameObject("PointFollower", true);
-			var t = go.transform;
+			SkeletonRenderer skeletonRenderer = cmd.context as SkeletonRenderer;
+			GameObject go = EditorInstantiation.NewGameObject("PointFollower", true);
+			Transform t = go.transform;
 			t.SetParent(skeletonRenderer.transform);
 			t.localPosition = Vector3.zero;
 
-			var f = go.AddComponent<PointFollower>();
+			PointFollower f = go.AddComponent<PointFollower>();
 			f.skeletonRenderer = skeletonRenderer;
 
 			EditorGUIUtility.PingObject(t);
@@ -62,7 +62,7 @@ namespace Spine.Unity.Editor {
 		// Validate
 		[MenuItem("CONTEXT/SkeletonRenderer/Add PointFollower GameObject", true)]
 		static bool ValidateAddBoneFollowerGameObject (MenuCommand cmd) {
-			var skeletonRenderer = cmd.context as SkeletonRenderer;
+			SkeletonRenderer skeletonRenderer = cmd.context as SkeletonRenderer;
 			return skeletonRenderer.valid;
 		}
 		#endregion
@@ -85,24 +85,24 @@ namespace Spine.Unity.Editor {
 		}
 
 		public void OnSceneGUI () {
-			var tbf = target as PointFollower;
-			var skeletonRendererComponent = tbf.skeletonRenderer;
+			PointFollower tbf = target as PointFollower;
+			SkeletonRenderer skeletonRendererComponent = tbf.skeletonRenderer;
 			if (skeletonRendererComponent == null)
 				return;
 
-			var skeleton = skeletonRendererComponent.skeleton;
-			var skeletonTransform = skeletonRendererComponent.transform;
+			Skeleton skeleton = skeletonRendererComponent.skeleton;
+			Transform skeletonTransform = skeletonRendererComponent.transform;
 
 			if (string.IsNullOrEmpty(pointAttachmentName.stringValue)) {
 				// Draw all active PointAttachments in the current skin
-				var currentSkin = skeleton.Skin;
+				Skin currentSkin = skeleton.Skin;
 				if (currentSkin != skeleton.Data.DefaultSkin) DrawPointsInSkin(skeleton.Data.DefaultSkin, skeleton, skeletonTransform);
 				if (currentSkin != null) DrawPointsInSkin(currentSkin, skeleton, skeletonTransform);
 			} else {
 				Slot slot = skeleton.FindSlot(slotName.stringValue);
 				if (slot != null) {
 					int slotIndex = slot.Data.Index;
-					var point = skeleton.GetAttachment(slotIndex, pointAttachmentName.stringValue) as PointAttachment;
+					PointAttachment point = skeleton.GetAttachment(slotIndex, pointAttachmentName.stringValue) as PointAttachment;
 					if (point != null) {
 						DrawPointAttachmentWithLabel(point, slot.Bone, skeletonTransform);
 					}
@@ -111,10 +111,10 @@ namespace Spine.Unity.Editor {
 		}
 
 		static void DrawPointsInSkin (Skin skin, Skeleton skeleton, Transform transform) {
-			foreach (var skinEntry in skin.Attachments) {
-				var attachment = skinEntry.Attachment as PointAttachment;
+			foreach (Skin.SkinEntry skinEntry in skin.Attachments) {
+				PointAttachment attachment = skinEntry.Attachment as PointAttachment;
 				if (attachment != null) {
-					var slot = skeleton.Slots.Items[skinEntry.SlotIndex];
+					Slot slot = skeleton.Slots.Items[skinEntry.SlotIndex];
 					DrawPointAttachmentWithLabel(attachment, slot.Bone, transform);
 				}
 			}
@@ -130,8 +130,8 @@ namespace Spine.Unity.Editor {
 			if (serializedObject.isEditingMultipleObjects) {
 				if (needsReset) {
 					needsReset = false;
-					foreach (var o in targets) {
-						var bf = (BoneFollower)o;
+					foreach (Object o in targets) {
+						BoneFollower bf = (BoneFollower)o;
 						bf.Initialize();
 						bf.LateUpdate();
 					}
@@ -163,7 +163,7 @@ namespace Spine.Unity.Editor {
 				}
 			}
 
-			var skeletonRendererReference = skeletonRenderer.objectReferenceValue as SkeletonRenderer;
+			SkeletonRenderer skeletonRendererReference = skeletonRenderer.objectReferenceValue as SkeletonRenderer;
 			if (skeletonRendererReference != null) {
 				if (skeletonRendererReference.gameObject == targetPointFollower.gameObject) {
 					skeletonRenderer.objectReferenceValue = null;
@@ -175,7 +175,7 @@ namespace Spine.Unity.Editor {
 				needsReset = true;
 			}
 
-			var current = Event.current;
+			Event current = Event.current;
 			bool wasUndo = (current.type == EventType.ValidateCommand && current.commandName == "UndoRedoPerformed");
 			if (wasUndo)
 				targetPointFollower.Initialize();

@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System.Collections.Generic;
@@ -282,9 +282,9 @@ namespace Spine.Unity.Editor {
 		public static bool TargetsUseSameData (SerializedObject so) {
 			if (so.isEditingMultipleObjects) {
 				int n = so.targetObjects.Length;
-				var first = so.targetObjects[0] as IHasSkeletonDataAsset;
+				IHasSkeletonDataAsset first = so.targetObjects[0] as IHasSkeletonDataAsset;
 				for (int i = 1; i < n; i++) {
-					var sr = so.targetObjects[i] as IHasSkeletonDataAsset;
+					IHasSkeletonDataAsset sr = so.targetObjects[i] as IHasSkeletonDataAsset;
 					if (sr != null && sr.SkeletonDataAsset != first.SkeletonDataAsset)
 						return false;
 				}
@@ -294,20 +294,20 @@ namespace Spine.Unity.Editor {
 
 		public static SerializedObject GetRenderersSerializedObject (SerializedObject serializedObject) {
 			if (serializedObject.isEditingMultipleObjects) {
-				var renderers = new List<Object>();
-				foreach (var o in serializedObject.targetObjects) {
-					var component = o as Component;
+				List<Object> renderers = new List<Object>();
+				foreach (UnityEngine.Object o in serializedObject.targetObjects) {
+					Component component = o as Component;
 					if (component != null) {
-						var renderer = component.GetComponent<Renderer>();
+						Renderer renderer = component.GetComponent<Renderer>();
 						if (renderer != null)
 							renderers.Add(renderer);
 					}
 				}
 				return new SerializedObject(renderers.ToArray());
 			} else {
-				var component = serializedObject.targetObject as Component;
+				Component component = serializedObject.targetObject as Component;
 				if (component != null) {
-					var renderer = component.GetComponent<Renderer>();
+					Renderer renderer = component.GetComponent<Renderer>();
 					if (renderer != null)
 						return new SerializedObject(renderer);
 				}
@@ -350,7 +350,7 @@ namespace Spine.Unity.Editor {
 
 				// SetDirty
 				if (renderer.isEditingMultipleObjects)
-					foreach (var o in renderer.targetObjects)
+					foreach (UnityEngine.Object o in renderer.targetObjects)
 						EditorUtility.SetDirty(o);
 				else
 					EditorUtility.SetDirty(renderer.targetObject);

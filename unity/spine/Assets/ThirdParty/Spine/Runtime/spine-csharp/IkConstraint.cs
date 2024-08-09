@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,13 +23,15 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
 
 namespace Spine {
+	using Physics = Skeleton.Physics;
+
 	/// <summary>
 	/// <para>
 	/// Stores the current pose for an IK constraint. An IK constraint adjusts the rotation of 1 or 2 constrained bones so the tip of
@@ -38,8 +40,8 @@ namespace Spine {
 	/// See <a href="http://esotericsoftware.com/spine-ik-constraints">IK constraints</a> in the Spine User Guide.</para>
 	/// </summary>
 	public class IkConstraint : IUpdatable {
-		internal IkConstraintData data;
-		internal ExposedList<Bone> bones = new ExposedList<Bone>();
+		internal readonly IkConstraintData data;
+		internal readonly ExposedList<Bone> bones = new ExposedList<Bone>();
 		internal Bone target;
 		internal int bendDirection;
 		internal bool compress, stretch;
@@ -49,29 +51,25 @@ namespace Spine {
 
 		public IkConstraint (IkConstraintData data, Skeleton skeleton) {
 			if (data == null) throw new ArgumentNullException("data", "data cannot be null.");
-			if (skeleton == null) throw new ArgumentNullException("skeleton", "skeleton cannot be null.");
 			this.data = data;
+
+			bones = new ExposedList<Bone>(data.bones.Count);
+			foreach (BoneData boneData in data.bones)
+				bones.Add(skeleton.bones.Items[boneData.index]);
+
+			target = skeleton.bones.Items[data.target.index];
+
 			mix = data.mix;
 			softness = data.softness;
 			bendDirection = data.bendDirection;
 			compress = data.compress;
 			stretch = data.stretch;
-
-			bones = new ExposedList<Bone>(data.bones.Count);
-			foreach (BoneData boneData in data.bones)
-				bones.Add(skeleton.FindBone(boneData.name));
-			target = skeleton.FindBone(data.target.name);
 		}
 
 		/// <summary>Copy constructor.</summary>
-		public IkConstraint (IkConstraint constraint, Skeleton skeleton) {
-			if (constraint == null) throw new ArgumentNullException("constraint cannot be null.");
-			if (skeleton == null) throw new ArgumentNullException("skeleton cannot be null.");
-			data = constraint.data;
-			bones = new ExposedList<Bone>(constraint.Bones.Count);
-			foreach (Bone bone in constraint.Bones)
-				bones.Add(skeleton.Bones.Items[bone.data.index]);
-			target = skeleton.Bones.Items[constraint.target.data.index];
+		public IkConstraint (IkConstraint constraint, Skeleton skeleton)
+			: this(constraint.data, skeleton) {
+
 			mix = constraint.mix;
 			softness = constraint.softness;
 			bendDirection = constraint.bendDirection;
@@ -79,10 +77,19 @@ namespace Spine {
 			stretch = constraint.stretch;
 		}
 
-		public void Update () {
+		public void SetToSetupPose () {
+			IkConstraintData data = this.data;
+			mix = data.mix;
+			softness = data.softness;
+			bendDirection = data.bendDirection;
+			compress = data.compress;
+			stretch = data.stretch;
+		}
+
+		public void Update (Physics physics) {
 			if (mix == 0) return;
 			Bone target = this.target;
-			var bones = this.bones.Items;
+			Bone[] bones = this.bones.Items;
 			switch (this.bones.Count) {
 			case 1:
 				Apply(bones[0], target.worldX, target.worldY, compress, stretch, data.uniform, mix);
@@ -166,30 +173,35 @@ namespace Spine {
 			float rotationIK = -bone.ashearX - bone.arotation;
 			float tx = 0, ty = 0;
 
-			switch (bone.data.transformMode) {
-			case TransformMode.OnlyTranslation:
-				tx = targetX - bone.worldX;
-				ty = targetY - bone.worldY;
+			switch (bone.inherit) {
+			case Inherit.OnlyTranslation:
+				tx = (targetX - bone.worldX) * Math.Sign(bone.skeleton.ScaleX);
+				ty = (targetY - bone.worldY) * Math.Sign(bone.skeleton.ScaleY);
 				break;
-			case TransformMode.NoRotationOrReflection: {
-				float s = Math.Abs(pa * pd - pb * pc) / (pa * pa + pc * pc);
-				float sa = pa / bone.skeleton.ScaleX;
+			case Inherit.NoRotationOrReflection: {
+				float s = Math.Abs(pa * pd - pb * pc) / Math.Max(0.0001f, pa * pa + pc * pc);
+				float sa = pa / bone.skeleton.scaleX;
 				float sc = pc / bone.skeleton.ScaleY;
-				pb = -sc * s * bone.skeleton.ScaleX;
+				pb = -sc * s * bone.skeleton.scaleX;
 				pd = sa * s * bone.skeleton.ScaleY;
-				rotationIK += (float)Math.Atan2(sc, sa) * MathUtils.RadDeg;
+				rotationIK += MathUtils.Atan2Deg(sc, sa);
 				goto default; // Fall through.
 			}
 			default: {
 				float x = targetX - p.worldX, y = targetY - p.worldY;
 				float d = pa * pd - pb * pc;
-				tx = (x * pd - y * pb) / d - bone.ax;
-				ty = (y * pa - x * pc) / d - bone.ay;
+				if (Math.Abs(d) <= 0.0001f) {
+					tx = 0;
+					ty = 0;
+				} else {
+					tx = (x * pd - y * pb) / d - bone.ax;
+					ty = (y * pa - x * pc) / d - bone.ay;
+				}
 				break;
 			}
 			}
 
-			rotationIK += (float)Math.Atan2(ty, tx) * MathUtils.RadDeg;
+			rotationIK += MathUtils.Atan2Deg(ty, tx);
 			if (bone.ascaleX < 0) rotationIK += 180;
 			if (rotationIK > 180)
 				rotationIK -= 360;
@@ -198,18 +210,21 @@ namespace Spine {
 
 			float sx = bone.ascaleX, sy = bone.ascaleY;
 			if (compress || stretch) {
-				switch (bone.data.transformMode) {
-				case TransformMode.NoScale:
-				case TransformMode.NoScaleOrReflection:
+				switch (bone.inherit) {
+				case Inherit.NoScale:
+				case Inherit.NoScaleOrReflection:
 					tx = targetX - bone.worldX;
 					ty = targetY - bone.worldY;
 					break;
 				}
-				float b = bone.data.length * sx, dd = (float)Math.Sqrt(tx * tx + ty * ty);
-				if ((compress && dd < b) || (stretch && dd > b) && b > 0.0001f) {
-					float s = (dd / b - 1) * alpha + 1;
-					sx *= s;
-					if (uniform) sy *= s;
+				float b = bone.data.length * sx;
+				if (b > 0.0001f) {
+					float dd = tx * tx + ty * ty;
+					if ((compress && dd < b * b) || (stretch && dd > b * b)) {
+						float s = ((float)Math.Sqrt(dd) / b - 1) * alpha + 1;
+						sx *= s;
+						if (uniform) sy *= s;
+					}
 				}
 			}
 			bone.UpdateWorldTransform(bone.ax, bone.ay, bone.arotation + rotationIK * alpha, sx, sy, bone.ashearX, bone.ashearY);
@@ -221,6 +236,7 @@ namespace Spine {
 			float softness, float alpha) {
 			if (parent == null) throw new ArgumentNullException("parent", "parent cannot be null.");
 			if (child == null) throw new ArgumentNullException("child", "child cannot be null.");
+			if (parent.inherit != Inherit.Normal || child.inherit != Inherit.Normal) return;
 			float px = parent.ax, py = parent.ay, psx = parent.ascaleX, psy = parent.ascaleY, sx = psx, sy = psy, csx = child.ascaleX;
 			int os1, os2, s2;
 			if (psx < 0) {
@@ -256,7 +272,8 @@ namespace Spine {
 			b = pp.b;
 			c = pp.c;
 			d = pp.d;
-			float id = 1 / (a * d - b * c), x = cwx - pp.worldX, y = cwy - pp.worldY;
+			float id = a * d - b * c, x = cwx - pp.worldX, y = cwy - pp.worldY;
+			id = Math.Abs(id) <= 0.0001f ? 0 : 1 / id;
 			float dx = (x * d - y * b) * id - px, dy = (y * a - x * c) * id - py;
 			float l1 = (float)Math.Sqrt(dx * dx + dy * dy), l2 = child.data.length * csx, a1, a2;
 			if (l1 < 0.0001f) {
@@ -311,8 +328,9 @@ namespace Spine {
 					q = -(c1 + q) * 0.5f;
 					float r0 = q / c2, r1 = c / q;
 					float r = Math.Abs(r0) < Math.Abs(r1) ? r0 : r1;
-					if (r * r <= dd) {
-						y = (float)Math.Sqrt(dd - r * r) * bendDir;
+					r0 = dd - r * r;
+					if (r0 >= 0) {
+						y = (float)Math.Sqrt(r0) * bendDir;
 						a1 = ta - (float)Math.Atan2(y, r);
 						a2 = (float)Math.Atan2(y / psy, (r - l1) / psx);
 						goto break_outer; // break outer;

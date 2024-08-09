@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #pragma warning disable 0219
@@ -49,82 +49,75 @@
 
 #if BUILT_IN_SPRITE_MASK_COMPONENT
 
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using UnityEditor;
+using UnityEngine;
 
 namespace Spine.Unity.Editor {
 
-	public class SpineMaskUtilities	{
+	public class SpineMaskUtilities {
 
 		private const string MATERIAL_FILENAME_SUFFIX_INSIDE_MASK = "_InsideMask";
 		private const string MATERIAL_FILENAME_SUFFIX_OUTSIDE_MASK = "_OutsideMask";
 
-		public static void EditorAssignSpriteMaskMaterials(SkeletonRenderer skeleton) {
-			var maskMaterials = skeleton.maskMaterials;
-			var maskInteraction = skeleton.maskInteraction;
-			var meshRenderer = skeleton.GetComponent<MeshRenderer>();
+		public static void EditorAssignSpriteMaskMaterials (SkeletonRenderer skeleton) {
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
+			SpriteMaskInteraction maskInteraction = skeleton.maskInteraction;
+			MeshRenderer meshRenderer = skeleton.GetComponent<MeshRenderer>();
 
 			if (maskMaterials.materialsMaskDisabled.Length > 0 && maskMaterials.materialsMaskDisabled[0] != null &&
 				maskInteraction == SpriteMaskInteraction.None) {
 				meshRenderer.materials = maskMaterials.materialsMaskDisabled;
-			}
-			else if (maskInteraction == SpriteMaskInteraction.VisibleInsideMask) {
+			} else if (maskInteraction == SpriteMaskInteraction.VisibleInsideMask) {
 				if (maskMaterials.materialsInsideMask.Length == 0 || maskMaterials.materialsInsideMask[0] == null)
 					EditorInitSpriteMaskMaterialsInsideMask(skeleton);
 				meshRenderer.materials = maskMaterials.materialsInsideMask;
-			}
-			else if (maskInteraction == SpriteMaskInteraction.VisibleOutsideMask) {
+			} else if (maskInteraction == SpriteMaskInteraction.VisibleOutsideMask) {
 				if (maskMaterials.materialsOutsideMask.Length == 0 || maskMaterials.materialsOutsideMask[0] == null)
 					EditorInitSpriteMaskMaterialsOutsideMask(skeleton);
 				meshRenderer.materials = maskMaterials.materialsOutsideMask;
 			}
 		}
 
-		public static bool AreMaskMaterialsMissing(SkeletonRenderer skeleton) {
-			var maskMaterials = skeleton.maskMaterials;
-			var maskInteraction = skeleton.maskInteraction;
+		public static bool AreMaskMaterialsMissing (SkeletonRenderer skeleton) {
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
+			SpriteMaskInteraction maskInteraction = skeleton.maskInteraction;
 
 			if (maskInteraction == SpriteMaskInteraction.VisibleInsideMask) {
 				return (maskMaterials.materialsInsideMask.Length == 0 || maskMaterials.materialsInsideMask[0] == null);
-			}
-			else if (maskInteraction == SpriteMaskInteraction.VisibleOutsideMask) {
+			} else if (maskInteraction == SpriteMaskInteraction.VisibleOutsideMask) {
 				return (maskMaterials.materialsOutsideMask.Length == 0 || maskMaterials.materialsOutsideMask[0] == null);
 			}
 			return false;
 		}
 
-		public static void EditorInitMaskMaterials(SkeletonRenderer skeleton, SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials, SpriteMaskInteraction maskType) {
+		public static void EditorInitMaskMaterials (SkeletonRenderer skeleton, SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials, SpriteMaskInteraction maskType) {
 			if (maskType == SpriteMaskInteraction.None) {
 				EditorConfirmDisabledMaskMaterialsInit(skeleton);
-			}
-			else if (maskType == SpriteMaskInteraction.VisibleInsideMask) {
+			} else if (maskType == SpriteMaskInteraction.VisibleInsideMask) {
 				EditorInitSpriteMaskMaterialsInsideMask(skeleton);
-			}
-			else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
+			} else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
 				EditorInitSpriteMaskMaterialsOutsideMask(skeleton);
 			}
 		}
 
-		public static void EditorDeleteMaskMaterials(SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials, SpriteMaskInteraction maskType) {
+		public static void EditorDeleteMaskMaterials (SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials, SpriteMaskInteraction maskType) {
 			Material[] targetMaterials;
 			if (maskType == SpriteMaskInteraction.VisibleInsideMask) {
 				targetMaterials = maskMaterials.materialsInsideMask;
-			}
-			else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
+			} else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
 				targetMaterials = maskMaterials.materialsOutsideMask;
-			}
-			else {
+			} else {
 				Debug.LogWarning("EditorDeleteMaskMaterials: Normal materials are kept as a reference and shall never be deleted.");
 				return;
 			}
 
 			for (int i = 0; i < targetMaterials.Length; ++i) {
-				var material = targetMaterials[i];
+				Material material = targetMaterials[i];
 				if (material != null) {
 					string materialPath = UnityEditor.AssetDatabase.GetAssetPath(material);
 					UnityEditor.AssetDatabase.DeleteAsset(materialPath);
@@ -134,31 +127,30 @@ namespace Spine.Unity.Editor {
 
 			if (maskType == SpriteMaskInteraction.VisibleInsideMask) {
 				maskMaterials.materialsInsideMask = new Material[0];
-			}
-			else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
+			} else if (maskType == SpriteMaskInteraction.VisibleOutsideMask) {
 				maskMaterials.materialsOutsideMask = new Material[0];
 			}
 		}
 
-		private static void EditorInitSpriteMaskMaterialsInsideMask(SkeletonRenderer skeleton) {
-			var maskMaterials = skeleton.maskMaterials;
+		private static void EditorInitSpriteMaskMaterialsInsideMask (SkeletonRenderer skeleton) {
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
 			EditorInitSpriteMaskMaterialsForMaskType(skeleton, SkeletonRenderer.STENCIL_COMP_MASKINTERACTION_VISIBLE_INSIDE,
 													ref maskMaterials.materialsInsideMask);
 		}
 
-		private static void EditorInitSpriteMaskMaterialsOutsideMask(SkeletonRenderer skeleton) {
-			var maskMaterials = skeleton.maskMaterials;
+		private static void EditorInitSpriteMaskMaterialsOutsideMask (SkeletonRenderer skeleton) {
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
 			EditorInitSpriteMaskMaterialsForMaskType(skeleton, SkeletonRenderer.STENCIL_COMP_MASKINTERACTION_VISIBLE_OUTSIDE,
 													ref maskMaterials.materialsOutsideMask);
 		}
 
-		private static void EditorInitSpriteMaskMaterialsForMaskType(SkeletonRenderer skeleton, UnityEngine.Rendering.CompareFunction maskFunction,
+		private static void EditorInitSpriteMaskMaterialsForMaskType (SkeletonRenderer skeleton, UnityEngine.Rendering.CompareFunction maskFunction,
 																ref Material[] materialsToFill) {
 			if (!EditorConfirmDisabledMaskMaterialsInit(skeleton))
 				return;
 
-			var maskMaterials = skeleton.maskMaterials;
-			var originalMaterials = maskMaterials.materialsMaskDisabled;
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
+			Material[] originalMaterials = maskMaterials.materialsMaskDisabled;
 			materialsToFill = new Material[originalMaterials.Length];
 			for (int i = 0; i < originalMaterials.Length; i++) {
 				Material newMaterial = null;
@@ -174,17 +166,17 @@ namespace Spine.Unity.Editor {
 			}
 		}
 
-		private static bool EditorConfirmDisabledMaskMaterialsInit(SkeletonRenderer skeleton) {
-			var maskMaterials = skeleton.maskMaterials;
+		private static bool EditorConfirmDisabledMaskMaterialsInit (SkeletonRenderer skeleton) {
+			SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials = skeleton.maskMaterials;
 			if (maskMaterials.materialsMaskDisabled.Length > 0 && maskMaterials.materialsMaskDisabled[0] != null) {
 				return true;
 			}
 
-			var meshRenderer = skeleton.GetComponent<MeshRenderer>();
+			MeshRenderer meshRenderer = skeleton.GetComponent<MeshRenderer>();
 			Material[] currentMaterials = meshRenderer.sharedMaterials;
 
 			if (currentMaterials.Length == 0 || currentMaterials[0] == null) {
-				Debug.LogWarning("No materials found assigned at " + skeleton.name);
+				// Note: if no attachments are visible, no materials are set. This is a valid state.
 				return false;
 			}
 
@@ -200,8 +192,7 @@ namespace Spine.Unity.Editor {
 					string correctPath = null;
 					if (path.Contains(MATERIAL_FILENAME_SUFFIX_INSIDE_MASK)) {
 						correctPath = path.Replace(MATERIAL_FILENAME_SUFFIX_INSIDE_MASK, "");
-					}
-					else if (path.Contains(MATERIAL_FILENAME_SUFFIX_OUTSIDE_MASK)) {
+					} else if (path.Contains(MATERIAL_FILENAME_SUFFIX_OUTSIDE_MASK)) {
 						correctPath = path.Replace(MATERIAL_FILENAME_SUFFIX_OUTSIDE_MASK, "");
 					}
 
@@ -212,14 +203,13 @@ namespace Spine.Unity.Editor {
 						maskMaterials.materialsMaskDisabled[i] = material;
 					}
 				}
-			}
-			else {
+			} else {
 				maskMaterials.materialsMaskDisabled = currentMaterials;
 			}
 			return true;
 		}
 
-		public static Material EditorCreateOrLoadMaskMaterialAsset(SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials,
+		public static Material EditorCreateOrLoadMaskMaterialAsset (SkeletonRenderer.SpriteMaskInteractionMaterials maskMaterials,
 																UnityEngine.Rendering.CompareFunction maskFunction, Material originalMaterial) {
 			string originalMaterialPath = UnityEditor.AssetDatabase.GetAssetPath(originalMaterial);
 			int posOfExtensionDot = originalMaterialPath.LastIndexOf('.');

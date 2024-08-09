@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,13 +23,17 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 // Not for optimization. Do not disable.
 #define SPINE_TRIANGLECHECK // Avoid calling SetTriangles at the cost of checking for mesh differences (vertex counts, memberwise attachment list compare) every frame.
 //#define SPINE_DEBUG
+
+// Important Note: When disabling this define, also disable the one in MeshGenerator.cs
+// For details, see MeshGenerator.cs.
+#define SLOT_ALPHA_DISABLES_ATTACHMENT
 
 using System;
 using System.Collections.Generic;
@@ -65,14 +69,14 @@ namespace Spine.Unity {
 			int runningVertexCount = 0;
 #endif
 
-			var submeshes = this.submeshInstructions;
+			ExposedList<SubmeshInstruction> submeshes = this.submeshInstructions;
 			submeshes.Clear(false);
 			int submeshCount = endSubmesh - startSubmesh;
 			submeshes.Resize(submeshCount);
-			var submeshesItems = submeshes.Items;
-			var instructionsItems = instructions.Items;
+			SubmeshInstruction[] submeshesItems = submeshes.Items;
+			SubmeshInstruction[] instructionsItems = instructions.Items;
 			for (int i = 0; i < submeshCount; i++) {
-				var instruction = instructionsItems[startSubmesh + i];
+				SubmeshInstruction instruction = instructionsItems[startSubmesh + i];
 				submeshesItems[i] = instruction;
 #if SPINE_TRIANGLECHECK
 				this.hasActiveClipping |= instruction.hasClipping;
@@ -90,12 +94,19 @@ namespace Spine.Unity {
 			attachments.Clear(false);
 			int attachmentCount = endSlot - startSlot;
 			attachments.Resize(attachmentCount);
-			var attachmentsItems = attachments.Items;
+			Attachment[] attachmentsItems = attachments.Items;
 
-			var drawOrderItems = instructionsItems[0].skeleton.DrawOrder.Items;
+			Slot[] drawOrderItems = instructionsItems[0].skeleton.DrawOrder.Items;
 			for (int i = 0; i < attachmentCount; i++) {
 				Slot slot = drawOrderItems[startSlot + i];
-				if (!slot.Bone.Active) continue;
+				if (!slot.Bone.Active
+#if SLOT_ALPHA_DISABLES_ATTACHMENT
+					|| slot.A == 0f
+#endif
+					) {
+					attachmentsItems[i] = null;
+					continue;
+				}
 				attachmentsItems[i] = slot.Attachment;
 			}
 
@@ -124,7 +135,7 @@ namespace Spine.Unity {
 #if SPINE_TRIANGLECHECK
 #if UNITY_EDITOR
 			if (!Application.isPlaying)
-			return true;
+				return true;
 #endif
 
 			if (a.hasActiveClipping || b.hasActiveClipping) return true; // Triangles are unpredictable when clipping is active.
@@ -143,17 +154,17 @@ namespace Spine.Unity {
 			if (submeshCountA != submeshCountB) return true;
 
 			// Submesh Instruction mismatch
-			var submeshInstructionsItemsA = a.submeshInstructions.Items;
-			var submeshInstructionsItemsB = b.submeshInstructions.Items;
+			SubmeshInstruction[] submeshInstructionsItemsA = a.submeshInstructions.Items;
+			SubmeshInstruction[] submeshInstructionsItemsB = b.submeshInstructions.Items;
 
-			var attachmentsA = a.attachments.Items;
-			var attachmentsB = b.attachments.Items;
+			Attachment[] attachmentsA = a.attachments.Items;
+			Attachment[] attachmentsB = b.attachments.Items;
 			for (int i = 0; i < attachmentCountB; i++)
 				if (!System.Object.ReferenceEquals(attachmentsA[i], attachmentsB[i])) return true;
 
 			for (int i = 0; i < submeshCountB; i++) {
-				var submeshA = submeshInstructionsItemsA[i];
-				var submeshB = submeshInstructionsItemsB[i];
+				SubmeshInstruction submeshA = submeshInstructionsItemsA[i];
+				SubmeshInstruction submeshB = submeshInstructionsItemsB[i];
 
 				if (!(
 					submeshA.rawVertexCount == submeshB.rawVertexCount &&

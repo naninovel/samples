@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using Spine.Unity.AnimationTools;
@@ -54,14 +54,14 @@ namespace Spine.Unity {
 		#endregion
 
 		AnimationState animationState;
-		Canvas canvas;
+		SkeletonGraphic skeletonGraphic;
 
 		public override Vector2 GetRemainingRootMotion (int trackIndex) {
 			TrackEntry track = animationState.GetCurrent(trackIndex);
 			if (track == null)
 				return Vector2.zero;
 
-			var animation = track.Animation;
+			Animation animation = track.Animation;
 			float start = track.AnimationTime;
 			float end = animation.Duration;
 			return GetAnimationRootMotion(start, end, animation);
@@ -72,14 +72,14 @@ namespace Spine.Unity {
 			if (track == null)
 				return new RootMotionInfo();
 
-			var animation = track.Animation;
+			Animation animation = track.Animation;
 			float time = track.AnimationTime;
 			return GetAnimationRootMotionInfo(track.Animation, time);
 		}
 
 		protected override float AdditionalScale {
 			get {
-				return canvas ? canvas.referencePixelsPerUnit : 1.0f;
+				return skeletonGraphic ? skeletonGraphic.MeshScale : 1.0f;
 			}
 		}
 
@@ -88,14 +88,12 @@ namespace Spine.Unity {
 			animationTrackFlags = DefaultAnimationTrackFlags;
 		}
 
-		protected override void Start () {
-			base.Start();
-			var animstateComponent = skeletonComponent as IAnimationStateComponent;
+		public override void Initialize () {
+			base.Initialize();
+			IAnimationStateComponent animstateComponent = skeletonComponent as IAnimationStateComponent;
 			this.animationState = (animstateComponent != null) ? animstateComponent.AnimationState : null;
 
-			if (this.GetComponent<CanvasRenderer>() != null) {
-				canvas = this.GetComponentInParent<Canvas>();
-			}
+			skeletonGraphic = this.GetComponent<SkeletonGraphic>();
 		}
 
 		protected override Vector2 CalculateAnimationsMovementDelta () {
@@ -111,10 +109,10 @@ namespace Spine.Unity {
 				TrackEntry track = animationState.GetCurrent(trackIndex);
 				TrackEntry next = null;
 				while (track != null) {
-					var animation = track.Animation;
+					Animation animation = track.Animation;
 					float start = track.AnimationLast;
 					float end = track.AnimationTime;
-					var currentDelta = GetAnimationRootMotion(start, end, animation);
+					Vector2 currentDelta = GetAnimationRootMotion(start, end, animation);
 					if (currentDelta != Vector2.zero) {
 						ApplyMixAlphaToDelta(ref currentDelta, next, track);
 						localDelta += currentDelta;
@@ -128,8 +126,50 @@ namespace Spine.Unity {
 			return localDelta;
 		}
 
+		protected override float CalculateAnimationsRotationDelta () {
+			float localDelta = 0;
+			int trackCount = animationState.Tracks.Count;
+
+			for (int trackIndex = 0; trackIndex < trackCount; ++trackIndex) {
+				// note: animationTrackFlags != -1 below covers trackIndex >= 32,
+				// with -1 corresponding to entry "everything" of the dropdown list.
+				if (animationTrackFlags != -1 && (animationTrackFlags & 1 << trackIndex) == 0)
+					continue;
+
+				TrackEntry track = animationState.GetCurrent(trackIndex);
+				TrackEntry next = null;
+				while (track != null) {
+					Animation animation = track.Animation;
+					float start = track.AnimationLast;
+					float end = track.AnimationTime;
+					float currentDelta = GetAnimationRootMotionRotation(start, end, animation);
+					if (currentDelta != 0) {
+						ApplyMixAlphaToDelta(ref currentDelta, next, track);
+						localDelta += currentDelta;
+					}
+
+					// Traverse mixingFrom chain.
+					next = track;
+					track = track.MixingFrom;
+				}
+			}
+			return localDelta;
+		}
+
 		void ApplyMixAlphaToDelta (ref Vector2 currentDelta, TrackEntry next, TrackEntry track) {
-			// Apply mix alpha to the delta position (based on AnimationState.cs).
+			float mixAlpha = 1;
+			GetMixAlpha(ref mixAlpha, next, track);
+			currentDelta *= mixAlpha;
+		}
+
+		void ApplyMixAlphaToDelta (ref float currentDelta, TrackEntry next, TrackEntry track) {
+			float mixAlpha = 1;
+			GetMixAlpha(ref mixAlpha, next, track);
+			currentDelta *= mixAlpha;
+		}
+
+		void GetMixAlpha (ref float cumulatedMixAlpha, TrackEntry next, TrackEntry track) {
+			// code below based on AnimationState.cs
 			float mix;
 			if (next != null) {
 				if (next.MixDuration == 0) { // Single frame mix to undo mixingFrom changes.
@@ -139,7 +179,7 @@ namespace Spine.Unity {
 					if (mix > 1) mix = 1;
 				}
 				float mixAndAlpha = track.Alpha * next.InterruptAlpha * (1 - mix);
-				currentDelta *= mixAndAlpha;
+				cumulatedMixAlpha *= mixAndAlpha;
 			} else {
 				if (track.MixDuration == 0) {
 					mix = 1;
@@ -147,7 +187,7 @@ namespace Spine.Unity {
 					mix = track.Alpha * (track.MixTime / track.MixDuration);
 					if (mix > 1) mix = 1;
 				}
-				currentDelta *= mix;
+				cumulatedMixAlpha *= mix;
 			}
 		}
 	}

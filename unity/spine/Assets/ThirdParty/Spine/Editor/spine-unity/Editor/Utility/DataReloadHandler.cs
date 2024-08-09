@@ -1,16 +1,16 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated July 28, 2023. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2023, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
  * conditions of Section 2 of the Spine Editor License Agreement:
  * http://esotericsoftware.com/spine-editor-license
  *
- * Otherwise, it is permitted to integrate the Spine Runtimes into software
- * or otherwise create derivative works of the Spine Runtimes (collectively,
+ * Otherwise, it is permitted to integrate the Spine Runtimes into software or
+ * otherwise create derivative works of the Spine Runtimes (collectively,
  * "Products"), provided that each user of the Products must obtain their own
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
@@ -23,8 +23,8 @@
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
  * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE
+ * SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #pragma warning disable 0219
@@ -60,17 +60,17 @@ namespace Spine.Unity.Editor {
 			}
 
 			public static void ReloadAllActiveSkeletonsEditMode () {
-
+				if (!Preferences.reloadAfterPlayMode) return;
 				if (EditorApplication.isPaused) return;
 				if (EditorApplication.isPlaying) return;
 				if (EditorApplication.isCompiling) return;
 				if (EditorApplication.isPlayingOrWillChangePlaymode) return;
 
-				var skeletonDataAssetsToReload = new HashSet<SkeletonDataAsset>();
+				HashSet<SkeletonDataAsset> skeletonDataAssetsToReload = new HashSet<SkeletonDataAsset>();
 
-				var activeSkeletonRenderers = GameObject.FindObjectsOfType<SkeletonRenderer>();
-				foreach (var sr in activeSkeletonRenderers) {
-					var skeletonDataAsset = sr.skeletonDataAsset;
+				SkeletonRenderer[] activeSkeletonRenderers = GameObject.FindObjectsOfType<SkeletonRenderer>();
+				foreach (SkeletonRenderer sr in activeSkeletonRenderers) {
+					SkeletonDataAsset skeletonDataAsset = sr.skeletonDataAsset;
 					if (skeletonDataAsset != null) skeletonDataAssetsToReload.Add(skeletonDataAsset);
 				}
 
@@ -79,37 +79,25 @@ namespace Spine.Unity.Editor {
 				// by the instance of the ScriptableObject being destroyed but still assigned.
 				// Here we save the skeletonGraphic.skeletonDataAsset asset path in order
 				// to restore it later.
-				var activeSkeletonGraphics = GameObject.FindObjectsOfType<SkeletonGraphic>();
-				foreach (var sg in activeSkeletonGraphics) {
-					var skeletonDataAsset = sg.skeletonDataAsset;
+				SkeletonGraphic[] activeSkeletonGraphics = GameObject.FindObjectsOfType<SkeletonGraphic>();
+				foreach (SkeletonGraphic skeletonGraphic in activeSkeletonGraphics) {
+					SkeletonDataAsset skeletonDataAsset = skeletonGraphic.skeletonDataAsset;
 					if (skeletonDataAsset != null) {
-						var assetPath = AssetDatabase.GetAssetPath(skeletonDataAsset);
-						var sgID = sg.GetInstanceID();
+						string assetPath = AssetDatabase.GetAssetPath(skeletonDataAsset);
+						int sgID = skeletonGraphic.GetInstanceID();
 						savedSkeletonDataAssetAtSKeletonGraphicID[sgID] = assetPath;
 						skeletonDataAssetsToReload.Add(skeletonDataAsset);
 					}
 				}
 
-				foreach (var sda in skeletonDataAssetsToReload) {
-					sda.Clear();
-					sda.GetSkeletonData(true);
+				foreach (SkeletonDataAsset skeletonDataAsset in skeletonDataAssetsToReload) {
+					ReloadSkeletonDataAsset(skeletonDataAsset, false);
 				}
 
-				foreach (var sr in activeSkeletonRenderers) {
-					var meshRenderer = sr.GetComponent<MeshRenderer>();
-					var sharedMaterials = meshRenderer.sharedMaterials;
-					foreach (var m in sharedMaterials) {
-						if (m == null) {
-							sr.Initialize(true);
-							break;
-						}
-					}
-				}
-
-				foreach (var sg in activeSkeletonGraphics) {
-					if (sg.mainTexture == null)
-						sg.Initialize(true);
-				}
+				foreach (SkeletonRenderer skeletonRenderer in activeSkeletonRenderers)
+					skeletonRenderer.Initialize(true);
+				foreach (SkeletonGraphic skeletonGraphic in activeSkeletonGraphics)
+					skeletonGraphic.Initialize(true);
 			}
 
 			public static void ReloadSceneSkeletonComponents (SkeletonDataAsset skeletonDataAsset) {
@@ -118,25 +106,36 @@ namespace Spine.Unity.Editor {
 				if (EditorApplication.isCompiling) return;
 				if (EditorApplication.isPlayingOrWillChangePlaymode) return;
 
-				var activeSkeletonRenderers = GameObject.FindObjectsOfType<SkeletonRenderer>();
-				foreach (var sr in activeSkeletonRenderers) {
-					if (sr.isActiveAndEnabled && sr.skeletonDataAsset == skeletonDataAsset) sr.Initialize(true);
+				SkeletonRenderer[] activeSkeletonRenderers = GameObject.FindObjectsOfType<SkeletonRenderer>();
+				foreach (SkeletonRenderer renderer in activeSkeletonRenderers) {
+					if (renderer.isActiveAndEnabled && renderer.skeletonDataAsset == skeletonDataAsset) renderer.Initialize(true);
 				}
 
-				var activeSkeletonGraphics = GameObject.FindObjectsOfType<SkeletonGraphic>();
-				foreach (var sg in activeSkeletonGraphics) {
-					if (sg.isActiveAndEnabled && sg.skeletonDataAsset == skeletonDataAsset) sg.Initialize(true);
+				SkeletonGraphic[] activeSkeletonGraphics = GameObject.FindObjectsOfType<SkeletonGraphic>();
+				foreach (SkeletonGraphic graphic in activeSkeletonGraphics) {
+					if (graphic.isActiveAndEnabled && graphic.skeletonDataAsset == skeletonDataAsset)
+						graphic.Initialize(true);
 				}
 			}
 
+			public static void ClearAnimationReferenceAssets (SkeletonDataAsset skeletonDataAsset) {
+				ForEachAnimationReferenceAsset(skeletonDataAsset, (referenceAsset) => referenceAsset.Clear());
+			}
+
 			public static void ReloadAnimationReferenceAssets (SkeletonDataAsset skeletonDataAsset) {
+				ForEachAnimationReferenceAsset(skeletonDataAsset, (referenceAsset) => referenceAsset.Initialize());
+			}
+
+			private static void ForEachAnimationReferenceAsset (SkeletonDataAsset skeletonDataAsset,
+				System.Action<AnimationReferenceAsset> func) {
+
 				string[] guids = UnityEditor.AssetDatabase.FindAssets("t:AnimationReferenceAsset");
 				foreach (string guid in guids) {
 					string path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
 					if (!string.IsNullOrEmpty(path)) {
-						var referenceAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<AnimationReferenceAsset>(path);
+						AnimationReferenceAsset referenceAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<AnimationReferenceAsset>(path);
 						if (referenceAsset.SkeletonDataAsset == skeletonDataAsset)
-							referenceAsset.Initialize();
+							func(referenceAsset);
 					}
 				}
 			}

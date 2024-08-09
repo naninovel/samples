@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 114777655263784816}
   - component: {fileID: 114198583836852780}
   - component: {fileID: 114377662660272134}
-  - component: {fileID: 7467599400164247068}
-  - component: {fileID: 1997338655195100174}
-  - component: {fileID: 6425437614670808424}
-  - component: {fileID: 3474526566590730892}
+  - component: {fileID: 7647176602750987730}
+  - component: {fileID: 1600722139143736762}
+  - component: {fileID: 2043241364949035862}
+  - component: {fileID: 431812431321268166}
   - component: {fileID: 95152701801533134}
-  - component: {fileID: 6919934174636542555}
+  - component: {fileID: 1654749853298520810}
   m_Layer: 0
   m_Name: Clipping
   m_TagString: Untagged
@@ -96,12 +96,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Opacity: 1
   _lastOpacity: 0
+  _isOverwrittenModelMultiplyColors: 0
+  _isOverwrittenModelScreenColors: 0
+  _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
+  _modelScreenColor: {r: 0, g: 0, b: 0, a: 0}
   _sortingLayerId: 0
   _sortingMode: 0
   _sortingOrder: 0
   CameraToFace: {fileID: 0}
   _drawOrderHandler: {fileID: 0}
   _opacityHandler: {fileID: 0}
+  _multiplyColorHandler: {fileID: 0}
+  _screenColorHandler: {fileID: 0}
   _depthOffset: 0.00001
 --- !u!114 &114377662660272134
 MonoBehaviour:
@@ -116,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maskTexture: {fileID: 0}
---- !u!114 &7467599400164247068
+--- !u!114 &7647176602750987730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702f05e81266375468e2b47006338cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1997338655195100174
+--- !u!114 &1600722139143736762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23066d7f6cfa354d91d0033239622a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6425437614670808424
+--- !u!114 &2043241364949035862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPoseIndex: 0
---- !u!114 &3474526566590730892
+--- !u!114 &431812431321268166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,6 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpressionsList: {fileID: 0}
+  UseLegacyBlendCalculation: 0
   CurrentExpressionIndex: -1
 --- !u!95 &95152701801533134
 Animator:
@@ -188,7 +195,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6919934174636542555
+--- !u!114 &1654749853298520810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,6 +431,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: b6eee2f53dbd5ef44b673113e84be2e3, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -542,6 +553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: b6eee2f53dbd5ef44b673113e84be2e3, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -739,6 +754,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: b6eee2f53dbd5ef44b673113e84be2e3, type: 3}
   _sortingMode: 0
   _sortingOrder: 0

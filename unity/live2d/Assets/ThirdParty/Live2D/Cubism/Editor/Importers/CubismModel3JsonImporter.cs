@@ -13,7 +13,9 @@ using Live2D.Cubism.Framework.Json;
 using Live2D.Cubism.Framework.Motion;
 using Live2D.Cubism.Framework.MotionFade;
 using Live2D.Cubism.Framework.Pose;
+using Live2D.Cubism.Rendering.Masking;
 using System;
+using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -166,13 +168,22 @@ namespace Live2D.Cubism.Editor.Importers
 
             // Instantiate model source and model.
             var model = Model3Json.ToModel(CubismImporter.OnPickMaterial, CubismImporter.OnPickTexture, ShouldImportAsOriginalWorkflow);
-            var moc = model.Moc;
 
+            if (model == null)
+            {
+                return;
+            }
+
+            var assetPath = AssetPath.Replace(".model3.json", "");
+            var modelName = Path.GetFileName(assetPath).Replace(".model3.json", "");
+
+            var moc = model.Moc;
+            moc.name = modelName;
 
             // Create moc asset.
             if (MocAsset == null)
             {
-                AssetDatabase.CreateAsset(moc, AssetPath.Replace(".model3.json", ".asset"));
+                AssetDatabase.CreateAsset(moc, $"{assetPath}.asset");
 
 
                 MocAsset = moc;
@@ -194,12 +205,21 @@ namespace Live2D.Cubism.Editor.Importers
                     CubismImporter.SendModelTextureImportEvent(this, model, texture);
                 }
 
+                var modelMaskTexture = ScriptableObject.CreateInstance<CubismMaskTexture>();
+                modelMaskTexture.name = model.name + "MaskTexture";
+
+                var filePath = string.Format("{0}/{1}.asset", Path.GetDirectoryName(AssetPath), modelMaskTexture.name);
+
+                if (!File.Exists(filePath))
+                {
+                    AssetDatabase.CreateAsset(modelMaskTexture, filePath);
+                }
 
                 // Create prefab and trigger saving of changes.
 #if UNITY_2018_3_OR_NEWER
-                ModelPrefab = PrefabUtility.SaveAsPrefabAsset(model.gameObject, AssetPath.Replace(".model3.json", ".prefab"));
+                ModelPrefab = PrefabUtility.SaveAsPrefabAsset(model.gameObject, $"{assetPath}.prefab");
 #else
-                ModelPrefab = PrefabUtility.CreatePrefab(AssetPath.Replace(".model3.json", ".prefab"), model.gameObject);
+                ModelPrefab = PrefabUtility.CreatePrefab($"{assetPath}.prefab", model.gameObject);
 #endif
 
                 isImporterDirty = true;
@@ -214,7 +234,7 @@ namespace Live2D.Cubism.Editor.Importers
                 {
                     CubismModel.ResetMocReference(cubismModel,
                         AssetDatabase.LoadAssetAtPath<CubismMoc>(
-                            AssetPath.Replace(".model3.json", ".asset")));
+                            $"{assetPath}.asset"));
                 }
 
 
@@ -239,9 +259,12 @@ namespace Live2D.Cubism.Editor.Importers
                 // Reset moc reference.
                 CubismModel.ResetMocReference(model, MocAsset);
 
+                // Keep layer value.
+                model.gameObject.layer = ModelPrefab.layer;
+
                 // Replace prefab.
 #if UNITY_2018_3_OR_NEWER
-                ModelPrefab = PrefabUtility.SaveAsPrefabAsset(model.gameObject, AssetPath.Replace(".model3.json", ".prefab"));
+                ModelPrefab = PrefabUtility.SaveAsPrefabAsset(model.gameObject, $"{assetPath}.prefab");
 #else
                 ModelPrefab = PrefabUtility.ReplacePrefab(model.gameObject, ModelPrefab, ReplacePrefabOptions.ConnectToPrefab);
 #endif
@@ -300,7 +323,6 @@ namespace Live2D.Cubism.Editor.Importers
 
                 // skip copy original workflow component.
                 if(sourceComponent.GetType() == typeof(CubismUpdateController)
-                || sourceComponent.GetType() == typeof(CubismMotionController)
                 || sourceComponent.GetType() == typeof(CubismFadeController)
                 || sourceComponent.GetType() == typeof(CubismExpressionController)
                 || sourceComponent.GetType() == typeof(CubismPoseController)

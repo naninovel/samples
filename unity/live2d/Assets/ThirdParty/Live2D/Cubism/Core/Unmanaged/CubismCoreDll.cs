@@ -40,6 +40,42 @@ namespace Live2D.Cubism.Core.Unmanaged
 
 
         /// <sumamry>
+        /// .moc3 file version Unknown
+        /// </sumamry>
+        public const int MocVersion_Unknown = 0;
+        /// <sumamry>
+        /// .moc3 file version 3.0.00 - 3.2.07
+        /// </sumamry>
+        public const int MocVersion_30 = 1;
+        /// <sumamry>
+        /// .moc3 file version 3.3.00 - 3.3.03
+        /// </sumamry>
+        public const int MocVersion_33 = 2;
+        /// <sumamry>
+        /// .moc3 file version 4.0.00 - 4.1.05
+        /// </sumamry>
+        public const int MocVersion_40 = 3;
+        /// <sumamry>
+        /// .moc3 file version 4.2.00 - 4.2.04
+        /// </sumamry>
+        public const int MocVersion_42 = 4;
+        /// <sumamry>
+        /// .moc3 file version 5.0.00 -
+        /// </sumamry>
+        public const int MocVersion_50 = 5;
+
+
+        /// <sumamry>
+        /// Normal Parameter.
+        /// </sumamry>
+        public const int ParameterType_Normal = 0;
+        /// <sumamry>
+        /// Parameter for blend shape.
+        /// </sumamry>
+        public const int ParameterType_BlendShape = 1;
+
+
+        /// <sumamry>
         /// Additive blend mode bit.
         /// </sumamry>
         public const Byte BlendAdditive = 1 << 0;
@@ -81,6 +117,10 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// Flag set when vertex positions did change.
         /// </sumamry>
         public const Byte VertexPositionsDidChange = 1 << 5;
+        /// <sumamry>
+        /// Flag set when blend color did change.
+        /// </sumamry>
+        public const Byte BlendColorDidChange = 1 << 6;
 
 
         /// <summary>
@@ -97,7 +137,7 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// Moc file format version.
         /// </summary>
         [DllImport(DllName, EntryPoint = "csmGetMocVersion")]
-        public static extern uint GetMocVersion(IntPtr moc);
+        public static extern uint GetMocVersion(IntPtr moc, uint mocSize);
         /// <summary>
         /// Sets log handler.
         /// </summary>
@@ -118,6 +158,11 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// </summary>
         [DllImport(DllName, EntryPoint = "csmInitializeModelInPlace")]
         public static extern IntPtr InitializeModelInPlace(IntPtr moc, IntPtr memory, uint modelSize);
+        /// <summary>
+        /// Checks consistency of a moc.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmHasMocConsistency")]
+        public static extern int HasMocConsistency(IntPtr memory, uint mocSize);
         /// <summary>
         /// Updates model.
         /// </summary>
@@ -144,6 +189,11 @@ namespace Live2D.Cubism.Core.Unmanaged
         [DllImport(DllName, EntryPoint = "csmGetParameterMinimumValues")]
         public static extern unsafe float* GetParameterMinimumValues(IntPtr model);
         /// <summary>
+        /// Gets Parameter types.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetParameterTypes")]
+        public static extern unsafe int* GetParameterTypes(IntPtr model);
+        /// <summary>
         /// Gets maximum parameter values.
         /// </summary>
         [DllImport(DllName, EntryPoint = "csmGetParameterMaximumValues")]
@@ -158,6 +208,16 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// </summary>
         [DllImport(DllName, EntryPoint = "csmGetParameterValues")]
         public static extern unsafe float* GetParameterValues(IntPtr model);
+        /// <summary>
+        /// Gets number of key values of each parameter.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetParameterKeyCounts")]
+        public static extern unsafe int* GetParameterKeyCounts(IntPtr model);
+        /// <summary>
+        /// Gets key values of each parameter.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetParameterKeyValues")]
+        public static extern unsafe float** GetParameterKeyValues(IntPtr model);
         /// <summary>
         /// Gets part count.
         /// </summary>
@@ -258,5 +318,20 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// </summary>
         [DllImport(DllName, EntryPoint = "csmResetDrawableDynamicFlags")]
         public static extern void ResetDrawableDynamicFlags(IntPtr model);
+        /// <summary>
+        /// Gets information multiply color.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetDrawableMultiplyColors")]
+        public static extern unsafe float* GetDrawableMultiplyColors(IntPtr model);
+        /// <summary>
+        /// Gets information Screen color.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetDrawableScreenColors")]
+        public static extern unsafe float* GetDrawableScreenColors(IntPtr model);
+        /// <summary>
+        /// Gets Indices of drawables parent part.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmGetDrawableParentPartIndices")]
+        public static extern unsafe int* GetDrawableParentPartIndices(IntPtr model);
     }
 }

@@ -25,12 +25,28 @@ namespace Live2D.Cubism.Core
         #region Factory Methods
 
         /// <summary>
+        /// Checks consistency of a moc.
+        /// </summary>
+        public static bool HasMocConsistency(byte[] moc3)
+        {
+            return CubismUnmanagedMoc.HasMocConsistency(moc3);
+        }
+
+        /// <summary>
         /// Creates a <see cref="CubismMoc"/> asset from raw bytes.
         /// </summary>
         /// <param name="moc3">Source.</param>
+        /// <param name="shouldCheckMocConsistency">Use the verification function?</param>
         /// <returns>Instance.</returns>
-        public static CubismMoc CreateFrom(byte[] moc3)
+        public static CubismMoc CreateFrom(byte[] moc3, bool shouldCheckMocConsistency = true)
         {
+            if (shouldCheckMocConsistency && !HasMocConsistency(moc3))
+            {
+                Debug.LogError("This Moc3 is Invalid. This model generation process is aborted and prefab is not created.\n" +
+                                           $"Please check Model's Moc version. This CubismCore supported latest Moc version is `{LatestVersion}`.");
+                return null;
+            }
+
             var moc = CreateInstance<CubismMoc>();
 
 
@@ -52,6 +68,17 @@ namespace Live2D.Cubism.Core
 
 
             moc.Revive();
+        }
+
+        /// <summary>
+        /// Gets the latest .moc3 file version.
+        /// </summary>
+        public static uint LatestVersion
+        {
+            get
+            {
+                return CubismCoreDll.GetLatestMocVersion();
+            }
         }
 
         /// <summary>
@@ -166,6 +193,14 @@ namespace Live2D.Cubism.Core
 
             // Try revive.
             UnmanagedMoc = CubismUnmanagedMoc.FromBytes(Bytes);
+        }
+
+        public uint Version
+        {
+            get
+            {
+                return UnmanagedMoc.MocVersion;
+            }
         }
     }
 }

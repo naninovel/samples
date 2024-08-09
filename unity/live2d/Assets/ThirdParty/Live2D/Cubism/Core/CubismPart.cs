@@ -70,7 +70,7 @@ namespace Live2D.Cubism.Core
         /// <summary>
         /// Position in unmanaged arrays.
         /// </summary>
-        internal int UnmanagedIndex
+        public int UnmanagedIndex
         {
             get { return _unmanagedIndex; }
             private set { _unmanagedIndex = value; }
@@ -95,6 +95,21 @@ namespace Live2D.Cubism.Core
         [SerializeField, HideInInspector]
         public float Opacity;
 
+        /// <summary>
+        /// Parent part position in unmanaged arrays.
+        /// </summary>
+        public int UnmanagedParentIndex
+        {
+            get
+            {
+                if (UnmanagedIndex > 0)
+                {
+                    // Pull data.
+                    return UnmanagedParts.ParentIndices[UnmanagedIndex];
+                }
+                return -1;
+            }
+        }
 
         /// <summary>
         /// Revives instance.

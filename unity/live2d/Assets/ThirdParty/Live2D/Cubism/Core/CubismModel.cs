@@ -9,11 +9,12 @@
 using Live2D.Cubism.Framework;
 using System;
 using UnityEngine;
-
 #if UNITY_2019_3_OR_NEWER
 using UnityEngine.LowLevel;
+using UnityEngine.PlayerLoop;
 #elif UNITY_2018_1_OR_NEWER
 using UnityEngine.Experimental.LowLevel;
+using UnityEngine.Experimental.PlayerLoop;
 #endif
 
 
@@ -268,6 +269,10 @@ namespace Live2D.Cubism.Core
             // Revive unmanaged model.
             TaskableModel = new CubismTaskableModel(Moc);
 
+            if (TaskableModel == null || TaskableModel.UnmanagedModel == null)
+            {
+                return;
+            }
 
             // Revive proxies.
             Parameters = GetComponentsInChildren<CubismParameter>();
@@ -293,6 +298,10 @@ namespace Live2D.Cubism.Core
             name = moc.name;
             TaskableModel = new CubismTaskableModel(moc);
 
+            if (TaskableModel == null || TaskableModel.UnmanagedModel == null)
+            {
+                return;
+            }
 
             // Create and initialize proxies.
             var parameters = CubismParameter.CreateParameters(TaskableModel.UnmanagedModel);
@@ -366,9 +375,26 @@ namespace Live2D.Cubism.Core
                 PlayerLoop.GetDefaultPlayerLoop();
 #endif
 
+            var playerLoopIndex = -1;
+            for (var i = 0; i < playerLoopSystem.subSystemList.Length; i++)
+            {
+                if (playerLoopSystem.subSystemList[i].type != typeof(PreLateUpdate))
+                {
+                    continue;
+                }
+
+                playerLoopIndex = i;
+                break;
+            }
+
+            if (playerLoopIndex < 0)
+            {
+                Debug.LogError("CubismModel : Failed to add processing to PlayerLoop.");
+                return;
+            }
 
             // Get the "PreLateUpdate" system.
-            var playerLoopSubSystem = playerLoopSystem.subSystemList[5];
+            var playerLoopSubSystem = playerLoopSystem.subSystemList[playerLoopIndex];
             var subSystemList = playerLoopSubSystem.subSystemList;
 
 
@@ -379,7 +405,7 @@ namespace Live2D.Cubism.Core
 
             // Restore the "PreLateUpdate" sytem.
             playerLoopSubSystem.subSystemList = subSystemList;
-            playerLoopSystem.subSystemList[5] = playerLoopSubSystem;
+            playerLoopSystem.subSystemList[playerLoopIndex] = playerLoopSubSystem;
             PlayerLoop.SetPlayerLoop(playerLoopSystem);
         }
 #endif

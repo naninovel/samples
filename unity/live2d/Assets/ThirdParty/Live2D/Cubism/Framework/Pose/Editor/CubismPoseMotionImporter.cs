@@ -47,6 +47,7 @@ namespace Live2D.Cubism.Editor.Importers
         private static void OnModelImport(CubismModel3JsonImporter sender, CubismModel model)
         {
             var shouldImportAsOriginalWorkflow = CubismUnityEditorMenu.ShouldImportAsOriginalWorkflow;
+            var shouldClearAnimationCurves = CubismUnityEditorMenu.ShouldClearAnimationCurves;
             var pose3Json = sender.Model3Json.Pose3Json;
 
             // Fail silently...
@@ -87,21 +88,45 @@ namespace Live2D.Cubism.Editor.Importers
                 var motion3Json = CubismMotion3Json.LoadFrom(jsonString);
 
                 var animationClipPath = directoryPath + motions[i].File.Replace(".motion3.json", ".anim");
-                var newAnimationClip = motion3Json.ToAnimationClip(shouldImportAsOriginalWorkflow, false, true, pose3Json);
-                var oldAnimationClip = AssetDatabase.LoadAssetAtPath<AnimationClip>(animationClipPath);
+                animationClipPath = animationClipPath.Replace("\\", "/");
 
-                // Create animation clip.
-                if(oldAnimationClip == null)
+                var animationName = Path.GetFileNameWithoutExtension(motions[i].File.Replace(".motion3.json", ".anim"));
+                var assetList = CubismCreatedAssetList.GetInstance();
+                var assetListIndex = assetList.AssetPaths.Contains(animationClipPath)
+                    ? assetList.AssetPaths.IndexOf(animationClipPath)
+                    : -1;
+
+                var oldAnimationClip = (shouldImportAsOriginalWorkflow)
+                    ? (assetListIndex >= 0)
+                        ? (AnimationClip)assetList.Assets[assetListIndex]
+                        : AssetDatabase.LoadAssetAtPath<AnimationClip>(animationClipPath)
+                    : null;
+
+                var newAnimationClip = (oldAnimationClip == null)
+                    ? motion3Json.ToAnimationClip(shouldImportAsOriginalWorkflow, shouldClearAnimationCurves, true, pose3Json)
+                    : motion3Json.ToAnimationClip(oldAnimationClip, shouldImportAsOriginalWorkflow, shouldClearAnimationCurves, true,
+                        pose3Json);
+                newAnimationClip.name = animationName;
+
+                if (assetListIndex < 0)
                 {
-                    AssetDatabase.CreateAsset(newAnimationClip, animationClipPath);
-                    oldAnimationClip = newAnimationClip;
+                    // Create animation clip.
+                    if (oldAnimationClip == null)
+                    {
+                        AssetDatabase.CreateAsset(newAnimationClip, animationClipPath);
+                        oldAnimationClip = newAnimationClip;
+                    }
+
+                    assetList.Assets.Add(newAnimationClip);
+                    assetList.AssetPaths.Add(animationClipPath);
+                    assetList.IsImporterDirties.Add(false);
                 }
                 // Update animation clip.
                 else
                 {
                     EditorUtility.CopySerialized(newAnimationClip, oldAnimationClip);
                     EditorUtility.SetDirty(oldAnimationClip);
-                    newAnimationClip = oldAnimationClip;
+                    assetList.Assets[assetListIndex] = oldAnimationClip;
                 }
 
                 // Add animation event
@@ -142,49 +167,107 @@ namespace Live2D.Cubism.Editor.Importers
                 var fadeMotionPath = directoryPath + motions[i].File.Replace(".motion3.json", ".fade.asset");
                 var fadeMotion = AssetDatabase.LoadAssetAtPath<CubismFadeMotionData>(fadeMotionPath);
 
-                if(fadeMotion == null)
+                if (fadeMotion == null)
                 {
-                    fadeMotion = CubismFadeMotionData.CreateInstance(motion3Json, fadeMotionPath.Replace(directoryPath, ""),
-                                                                    newAnimationClip.length, shouldImportAsOriginalWorkflow, true);
+                    fadeMotion = CubismFadeMotionData.CreateInstance(
+                        motion3Json,
+                        Path.GetFileName(motions[i].File),
+                        newAnimationClip.length,
+                        shouldImportAsOriginalWorkflow,
+                        true);
 
                     AssetDatabase.CreateAsset(fadeMotion, fadeMotionPath);
+                }
 
-                    EditorUtility.SetDirty(fadeMotion);
+                // Motion references for Fade added to list.
+                var directoryName = Path.GetDirectoryName(fadeMotionPath).ToString();
+                var modelDir = Path.GetDirectoryName(directoryName).ToString();
+                var modelName = Path.GetFileName(modelDir).ToString();
+                var fadeMotionListPath = Path.GetDirectoryName(directoryName).ToString() + "/" + modelName + ".fadeMotionList.asset";
 
-                    // Fade用モーションの参照をリストに追加
-                    var directoryName = Path.GetDirectoryName(fadeMotionPath).ToString();
-                    var modelDir = Path.GetDirectoryName(directoryName).ToString();
-                    var modelName = Path.GetFileName(modelDir).ToString();
-                    var fadeMotionListPath = Path.GetDirectoryName(directoryName).ToString() + "/" + modelName + ".fadeMotionList.asset";
-                    var fadeMotions = AssetDatabase.LoadAssetAtPath<CubismFadeMotionList>(fadeMotionListPath);
+                assetList = CubismCreatedAssetList.GetInstance();
+                assetListIndex = assetList.AssetPaths.Contains(fadeMotionListPath)
+                    ? assetList.AssetPaths.IndexOf(fadeMotionListPath)
+                    : -1;
 
-                    // 参照リスト作成
-                    if(fadeMotions == null)
+                CubismFadeMotionList fadeMotions = null;
+                if (assetListIndex < 0)
+                {
+                    fadeMotions = AssetDatabase.LoadAssetAtPath<CubismFadeMotionList>(fadeMotionListPath);
+
+                    if (fadeMotions == null)
                     {
+                        // Create reference list.
                         fadeMotions = ScriptableObject.CreateInstance<CubismFadeMotionList>();
                         fadeMotions.MotionInstanceIds = new int[0];
                         fadeMotions.CubismFadeMotionObjects = new CubismFadeMotionData[0];
                         AssetDatabase.CreateAsset(fadeMotions, fadeMotionListPath);
                     }
+                    assetList.Assets.Add(fadeMotions);
+                    assetList.AssetPaths.Add(fadeMotionListPath);
+                    assetList.IsImporterDirties.Add(true);
+                }
+                else
+                {
+                    fadeMotions = (CubismFadeMotionList)assetList.Assets[assetListIndex];
+                }
 
-                    var instanceId = oldAnimationClip.GetInstanceID();
-                    var motionIndex = Array.IndexOf(fadeMotions.MotionInstanceIds, instanceId);
-                    if (motionIndex != -1)
+                if (fadeMotions == null)
+                {
+                    Debug.LogError("CubismPoseMotionImporter : Can not create CubismFadeMotionList.");
+                    return;
+                }
+
+                var motionIndex = -1;
+                var motionName = Path.GetFileName(motions[i].File);
+
+                for (var fadeMotionIndex = 0; fadeMotionIndex < fadeMotions.CubismFadeMotionObjects.Length; fadeMotionIndex++)
+                {
+                    if (Path.GetFileName(fadeMotions.CubismFadeMotionObjects[fadeMotionIndex].MotionName) != motionName)
                     {
-                        fadeMotions.CubismFadeMotionObjects[motionIndex] = fadeMotion;
+                        continue;
                     }
-                    else
+
+                    motionIndex = fadeMotionIndex;
+                    break;
+                }
+
+                // Create fade motion.
+                if (motionIndex != -1)
+                {
+                    var instanceId = 0;
+                    var isExistInstanceId = false;
+                    var events = newAnimationClip.events;
+                    for (var k = 0; k < events.Length; ++k)
                     {
-                        motionIndex = fadeMotions.MotionInstanceIds.Length;
+                        if (events[k].functionName != "InstanceId")
+                        {
+                            continue;
+                        }
 
-                        Array.Resize(ref fadeMotions.MotionInstanceIds, motionIndex+1);
-                        fadeMotions.MotionInstanceIds[motionIndex] = instanceId;
-
-                        Array.Resize(ref fadeMotions.CubismFadeMotionObjects, motionIndex+1);
-                        fadeMotions.CubismFadeMotionObjects[motionIndex] = fadeMotion;
+                        instanceId = events[k].intParameter;
+                        isExistInstanceId = true;
+                        break;
                     }
 
-                    EditorUtility.SetDirty(fadeMotions);
+                    if (!isExistInstanceId)
+                    {
+                        instanceId = newAnimationClip.GetInstanceID();
+                    }
+
+                    fadeMotions.MotionInstanceIds[motionIndex] = instanceId;
+                    fadeMotions.CubismFadeMotionObjects[motionIndex] = fadeMotion;
+                }
+                else
+                {
+                    var instanceId = newAnimationClip.GetInstanceID();
+                    motionIndex = fadeMotions.MotionInstanceIds.Length;
+
+                    Array.Resize(ref fadeMotions.MotionInstanceIds, motionIndex + 1);
+                    fadeMotions.MotionInstanceIds[motionIndex] = instanceId;
+
+                    Array.Resize(ref fadeMotions.CubismFadeMotionObjects, motionIndex + 1);
+                    fadeMotions.CubismFadeMotionObjects[motionIndex] = fadeMotion;
                 }
 
                 for (var curveIndex = 0; curveIndex < motion3Json.Curves.Length; ++curveIndex)

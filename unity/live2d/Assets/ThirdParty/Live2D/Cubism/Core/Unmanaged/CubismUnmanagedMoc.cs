@@ -48,6 +48,29 @@ namespace Live2D.Cubism.Core.Unmanaged
         /// </summary>
         public IntPtr Ptr { get; private set; }
 
+        /// <summary>
+        /// .moc3 version.
+        /// </summary>
+        public uint MocVersion { get; private set; }
+
+        /// <summary>
+        /// Checks consistency of a moc.
+        /// </summary>
+        public static bool HasMocConsistency(byte[] bytes)
+        {
+            // Allocate and initialize memory (returning on fail).
+            var memory = CubismUnmanagedMemory.Allocate(bytes.Length, CubismCoreDll.AlignofMoc);
+
+            CubismUnmanagedMemory.Write(bytes, memory);
+
+            // '1' if Moc is valid; '0' otherwise.
+            var mocConsistencyNum = CubismCoreDll.HasMocConsistency(memory, (uint)bytes.Length);
+            var hasMocConsistency = (mocConsistencyNum == 1);
+
+            CubismUnmanagedMemory.Deallocate(memory);
+
+            return hasMocConsistency;
+        }
 
         /// <summary>
         /// Releases instance.
@@ -94,7 +117,11 @@ namespace Live2D.Cubism.Core.Unmanaged
             if (Ptr == IntPtr.Zero)
             {
                 CubismUnmanagedMemory.Deallocate(memory);
+                // Fail silently.
+                return;
             }
+
+            MocVersion = CubismCoreDll.GetMocVersion(Ptr, (uint)bytes.Length);
         }
 
         #endregion

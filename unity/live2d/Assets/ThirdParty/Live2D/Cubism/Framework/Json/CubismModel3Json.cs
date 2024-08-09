@@ -293,6 +293,17 @@ namespace Live2D.Cubism.Framework.Json
         }
 
         /// <summary>
+        /// The contents of cdi3.json asset.
+        /// </summary>
+        public string DisplayInfo3Json
+        {
+            get
+            {
+                return string.IsNullOrEmpty(FileReferences.DisplayInfo) ? null : LoadReferencedAsset<string>(FileReferences.DisplayInfo);
+            }
+        }
+
+        /// <summary>
         /// <see cref="Textures"/> backing field.
         /// </summary>
         [NonSerialized]
@@ -370,6 +381,10 @@ namespace Live2D.Cubism.Framework.Json
 
             var model = CubismModel.InstantiateFrom(moc);
 
+            if (model == null)
+            {
+                return null;
+            }
 
             model.name = Path.GetFileNameWithoutExtension(FileReferences.Moc);
 
@@ -386,6 +401,10 @@ namespace Live2D.Cubism.Framework.Json
 
             var drawables = model.Drawables;
 
+            if (renderers == null || drawables  == null)
+            {
+                return null;
+            }
 
             // Initialize materials.
             for (var i = 0; i < renderers.Length; ++i)
@@ -401,8 +420,21 @@ namespace Live2D.Cubism.Framework.Json
             }
 
 
+            if (model.Parts != null)
+            {
+                var parts = model.Parts;
+
+                // Create and initialize partColorsEditors.
+                for (int i = 0; i < parts.Length; i++)
+                {
+                    var partColorsEditor = parts[i].gameObject.AddComponent<CubismPartColorsEditor>();
+                    partColorsEditor.TryInitialize(model);
+                }
+            }
+
+
             // Initialize drawables.
-            if(HitAreas != null)
+            if (HitAreas != null)
             {
                 for (var i = 0; i < HitAreas.Length; i++)
                 {
@@ -421,10 +453,12 @@ namespace Live2D.Cubism.Framework.Json
                 }
             }
 
+            //Load from cdi3.json
+            var DisplayInfo3JsonAsString = DisplayInfo3Json;
+            var cdi3Json = CubismDisplayInfo3Json.LoadFrom(DisplayInfo3JsonAsString);
 
             // Initialize groups.
             var parameters = model.Parameters;
-
 
             for (var i = 0; i < parameters.Length; ++i)
             {
@@ -451,8 +485,46 @@ namespace Live2D.Cubism.Framework.Json
 
                     parameters[i].gameObject.AddComponent<CubismMouthParameter>();
                 }
+
+
+                // Setting up the parameter name for display.
+                if (cdi3Json != null)
+                {
+                    var cubismDisplayInfoParameterName = parameters[i].gameObject.AddComponent<CubismDisplayInfoParameterName>();
+                    cubismDisplayInfoParameterName.Name = parameters[i].Id;
+                    for (int j = 0; j < cdi3Json.Parameters.Length; j++)
+                    {
+                        if (cdi3Json.Parameters[j].Id == parameters[i].Id)
+                        {
+                            cubismDisplayInfoParameterName.Name = cdi3Json.Parameters[j].Name;
+                            break;
+                        }
+                    }
+                    cubismDisplayInfoParameterName.DisplayName = string.Empty;
+                }
             }
 
+            // Setting up the part name for display.
+            if (cdi3Json != null)
+            {
+                // Initialize groups.
+                var parts = model.Parts;
+
+                for (var i = 0; i < parts.Length; i++)
+                {
+                    var cubismDisplayInfoPartNames = parts[i].gameObject.AddComponent<CubismDisplayInfoPartName>();
+                    cubismDisplayInfoPartNames.Name = parts[i].Id;
+                    for (int j = 0; j < cdi3Json.Parts.Length; j++)
+                    {
+                        if (cdi3Json.Parts[j].Id == parts[i].Id)
+                        {
+                            cubismDisplayInfoPartNames.Name = cdi3Json.Parts[j].Name;
+                            break;
+                        }
+                    }
+                    cubismDisplayInfoPartNames.DisplayName = string.Empty;
+                }
+            }
 
             // Add mask controller if required.
             for (var i = 0; i < drawables.Length; ++i)
@@ -750,6 +822,12 @@ namespace Live2D.Cubism.Framework.Json
             /// </summary>
             [SerializeField]
             public string UserData;
+
+            /// <summary>
+            /// Relative path to the cdi3.json.
+            /// </summary>
+            [SerializeField]
+            public string DisplayInfo;
         }
 
         /// <summary>

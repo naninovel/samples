@@ -8,6 +8,7 @@
 
 using Live2D.Cubism.Core;
 using Live2D.Cubism.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -118,8 +119,15 @@ namespace Live2D.Cubism.Rendering.Masking
                     continue;
                 }
 
+                // Make sure no leftover null-entries are added as mask.
+                var masks = Array.FindAll(drawables[i].Masks, mask => mask != null);
 
-                pairs.Add(drawables[i], drawables[i].Masks);
+                if (masks.Length == 0)
+                {
+                    continue;
+                }
+
+                pairs.Add(drawables[i], masks);
             }
 
 
@@ -233,6 +241,14 @@ namespace Live2D.Cubism.Rendering.Masking
         #region ICubismMaskDrawSource
 
         /// <summary>
+        /// Number of command buffers required.
+        /// </summary>
+        public int CountOfCommandBuffers
+        {
+            get { return MaskTexture.CountOfCommandBuffers; }
+        }
+
+        /// <summary>
         /// Queries the number of tiles needed by the source.
         /// </summary>
         /// <returns>The necessary number of tiles needed.</returns>
@@ -261,11 +277,11 @@ namespace Live2D.Cubism.Rendering.Masking
         /// <summary>
         /// Called when source should instantly draw.
         /// </summary>
-        void ICubismMaskCommandSource.AddToCommandBuffer(CommandBuffer buffer)
+        void ICubismMaskCommandSource.AddToCommandBuffer(CommandBuffer buffer, bool isUsingMultipleBuffer, int bufferIndex)
         {
             for (var i = 0; i < Junctions.Length; ++i)
             {
-                Junctions[i].AddToCommandBuffer(buffer);
+                Junctions[i].AddToCommandBuffer(buffer, isUsingMultipleBuffer, bufferIndex);
             }
         }
 

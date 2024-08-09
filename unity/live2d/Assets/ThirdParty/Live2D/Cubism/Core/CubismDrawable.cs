@@ -76,6 +76,13 @@ namespace Live2D.Cubism.Core
             private set { _unmanagedIndex = value; }
         }
 
+        /// <summary>
+        /// Parent Part Position in unmanaged arrays.
+        /// </summary>
+        public int UnmanagedParentIndex
+        {
+            get { return UnmanagedDrawables.ParentPartIndices[UnmanagedIndex]; }
+        }
 
         /// <summary>
         /// Copy of Id.
@@ -98,6 +105,50 @@ namespace Live2D.Cubism.Core
             {
                 // Pull data.
                 return UnmanagedDrawables.TextureIndices[UnmanagedIndex];
+            }
+        }
+
+        /// <summary>
+        /// Copy of MultiplyColor.
+        /// </summary>
+        public Color MultiplyColor
+        {
+            get
+            {
+                var index = UnmanagedIndex * 4;
+                // Pull data.
+                return new Color(UnmanagedDrawables.MultiplyColors[index],
+                    UnmanagedDrawables.MultiplyColors[index + 1],
+                    UnmanagedDrawables.MultiplyColors[index + 2],
+                    UnmanagedDrawables.MultiplyColors[index + 3]);
+            }
+        }
+
+        /// <summary>
+        /// Copy of ScreenColor.
+        /// </summary>
+        public Color ScreenColor
+        {
+            get
+            {
+                var index = UnmanagedIndex * 4;
+                // Pull data.
+                return new Color(UnmanagedDrawables.ScreenColors[index],
+                    UnmanagedDrawables.ScreenColors[index + 1],
+                    UnmanagedDrawables.ScreenColors[index + 2],
+                    UnmanagedDrawables.ScreenColors[index + 3]);
+            }
+        }
+
+        /// <summary>
+        /// Index of Parent Part.
+        /// </summary>
+        public int ParentPartIndex
+        {
+            get
+            {
+                // Pull data.
+                return UnmanagedDrawables.ParentPartIndices[UnmanagedIndex];
             }
         }
 

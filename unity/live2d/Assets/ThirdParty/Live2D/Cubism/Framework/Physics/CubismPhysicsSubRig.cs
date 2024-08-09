@@ -20,16 +20,34 @@ namespace Live2D.Cubism.Framework.Physics
     public class CubismPhysicsSubRig
     {
         /// <summary>
+        /// Name.
+        /// </summary>
+        [SerializeField]
+        public string Name;
+
+        /// <summary>
         /// Input.
         /// </summary>
         [SerializeField]
         public CubismPhysicsInput[] Input;
 
         /// <summary>
+        /// Original Input.
+        /// </summary>
+        [NonSerialized]
+        public CubismPhysicsInput[] OriginalInput;
+
+        /// <summary>
         /// Output.
         /// </summary>
         [SerializeField]
         public CubismPhysicsOutput[] Output;
+
+        /// <summary>
+        /// Original Output.
+        /// </summary>
+        [NonSerialized]
+        public CubismPhysicsOutput[] OriginalOutput;
 
         /// <summary>
         /// Particles.
@@ -57,12 +75,56 @@ namespace Live2D.Cubism.Framework.Physics
 
 
         /// <summary>
+        /// Output result of physics operations before applying to parameters.
+        /// </summary>
+        private struct SubRigPhysicsOutput
+        {
+            public float[] Output;
+        }
+
+        [NonSerialized]
+        private SubRigPhysicsOutput _currentRigOutput; // Results of the latest pendulum calculation.
+
+        [NonSerialized]
+        private SubRigPhysicsOutput _previousRigOutput; // Result of previous pendulum calculation.
+
+        /// <summary>
+        /// Applies the specified weights from the latest and one previous result of the pendulum operation.
+        /// </summary>
+        /// <param name="weight">Weight of latest results.</param>
+        public void Interpolate(float weight)
+        {
+            // Load input parameters.
+            for (int i = 0; i < Output.Length; ++i)
+            {
+                if (Output[i].Destination == null)
+                {
+                    var destination = Rig.Controller.Parameters.FindById(Output[i].DestinationId);
+                    if (destination == null)
+                    {
+                        continue;
+                    }
+
+                    Output[i].Destination = destination;
+                }
+
+                UpdateOutputParameterValue(
+                    Output[i].Destination,
+                    ref Output[i].Destination.Value,
+                    _previousRigOutput.Output[i] * (1 - weight) + _currentRigOutput.Output[i] * weight,
+                    Output[i]
+                );
+            }
+        }
+
+        /// <summary>
         /// Updates parameter from output value.
         /// </summary>
         /// <param name="parameter">Target parameter.</param>
+        /// <param name="parameterValue">Target parameter Value.</param>
         /// <param name="translation">Translation.</param>
         /// <param name="output">Output value.</param>
-        private void UpdateOutputParameterValue(CubismParameter parameter, float translation, CubismPhysicsOutput output)
+        private void UpdateOutputParameterValue(CubismParameter parameter, ref float parameterValue, float translation, CubismPhysicsOutput output)
         {
             var outputScale = 1.0f;
 
@@ -97,12 +159,12 @@ namespace Live2D.Cubism.Framework.Physics
 
             if (weight >= 1.0f)
             {
-                parameter.Value = value;
+                parameterValue = value;
             }
             else
             {
-                value = (parameter.Value * (1.0f - weight)) + (value * weight);
-                parameter.Value = value;
+                value = (parameterValue * (1.0f - weight)) + (value * weight);
+                parameterValue = value;
             }
         }
 
@@ -183,6 +245,49 @@ namespace Live2D.Cubism.Framework.Physics
             }
         }
 
+        /// <summary>
+        /// Updates particles in stabilization function.
+        /// </summary>
+        /// <param name="strand">Particles</param>
+        /// <param name="totalTranslation">Total translation.</param>
+        /// <param name="totalAngle">Total angle.</param>
+        /// <param name="wind">Direction of wind.</param>
+        /// <param name="thresholdValue">Value of threshold.</param>
+        private void UpdateParticlesForStabilization(
+            CubismPhysicsParticle[] strand,
+            Vector2 totalTranslation,
+            float totalAngle,
+            Vector2 wind,
+            float thresholdValue
+            )
+        {
+            strand[0].Position = totalTranslation;
+
+            var totalRadian = CubismPhysicsMath.DegreesToRadian(totalAngle);
+            var currentGravity = CubismPhysicsMath.RadianToDirection(totalRadian);
+            currentGravity.Normalize();
+
+            for (var i = 1; i < strand.Length; ++i)
+            {
+                strand[i].Force = (currentGravity * strand[i].Acceleration) + wind;
+
+                strand[i].LastPosition = strand[i].Position;
+
+                strand[i].Velocity = Vector2.zero;
+                var force = strand[i].Force;
+                force.Normalize();
+
+                strand[i].Position = strand[i - 1].Position + force * strand[i].Radius;
+
+                if (Mathf.Abs(strand[i].Position.x) < thresholdValue)
+                {
+                    strand[i].Position.x = 0.0f;
+                }
+
+                strand[i].Force = Vector2.zero;
+                strand[i].LastGravity = currentGravity;
+            }
+        }
 
         /// <summary>
         /// Initializes <see langword="this"/>.
@@ -212,14 +317,24 @@ namespace Live2D.Cubism.Framework.Physics
 
 
             // Initialize inputs.
+            OriginalInput = new CubismPhysicsInput[Input.Length];
             for (var i = 0; i < Input.Length; ++i)
             {
+                OriginalInput[i] = Input[i];
                 Input[i].InitializeGetter();
             }
 
+            _previousRigOutput = new SubRigPhysicsOutput();
+            _currentRigOutput = new SubRigPhysicsOutput();
+
+            Array.Resize(ref _previousRigOutput.Output, Output.Length);
+            Array.Resize(ref _currentRigOutput.Output, Output.Length);
+
             // Initialize outputs.
+            OriginalOutput = new CubismPhysicsOutput[Output.Length];
             for (var i = 0; i < Output.Length; ++i)
             {
+                OriginalOutput[i] = Output[i];
                 Output[i].InitializeGetter();
             }
         }
@@ -234,27 +349,26 @@ namespace Live2D.Cubism.Framework.Physics
             var totalAngle = 0.0f;
             var totalTranslation = Vector2.zero;
 
-
             for (var i = 0; i < Input.Length; ++i)
             {
-                var weight = Input[i].Weight / CubismPhysics.MaximumWeight;
+                ref var input = ref Input[i];
+                var weight = input.Weight / CubismPhysics.MaximumWeight;
 
-
-                if (Input[i].Source == null)
+                if (input.Source == null)
                 {
-                    Input[i].Source = Rig.Controller.Parameters.FindById(Input[i].SourceId);
+                    input.Source = Rig.Controller.Parameters.FindById(input.SourceId);
+                    input.SourceIndex = Array.IndexOf(Rig.Controller.Parameters, input.Source);
                 }
 
-
-                var parameter = Input[i].Source;
-                Input[i].GetNormalizedParameterValue(
+                var parameter = input.Source;
+                input.GetNormalizedParameterValue(
                     ref totalTranslation,
                     ref totalAngle,
                     parameter,
+                    ref Rig.ParametersCache[input.SourceIndex],
                     Normalization,
                     weight
                     );
-
             }
 
 
@@ -277,33 +391,135 @@ namespace Live2D.Cubism.Framework.Physics
 
             for (var i = 0; i < Output.Length; ++i)
             {
-                var particleIndex = Output[i].ParticleIndex;
+                ref var currentRigOutput = ref _currentRigOutput.Output[i];
+                _previousRigOutput.Output[i] = currentRigOutput;
+
+                ref var output = ref Output[i];
+
+                if (output.Destination == null)
+                {
+                    var destination = Rig.Controller.Parameters.FindById(output.DestinationId);
+                    if (destination == null)
+                    {
+                        continue;
+                    }
+
+                    output.Destination = destination;
+                }
+
+                var particleIndex = output.ParticleIndex;
 
                 if (particleIndex < 1 || particleIndex >= Particles.Length)
                 {
-                    break;
+                    continue;
                 }
-
-                if (Output[i].Destination == null)
-                {
-                    Output[i].Destination = Rig.Controller.Parameters.FindById(Output[i].DestinationId);
-                }
-
-                var parameter = Output[i].Destination;
+                // Update each time as the index may fluctuate.
+                output.DestinationIndex = Array.IndexOf(Rig.Controller.Parameters, output.Destination);
 
                 var translation = Particles[particleIndex].Position -
                                         Particles[particleIndex - 1].Position;
 
-                var outputValue = Output[i].GetValue(
+                var parameter = output.Destination;
+                var outputValue = output.GetValue(
                     translation,
-                    parameter,
                     Particles,
                     particleIndex,
                     Rig.Gravity
                     );
 
+                currentRigOutput = outputValue;
 
-                UpdateOutputParameterValue(parameter, outputValue, Output[i]);
+                UpdateOutputParameterValue(parameter, ref Rig.ParametersCache[output.DestinationIndex], outputValue, output);
+            }
+        }
+
+        /// <summary>
+        /// Calculate the state in which the physics operation stabilizes at the current parameter values.
+        /// </summary>
+        public void Stabilization()
+        {
+            var totalAngle = 0.0f;
+            var totalTranslation = Vector2.zero;
+
+            for (var i = 0; i < Input.Length; ++i)
+            {
+                var weight = Input[i].Weight / CubismPhysics.MaximumWeight;
+
+                if (Input[i].Source == null)
+                {
+                    Input[i].Source = Rig.Controller.Parameters.FindById(Input[i].SourceId);
+                }
+                var index = Array.IndexOf(Rig.Controller.Parameters, Input[i].Source);
+
+                var parameter = Input[i].Source;
+                Input[i].GetNormalizedParameterValue(
+                    ref totalTranslation,
+                    ref totalAngle,
+                    parameter,
+                    ref Input[i].Source.Value,
+                    Normalization,
+                    weight
+                    );
+                Rig.ParametersCache[index] = Input[i].Source.Value;
+            }
+
+
+            var radAngle = CubismPhysicsMath.DegreesToRadian(-totalAngle);
+
+
+            totalTranslation.x = (totalTranslation.x * Mathf.Cos(radAngle) - totalTranslation.y * Mathf.Sin(radAngle));
+            totalTranslation.y = (totalTranslation.x * Mathf.Sin(radAngle) + totalTranslation.y * Mathf.Cos(radAngle));
+
+
+            UpdateParticlesForStabilization(
+                Particles,
+                totalTranslation,
+                totalAngle,
+                Rig.Wind,
+                CubismPhysics.MovementThreshold * Normalization.Position.Maximum
+                );
+
+
+            for (var i = 0; i < Output.Length; ++i)
+            {
+                _previousRigOutput.Output[i] = _currentRigOutput.Output[i];
+
+                if (Output[i].Destination == null)
+                {
+                    var destination = Rig.Controller.Parameters.FindById(Output[i].DestinationId);
+                    if (destination == null)
+                    {
+                        continue;
+                    }
+
+                    Output[i].Destination = destination;
+                }
+
+                var particleIndex = Output[i].ParticleIndex;
+
+                if (particleIndex < 1 || particleIndex >= Particles.Length)
+                {
+                    continue;
+                }
+
+                var index = Array.IndexOf(Rig.Controller.Parameters, Output[i].Destination);
+
+                var translation = Particles[particleIndex].Position -
+                                        Particles[particleIndex - 1].Position;
+
+                var parameter = Output[i].Destination;
+                var outputValue = Output[i].GetValue(
+                    translation,
+                    Particles,
+                    particleIndex,
+                    Rig.Gravity
+                    );
+
+                _currentRigOutput.Output[i] = outputValue;
+                _previousRigOutput.Output[i] = outputValue;
+                UpdateOutputParameterValue(parameter, ref Output[i].Destination.Value, outputValue, Output[i]);
+
+                Rig.ParametersCache[index] = Output[i].Destination.Value;
             }
         }
     }

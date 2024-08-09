@@ -157,7 +157,8 @@ namespace Live2D.Cubism.Framework.MotionFade
                 {
                     if ((elapsedTime <= playingMotionData.FadeInTime) ||
                         ((0 <= playingMotionData.ParameterFadeInTimes[j]) &&
-                          (elapsedTime <= playingMotionData.ParameterFadeInTimes[j])))
+                         (elapsedTime <= playingMotionData.ParameterFadeInTimes[j])) ||
+                        !_fadeStates[i].GetStateTransitionFinished())
                     {
                         _isFading[i] = true;
                         break;
@@ -168,20 +169,15 @@ namespace Live2D.Cubism.Framework.MotionFade
             var isFadingAllFinished = true;
             for (var i = 0; i < _fadeStates.Length; ++i)
             {
-                var playingMotions = _fadeStates[i].GetPlayingMotions();
-                var playingMotionCount = playingMotions.Count - 1;
                 if (_isFading[i])
                 {
                     isFadingAllFinished = false;
                     continue;
                 }
-                for (var j = playingMotionCount; j >= 0; --j)
-                {
-                    if (playingMotions.Count <= 1)
-                    {
-                        break;
-                    }
 
+                var playingMotions = _fadeStates[i].GetPlayingMotions();
+                for (var j = playingMotions.Count - 2; j >= 0; --j)
+                {
                     var playingMotion = playingMotions[j];
                     if (time <= playingMotion.EndTime)
                     {

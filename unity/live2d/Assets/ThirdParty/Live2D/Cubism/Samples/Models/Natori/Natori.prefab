@@ -158,6 +158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -276,6 +280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -440,6 +448,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -650,6 +662,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -768,6 +784,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -932,6 +952,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1096,6 +1120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1214,6 +1242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1378,6 +1410,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1542,6 +1578,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1558,6 +1598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4412074750717448}
   - component: {fileID: 114720743197640614}
+  - component: {fileID: 6399288125867774522}
   - component: {fileID: 114101106307150074}
   m_Layer: 0
   m_Name: PartArmCL
@@ -1595,6 +1636,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 13
   Opacity: 1
+--- !u!114 &6399288125867774522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073116495770762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114101106307150074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1620,6 +1683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4141170597586946}
   - component: {fileID: 114174679896630518}
+  - component: {fileID: 7298010210090751316}
   m_Layer: 0
   m_Name: PartUpperBody
   m_TagString: Untagged
@@ -1656,6 +1720,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 7
   Opacity: 1
+--- !u!114 &7298010210090751316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075280210343030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1078774078134542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +1860,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -1886,6 +1982,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2096,6 +2196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2112,6 +2216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4518851238654908}
   - component: {fileID: 114236610527579514}
+  - component: {fileID: 140626149092376387}
   m_Layer: 0
   m_Name: PartEyeBlow
   m_TagString: Untagged
@@ -2148,6 +2253,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 16
   Opacity: 1
+--- !u!114 &140626149092376387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111297884581620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1116050335358596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,6 +2385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2378,6 +2507,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2496,6 +2629,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2614,6 +2751,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2732,6 +2873,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -2896,6 +3041,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3014,6 +3163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3132,6 +3285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3250,6 +3407,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3368,6 +3529,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3486,6 +3651,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3604,6 +3773,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3722,6 +3895,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3840,6 +4017,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -3958,6 +4139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4020,6 +4205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806458840649480}
   - component: {fileID: 114931752369306550}
+  - component: {fileID: 854764841275458178}
   m_Layer: 0
   m_Name: PartCore
   m_TagString: Untagged
@@ -4056,6 +4242,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 1
   Opacity: 1
+--- !u!114 &854764841275458178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147459907910916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1149851478100572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,6 +4374,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4286,6 +4496,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4450,6 +4664,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4568,6 +4786,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4686,6 +4908,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -4909,6 +5135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5027,6 +5257,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5191,6 +5425,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5355,6 +5593,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5473,6 +5715,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5591,6 +5837,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5709,6 +5959,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -5827,6 +6081,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6037,6 +6295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6155,6 +6417,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6273,6 +6539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6335,6 +6605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136323001224178}
   - component: {fileID: 114366592242170784}
+  - component: {fileID: 6250667150096910232}
   m_Layer: 0
   m_Name: PartHairLine
   m_TagString: Untagged
@@ -6371,6 +6642,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 19
   Opacity: 1
+--- !u!114 &6250667150096910232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269547522630360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1270783983447172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6575,6 +6867,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6693,6 +6989,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -6903,6 +7203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7021,6 +7325,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7037,6 +7345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4170056734156888}
   - component: {fileID: 114038832311464756}
+  - component: {fileID: 3924012062970142942}
   m_Layer: 0
   m_Name: PartHand31
   m_TagString: Untagged
@@ -7073,6 +7382,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 29
   Opacity: 1
+--- !u!114 &3924012062970142942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318003247867978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1319332690628114
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,6 +7519,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7201,6 +7539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320966464501664}
   - component: {fileID: 114858732220300572}
+  - component: {fileID: 5758742431019176279}
   - component: {fileID: 114092711887528454}
   m_Layer: 0
   m_Name: PartWatchA
@@ -7238,6 +7577,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 3
   Opacity: 1
+--- !u!114 &5758742431019176279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319473401017818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114092711887528454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7520,6 +7882,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7638,6 +8004,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7654,6 +8024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4398397433301532}
   - component: {fileID: 114550696636371880}
+  - component: {fileID: 2675570834059912890}
   m_Layer: 0
   m_Name: PartArmALFore
   m_TagString: Untagged
@@ -7690,6 +8061,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 24
   Opacity: 1
+--- !u!114 &2675570834059912890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331591041877746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1332040339824670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7802,6 +8196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -7920,6 +8318,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8038,6 +8440,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8156,6 +8562,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8274,6 +8684,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8392,6 +8806,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8510,6 +8928,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8628,6 +9050,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8746,6 +9172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8864,6 +9294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -8880,6 +9314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4992998823663390}
   - component: {fileID: 114368102153480822}
+  - component: {fileID: 9068197517717755869}
   m_Layer: 0
   m_Name: PartHairFront
   m_TagString: Untagged
@@ -8916,6 +9351,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 5
   Opacity: 1
+--- !u!114 &9068197517717755869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350169386197248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1358242065456026
 GameObject:
   m_ObjectHideFlags: 0
@@ -9028,6 +9486,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -9192,6 +9654,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -9402,6 +9868,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -9520,6 +9990,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -9776,6 +10250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -9838,6 +10316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4739478919438318}
   - component: {fileID: 114583666221663150}
+  - component: {fileID: 6609986241323562261}
   m_Layer: 0
   m_Name: PartHand21
   m_TagString: Untagged
@@ -9874,6 +10353,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 28
   Opacity: 1
+--- !u!114 &6609986241323562261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390654628008246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1391429429686286
 GameObject:
   m_ObjectHideFlags: 0
@@ -9986,6 +10490,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10150,6 +10658,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10270,6 +10782,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10414,6 +10930,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10591,6 +11111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10801,6 +11325,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -10863,6 +11391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4922339527313566}
   - component: {fileID: 114115537854399560}
+  - component: {fileID: 516033191112272681}
   - component: {fileID: 114509467713570208}
   m_Layer: 0
   m_Name: PartArmER
@@ -10900,6 +11429,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 15
   Opacity: 1
+--- !u!114 &516033191112272681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430279833743910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114509467713570208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11027,6 +11579,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11145,6 +11701,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11263,6 +11823,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11381,6 +11945,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11499,6 +12067,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11617,6 +12189,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11679,6 +12255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4782512131835844}
   - component: {fileID: 114228089942876330}
+  - component: {fileID: 1477949985958437274}
   - component: {fileID: 114631095543334198}
   m_Layer: 0
   m_Name: PartArmAL
@@ -11716,6 +12293,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 10
   Opacity: 1
+--- !u!114 &1477949985958437274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447377797203208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114631095543334198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11843,6 +12441,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -11961,6 +12563,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12079,6 +12685,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12197,6 +12807,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12315,6 +12929,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12433,6 +13051,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12551,6 +13173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12669,6 +13295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12787,6 +13417,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -12905,6 +13539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13023,6 +13661,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13141,6 +13783,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13305,6 +13951,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13367,6 +14017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4696518206800702}
   - component: {fileID: 114018453807475282}
+  - component: {fileID: 1395952430156012758}
   - component: {fileID: 114841527652669488}
   m_Layer: 0
   m_Name: PartArmBR
@@ -13404,6 +14055,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 12
   Opacity: 1
+--- !u!114 &1395952430156012758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491960868806412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114841527652669488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13577,6 +14251,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13695,6 +14373,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13813,6 +14495,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -13931,6 +14617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -14049,6 +14739,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -14065,6 +14759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989637455434078}
   - component: {fileID: 114183906742490384}
+  - component: {fileID: 3302409565147808000}
   - component: {fileID: 114328897643370494}
   m_Layer: 0
   m_Name: PartArmDL
@@ -14102,6 +14797,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 14
   Opacity: 1
+--- !u!114 &3302409565147808000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503475429605668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114328897643370494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14229,6 +14946,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -14334,12 +15055,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Opacity: 1
   _lastOpacity: 0
+  _isOverwrittenModelMultiplyColors: 0
+  _isOverwrittenModelScreenColors: 0
+  _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
+  _modelScreenColor: {r: 0, g: 0, b: 0, a: 0}
   _sortingLayerId: 0
   _sortingMode: 0
   _sortingOrder: 0
   CameraToFace: {fileID: 0}
   _drawOrderHandler: {fileID: 0}
   _opacityHandler: {fileID: 0}
+  _multiplyColorHandler: {fileID: 0}
+  _screenColorHandler: {fileID: 0}
   _depthOffset: 0.00001
 --- !u!114 &114059646094663510
 MonoBehaviour:
@@ -14431,7 +15158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b893d4d32dd60bc4c9a2e447d31c6e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpressionsList: {fileID: 0}
+  ExpressionsList: {fileID: 11400000, guid: 3a537a92ee1560549aa1cf5c31af8e65, type: 2}
+  UseLegacyBlendCalculation: 0
   CurrentExpressionIndex: -1
 --- !u!95 &95434638689952108
 Animator:
@@ -14466,7 +15194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd9e6647bfff7542acb0200ab74bdd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubismFadeMotionList: {fileID: 0}
+  CubismFadeMotionList: {fileID: 11400000, guid: 708efa1768927d848a81aba8ba77ed01,
+    type: 2}
 --- !u!114 &114843234341511188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14481,7 +15210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rig:
     SubRigs:
-    - Input:
+    - Name: "\u524D\u9AEA\u3000\u63FA\u308C"
+      Input:
       - SourceId: ParamAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14534,7 +15264,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u6A2A\u9AEA\u3000\u63FA\u308C"
+      Input:
       - SourceId: ParamAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14587,7 +15318,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u5F8C\u308D\u9AEA\u3000\u63FA\u308C"
+      Input:
       - SourceId: ParamAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14640,7 +15372,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u524D\u9AEA\u3075\u308F"
+      Input:
       - SourceId: ParamAngleY
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14687,7 +15420,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u6A2A\u9AEA\u3075\u308F"
+      Input:
       - SourceId: ParamAngleY
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14734,7 +15468,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u5F8C\u308D\u9AEA\u3075\u308F"
+      Input:
       - SourceId: ParamAngleY
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14781,7 +15516,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u71D5\u5C3E\u63FA\u308C"
+      Input:
       - SourceId: ParamBodyAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14828,7 +15564,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u61D0\u4E2D\u6642\u8A08\u8170\u3000\u63FA\u308C"
+      Input:
       - SourceId: ParamBodyAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14887,7 +15624,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u8170\u306E\u30C1\u30A7\u30FC\u30F3\u63FA\u308C"
+      Input:
       - SourceId: ParamBodyAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14934,7 +15672,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u61D0\u4E2D\u6642\u8A08\u8170\u3000\u6A2A\u56DE\u8EE2"
+      Input:
       - SourceId: ParamBodyAngleX
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -14981,7 +15720,8 @@ MonoBehaviour:
           Maximum: 10
           Minimum: -10
           Default: 0
-    - Input:
+    - Name: "\u61D0\u4E2D\u6642\u8A08B \u30C1\u30A7\u30FC\u30F3\u63FA\u308C"
+      Input:
       - SourceId: ParamArmBR03
         ScaleOfTranslation: {x: 0, y: 0}
         AngleScale: 0
@@ -15018,6 +15758,7 @@ MonoBehaviour:
           Default: 0
     Gravity: {x: 0, y: -1}
     Wind: {x: 0, y: 0}
+    Fps: 0
 --- !u!1 &1506223167994700
 GameObject:
   m_ObjectHideFlags: 0
@@ -15074,6 +15815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4865491457719674}
   - component: {fileID: 114100868091052894}
+  - component: {fileID: 6677794919728898577}
   m_Layer: 0
   m_Name: PartArmARFore
   m_TagString: Untagged
@@ -15110,6 +15852,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 25
   Opacity: 1
+--- !u!114 &6677794919728898577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518706258642948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1520835943054528
 GameObject:
   m_ObjectHideFlags: 0
@@ -15222,6 +15987,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -15238,6 +16007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252049265863012}
   - component: {fileID: 114271775682163050}
+  - component: {fileID: 8174661202212534226}
   m_Layer: 0
   m_Name: PartHead
   m_TagString: Untagged
@@ -15274,6 +16044,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 6
   Opacity: 1
+--- !u!114 &8174661202212534226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521031822967934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1522855004207684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15386,6 +16185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -15494,6 +16297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4821766693763360}
   - component: {fileID: 114142036348605254}
+  - component: {fileID: 263307881310257633}
   m_Layer: 0
   m_Name: PartEyeR
   m_TagString: Untagged
@@ -15530,6 +16334,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 17
   Opacity: 1
+--- !u!114 &263307881310257633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535972757678058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1540026477637034
 GameObject:
   m_ObjectHideFlags: 0
@@ -15688,6 +16524,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -15898,6 +16738,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16246,6 +17090,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16364,6 +17212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16482,6 +17334,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16600,6 +17456,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16616,6 +17476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4995780541794234}
   - component: {fileID: 114553860445986182}
+  - component: {fileID: 7004314197387987940}
   m_Layer: 0
   m_Name: PartEyeL
   m_TagString: Untagged
@@ -16652,6 +17513,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 18
   Opacity: 1
+--- !u!114 &7004314197387987940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581663846164166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1583388413882496
 GameObject:
   m_ObjectHideFlags: 0
@@ -16764,6 +17658,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -16928,6 +17826,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17092,6 +17994,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17210,6 +18116,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17328,6 +18238,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17344,6 +18258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4224093385853672}
   - component: {fileID: 114516018853514590}
+  - component: {fileID: 8892638385099600614}
   m_Layer: 0
   m_Name: PartHairBack
   m_TagString: Untagged
@@ -17380,6 +18295,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 8
   Opacity: 1
+--- !u!114 &8892638385099600614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610489523595686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1618913787840124
 GameObject:
   m_ObjectHideFlags: 0
@@ -17492,6 +18430,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17656,6 +18598,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17774,6 +18720,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17938,6 +18888,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -17954,6 +18908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4054739804091190}
   - component: {fileID: 114580381389272888}
+  - component: {fileID: 7658383475595257219}
   m_Layer: 0
   m_Name: PartHand51
   m_TagString: Untagged
@@ -17990,6 +18945,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 27
   Opacity: 1
+--- !u!114 &7658383475595257219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634515076774536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1635851306834718
 GameObject:
   m_ObjectHideFlags: 0
@@ -18102,6 +19082,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -18210,6 +19194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4492453614767912}
   - component: {fileID: 114575965532925068}
+  - component: {fileID: 6015470670408973667}
   - component: {fileID: 114402611641960448}
   m_Layer: 0
   m_Name: PartArmAR
@@ -18247,6 +19232,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 11
   Opacity: 1
+--- !u!114 &6015470670408973667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647271976194834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  _childParts:
+  - {fileID: 0}
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114402611641960448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18374,6 +19379,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -18390,6 +19399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4085642090961542}
   - component: {fileID: 114109685896229284}
+  - component: {fileID: 131876253218699190}
   - component: {fileID: 114991846460024100}
   m_Layer: 0
   m_Name: PartWatchB
@@ -18427,6 +19437,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 4
   Opacity: 1
+--- !u!114 &131876253218699190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651070971565316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114991846460024100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18554,6 +19588,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -18672,6 +19710,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -18734,6 +19776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4847935098841608}
   - component: {fileID: 114552167943139486}
+  - component: {fileID: 1554093996770579308}
   m_Layer: 0
   m_Name: PartNose
   m_TagString: Untagged
@@ -18770,6 +19813,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 21
   Opacity: 1
+--- !u!114 &1554093996770579308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658987546236696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1662287956700540
 GameObject:
   m_ObjectHideFlags: 0
@@ -18882,6 +19948,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19000,6 +20070,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19164,6 +20238,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19374,6 +20452,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19492,6 +20574,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19610,6 +20696,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19728,6 +20818,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -19790,6 +20884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4920816792545094}
   - component: {fileID: 114138077558153104}
+  - component: {fileID: 7607192755512227871}
   m_Layer: 0
   m_Name: Part
   m_TagString: Untagged
@@ -19826,6 +20921,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 0
   Opacity: 1
+--- !u!114 &7607192755512227871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693154264510466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1702523706429344
 GameObject:
   m_ObjectHideFlags: 0
@@ -19938,6 +21052,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20056,6 +21174,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20174,6 +21296,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20292,6 +21418,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20617,6 +21747,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20735,6 +21869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -20945,6 +22083,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21063,6 +22205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21181,6 +22327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21301,6 +22451,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21445,6 +22599,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21563,6 +22721,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21681,6 +22843,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -21937,6 +23103,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22055,6 +23225,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22219,6 +23393,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22281,6 +23459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4335530459007984}
   - component: {fileID: 114795254472849964}
+  - component: {fileID: 2687072851273894626}
   m_Layer: 0
   m_Name: PartHand61
   m_TagString: Untagged
@@ -22317,6 +23496,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 31
   Opacity: 1
+--- !u!114 &2687072851273894626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766890053526976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1768257589958588
 GameObject:
   m_ObjectHideFlags: 0
@@ -22327,6 +23531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4086844923094408}
   - component: {fileID: 114764542781945426}
+  - component: {fileID: 4677743593093159416}
   m_Layer: 0
   m_Name: PartMouth
   m_TagString: Untagged
@@ -22363,6 +23568,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 22
   Opacity: 1
+--- !u!114 &4677743593093159416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768257589958588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1772856704015342
 GameObject:
   m_ObjectHideFlags: 0
@@ -22521,6 +23751,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22685,6 +23919,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22803,6 +24041,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22967,6 +24209,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -22983,6 +24229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4964838227140608}
   - component: {fileID: 114212835773730926}
+  - component: {fileID: 8113923249882162731}
   m_Layer: 0
   m_Name: PartHand11
   m_TagString: Untagged
@@ -23019,6 +24266,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 26
   Opacity: 1
+--- !u!114 &8113923249882162731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793418904283386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1794991448951994
 GameObject:
   m_ObjectHideFlags: 0
@@ -23177,6 +24449,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -23295,6 +24571,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -23459,6 +24739,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -23475,6 +24759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4634083321227042}
   - component: {fileID: 114208623055310998}
+  - component: {fileID: 2535116808062313162}
   m_Layer: 0
   m_Name: PartLowerBody
   m_TagString: Untagged
@@ -23511,6 +24796,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 9
   Opacity: 1
+--- !u!114 &2535116808062313162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810242403308536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1814531454239572
 GameObject:
   m_ObjectHideFlags: 0
@@ -23669,6 +24983,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -23833,6 +25151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -23951,6 +25273,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24069,6 +25395,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24187,6 +25517,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24305,6 +25639,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24515,6 +25853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24633,6 +25975,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24751,6 +26097,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -24869,6 +26219,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25033,6 +26387,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25151,6 +26509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25420,6 +26782,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25436,6 +26802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4103237291121000}
   - component: {fileID: 114130833919574580}
+  - component: {fileID: 4549083007581338335}
   m_Layer: 0
   m_Name: PartJacket
   m_TagString: Untagged
@@ -25472,6 +26839,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 23
   Opacity: 1
+--- !u!114 &4549083007581338335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877177034418034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1878013566654688
 GameObject:
   m_ObjectHideFlags: 0
@@ -25584,6 +26975,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25748,6 +27143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -25866,6 +27265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -26111,6 +27514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -26127,6 +27534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4431288681452898}
   - component: {fileID: 114931515758381108}
+  - component: {fileID: 5984880414954529198}
   m_Layer: 0
   m_Name: PartHand41
   m_TagString: Untagged
@@ -26163,6 +27571,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 30
   Opacity: 1
+--- !u!114 &5984880414954529198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900482822260724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1913240173867018
 GameObject:
   m_ObjectHideFlags: 0
@@ -26367,6 +27799,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -26623,6 +28059,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -26787,6 +28227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -26905,6 +28349,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27115,6 +28563,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27233,6 +28685,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27443,6 +28899,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27561,6 +29021,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27725,6 +29189,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27741,6 +29209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4176999385564636}
   - component: {fileID: 114189360966520194}
+  - component: {fileID: 1285810729255608767}
   m_Layer: 0
   m_Name: PartHairShadow
   m_TagString: Untagged
@@ -27777,6 +29246,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 20
   Opacity: 1
+--- !u!114 &1285810729255608767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989768995467238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1991837270679660
 GameObject:
   m_ObjectHideFlags: 0
@@ -27889,6 +29380,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0
@@ -27905,6 +29400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4157779487862800}
   - component: {fileID: 114216450850633072}
+  - component: {fileID: 5958645420798868985}
   m_Layer: 0
   m_Name: PartGlass
   m_TagString: Untagged
@@ -27941,6 +29437,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unmanagedIndex: 2
   Opacity: 1
+--- !u!114 &5958645420798868985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992300831140148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _childDrawableRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _childParts: []
+  _isOverwrittenPartMultiplyColors: 0
+  _isOverwrittenPartScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1998448863688756
 GameObject:
   m_ObjectHideFlags: 0
@@ -28053,6 +29573,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localSortingOrder: 0
   _color: {r: 1, g: 1, b: 1, a: 1}
+  _isOverwrittenDrawableMultiplyColors: 0
+  _isOverwrittenDrawableScreenColors: 0
+  _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
+  _screenColor: {r: 0, g: 0, b: 0, a: 1}
   _mainTexture: {fileID: 2800000, guid: e72c1d7f81e05e448ac54655a1f69d4d, type: 3}
   _sortingMode: 0
   _sortingOrder: 0

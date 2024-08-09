@@ -4,10 +4,10 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+/UserSettings/
 
 /.idea/
 .gradle*
-/UserSettings/
 /Assets/AssetStoreTools*
 /Assets/ThirdParty/Naninovel*
 /Assets/NaninovelData/Saves*

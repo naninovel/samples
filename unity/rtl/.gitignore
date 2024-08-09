@@ -4,6 +4,8 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+/UserSettings/
+
 /.idea/
 .gradle*
 /Assets/AssetStoreTools*

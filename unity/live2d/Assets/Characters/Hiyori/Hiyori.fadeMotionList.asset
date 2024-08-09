@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
+  m_Name: Hiyori.fadeMotionList
+  m_EditorClassIdentifier: 
+  MotionInstanceIds: a4730000a474000098740000c8740000
+  CubismFadeMotionObjects:
+  - {fileID: 11400000, guid: f3c83d2a7a0464542ac5af5650189087, type: 2}
+  - {fileID: 11400000, guid: 5436795428a60b84485b8955ca92a0a4, type: 2}
+  - {fileID: 11400000, guid: e21ca40471a608841828dcdc1673645c, type: 2}
+  - {fileID: 11400000, guid: bddc787c12279974a96fb98a5d748ed1, type: 2}

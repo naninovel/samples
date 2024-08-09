@@ -43,7 +43,7 @@ namespace Live2D.Cubism.Plugins.Editor
             // Detect the type of iOS plugin by SDK type and SDK version in the build settings.
             CubismiOSPlugin targetPlugin;
 
-            if (EditorUserBuildSettings.iOSBuildConfigType == iOSBuildType.Debug)
+            if (EditorUserBuildSettings.iOSXcodeBuildConfig == XcodeBuildConfig.Debug)
             {
                 targetPlugin = PlayerSettings.iOS.sdkVersion == iOSSdkVersion.DeviceSDK
                     ? CubismiOSPlugin.DebugIphoneos

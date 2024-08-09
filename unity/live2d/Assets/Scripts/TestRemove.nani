@@ -3,7 +3,8 @@
 
 Now removing all actors, live2d models should be destroyed.
 
-@hideAll remove:true
+@hideAll wait!
+@remove *
 
 Removed.
 

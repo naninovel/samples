@@ -19,16 +19,29 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  ScriptRoot: Assets/Scripts
+  ScriptParser: Naninovel.ScriptAssetParser, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  CompilerLocalization: {fileID: 0}
+  StableIdentification: 0
   InitializationScript: 
   TitleScript: 
   StartGameScript: TestScript
   AutoAddScripts: 1
+  AutoResolvePath: 1
   HotReloadScripts: 1
+  WatchScripts: 1
   CountTotalCommands: 0
+  ShowScriptNavigator: 0
   EnableVisualEditor: 1
   HideUnusedParameters: 1
+  SelectPlayedScript: 1
   InsertLineKey: 32
   InsertLineModifier: 2
+  IndentLineKey: 275
+  IndentLineModifier: 2
+  UnindentLineKey: 276
+  UnindentLineModifier: 2
   SaveScriptKey: 115
   SaveScriptModifier: 2
   RewindMouseButton: 0
@@ -37,11 +50,9 @@ MonoBehaviour:
   EditorCustomStyleSheet: {fileID: 0}
   GraphOrientation: 1
   GraphAutoAlignPadding: {x: 10, y: 0}
+  ShowSynopsis: 1
   GraphCustomStyleSheet: {fileID: 0}
   EnableCommunityModding: 0
   ExternalLoader:
     PathPrefix: Scripts
     ProviderTypes: []
-  EnableNavigator: 1
-  ShowNavigatorOnInit: 1
-  NavigatorSortOrder: 900

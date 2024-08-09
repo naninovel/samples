@@ -32,14 +32,13 @@ s.Sleep: Etiam lacinia eros interdum accumsan luctus.
 
 Testing billboard script.
 
-@startTrans
-@hidePrinter time:0
-@sun power:0 time:0
-@hide MainBackground time:0
-@camera ortho:false offset:,,40 time:0
-@char s pos:75,-15,82 time:0
-@loadScene Island additive:true
-@finishTrans
+@trans
+    @hidePrinter
+    @sun power:0
+    @hide MainBackground
+    @camera ortho:false offset:,,40
+    @char s pos:75,-15,82
+    @loadScene Island additive:true
 
 @wait i2
 

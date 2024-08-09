@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "com.unity.ide.rider": "3.0.24",
+    "com.unity.ide.rider": "3.0.31",
     "com.unity.test-framework": "1.1.33",
-    "com.unity.textmeshpro": "2.1.6",
+    "com.unity.textmeshpro": "3.0.9",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
@@ -14,5 +14,8 @@
     "com.unity.modules.ui": "1.0.0",
     "com.unity.modules.uielements": "1.0.0",
     "com.unity.modules.video": "1.0.0"
-  }
+  },
+  "testables": [
+    "com.elringus.naninovel"
+  ]
 }

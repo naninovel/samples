@@ -28,7 +28,7 @@ MonoBehaviour:
       ProviderTypes: []
     guid: 8e564fef-7489-4f3c-9002-fbf103cf1cfa
     customData:
-      id: 0
+      rid: -2
     Pivot: {x: 0.5, y: 0}
     PixelsPerUnit: 100
     EnableDepthPass: 1
@@ -67,7 +67,7 @@ MonoBehaviour:
     - s
     - sr
     metas:
-    - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.Live2DCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -78,7 +78,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: b8fe3311-f675-4931-a75f-c7f9f0ddc23b
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
       VoiceSource: {fileID: 0}
       LinkedPrinter: 
       Poses: []
-    - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.Live2DCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -122,7 +122,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: e82ca361-7667-4cd0-bd04-5271b2f1ee82
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -154,7 +154,7 @@ MonoBehaviour:
       VoiceSource: {fileID: 0}
       LinkedPrinter: HiyoriPrinter
       Poses: []
-    - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.Live2DCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -165,7 +165,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: da524575-4c75-4abc-a8f4-90fff9103850
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
       VoiceSource: {fileID: 0}
       LinkedPrinter: 
       Poses: []
-    - Implementation: Naninovel.Live2DCharacter, Assembly-CSharp, Version=0.0.0.0,
+    - Implementation: Naninovel.Live2DCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
         PathPrefix: Characters
@@ -209,7 +209,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: 3afd1e6b-75d0-43b2-ba76-cb523b5b7651
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -250,6 +250,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   SharedPoses: []
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.unity.ide.rider": "3.0.28",
+    "com.unity.ide.rider": "3.0.31",
     "com.unity.nuget.newtonsoft-json": "3.2.1",
     "com.unity.textmeshpro": "3.0.8",
     "com.unity.ugui": "1.0.0",

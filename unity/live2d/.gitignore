@@ -9,7 +9,6 @@
 .gradle*
 /Assets/AssetStoreTools*
 /Assets/ThirdParty/*
-!/Assets/ThirdParty/Live2D*
 !/Assets/ThirdParty/NaninovelData*
 /Assets/ThirdParty/NaninovelData/Saves*
 

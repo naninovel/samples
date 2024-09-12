@@ -281,3 +281,13 @@ MonoBehaviour:
     - name: CustomPrinter
       pathPrefix: TextPrinters
       guid: 4f346f5982504ab48a6e2bb5aeea2f58
+  - Id: TextPrinters/26d79b7f-6dd5-4c90-a712-2ca2d0aca637
+    Resources:
+    - name: Dialogue
+      pathPrefix: TextPrinters
+      guid: 
+  - Id: TextPrinters/c62844af-2161-4921-963c-ee04a32fe952
+    Resources:
+    - name: Chat
+      pathPrefix: TextPrinters
+      guid: 

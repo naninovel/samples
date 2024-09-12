@@ -20,14 +20,13 @@ MonoBehaviour:
   SaveSlotLimit: 99
   QuickSaveSlotLimit: 18
   BinarySaveFiles: 1
-  LoadStartDelay: 0.3
   ResetOnGoto: 1
   EnableStateRollback: 1
   StateRollbackSteps: 1024
   SavedRollbackSteps: 128
-  GameStateHandler: Naninovel.PlayerPrefsGameStateSlotManager, Elringus.Naninovel.Runtime,
+  GameStateHandler: Naninovel.UniversalGameStateSerializer, Elringus.Naninovel.Runtime,
     Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  GlobalStateHandler: Naninovel.PlayerPrefsGlobalStateSlotManager, Elringus.Naninovel.Runtime,
+  GlobalStateHandler: Naninovel.UniversalGlobalStateSerializer, Elringus.Naninovel.Runtime,
     Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  SettingsStateHandler: Naninovel.PlayerPrefsSettingsSlotManager, Elringus.Naninovel.Runtime,
+  SettingsStateHandler: Naninovel.UniversalSettingsStateSerializer, Elringus.Naninovel.Runtime,
     Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

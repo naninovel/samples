@@ -36,7 +36,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     guid: 7e9f9a9f-aeb4-4fb2-b861-1fbb02685158
     customData:
-      id: 0
+      rid: -2
     Pivot: {x: 0.5, y: 0.5}
     PixelsPerUnit: 100
     EnableDepthPass: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: 26d79b7f-6dd5-4c90-a712-2ca2d0aca637
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -121,7 +121,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: 24220ff0-0a80-4703-aa4e-87e828fe7e9c
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: 99d94480-453b-47a5-8cc9-5dab7f42630f
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -197,7 +197,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: c62844af-2161-4921-963c-ee04a32fe952
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -235,7 +235,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: feb5e3a2-1e38-42f4-bc77-c87e1c98513d
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -273,7 +273,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       guid: dc62349d-b95f-4fdc-8934-3363cb325e64
       customData:
-        id: 0
+        rid: -2
       Pivot: {x: 0.5, y: 0.5}
       PixelsPerUnit: 100
       EnableDepthPass: 1
@@ -301,6 +301,7 @@ MonoBehaviour:
       RevealInstantly: 0
       AuthoredTemplate: 
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

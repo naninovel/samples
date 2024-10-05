@@ -17,7 +17,6 @@ MonoBehaviour:
   MinAutoPlayDelay: 3
   CompleteOnContinue: 1
   ShowDebugOnInit: 0
-  WaitByDefault: 1
-  UnloadAssetsOnPlay: 1
-  LoadOnGoto: 0
+  WaitByDefault: 0
+  ShowLoadingUI: 1
   ResolveMode: 0

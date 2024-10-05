@@ -1,0 +1,6 @@
+@back Canyon wait!
+This place is called something <i>of despair</i>.[i] Is this where my journey ends?[< skip!]
+@choice Indeed.
+@choice F
+@stop
+@title

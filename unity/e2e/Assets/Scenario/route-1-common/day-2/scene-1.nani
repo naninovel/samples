@@ -1,4 +1,4 @@
-@back Canyon
+@back Canyon wait!
 Beginning day 2 of common route.|#1|
 It's scene A. The fact that this text line has "a" identifier is purely coincedential.|#a|
 
@@ -19,5 +19,4 @@ Choose which scene to visit next. This will have major impact on which route (X 
 @else
     Player wasn't able to pick a choice the other day.|#8|
     Maybe on the next playthrough.|#9|
-@endIf
 @return

@@ -146,42 +146,42 @@ MonoBehaviour:
       guid: dcfdec0fbfc88b34691e7c3c5b0a527f
   - Id: Scripts
     Resources:
-    - name: title
-      pathPrefix: Scripts
-      guid: 2074869c8af60174e910661a98dd3447
-    - name: route-1-common/day-1/scene-1
-      pathPrefix: Scripts
-      guid: 8cc9b10b18606cf458c83fd4ede53d7b
-    - name: route-1-common/day-2/scene-1
-      pathPrefix: Scripts
-      guid: 0e7273d9edb5bc2418eeb1882b96cc56
-    - name: route-1-common/day-2/scene-2-x
-      pathPrefix: Scripts
-      guid: 64da782f529384b498342426c0919e81
-    - name: route-1-common/day-2/scene-2-y
-      pathPrefix: Scripts
-      guid: e93e22148fe318343b7b77f5b022c8f2
-    - name: route-1-common/day-2/scene-3
-      pathPrefix: Scripts
-      guid: 5f4e1a5cf77202540a64a65447ef7c13
-    - name: route-1-common/day-3/scene-1
-      pathPrefix: Scripts
-      guid: 6fdffa06709694847bc4412229e213c5
     - name: route-1-common/day-3/scene-2-bad-end
       pathPrefix: Scripts
       guid: 37f88db03b7e4584681cbda544b1bba3
-    - name: route-1-common/day-3/scene-2-dead-end
+    - name: route-1-common/day-2/scene-2-y
       pathPrefix: Scripts
-      guid: 3bec8efff537ba748ba5a1dbab15ead6
-    - name: route-2-x/scene-1
+      guid: e93e22148fe318343b7b77f5b022c8f2
+    - name: route-1-common/day-3/scene-1
       pathPrefix: Scripts
-      guid: 5e53651ba678aa54cae5aca032a66a50
-    - name: route-2-y/scene-1
-      pathPrefix: Scripts
-      guid: 332defc841698ef448e79d86c7ffaeb0
+      guid: 6fdffa06709694847bc4412229e213c5
     - name: route-3-true/scene-1
       pathPrefix: Scripts
       guid: ac157b47f887f1e43803dd6abb0d1a63
+    - name: route-2-y/scene-1
+      pathPrefix: Scripts
+      guid: 332defc841698ef448e79d86c7ffaeb0
+    - name: route-1-common/day-2/scene-1
+      pathPrefix: Scripts
+      guid: 0e7273d9edb5bc2418eeb1882b96cc56
+    - name: route-1-common/day-1/scene-1
+      pathPrefix: Scripts
+      guid: 8cc9b10b18606cf458c83fd4ede53d7b
+    - name: route-2-x/scene-1
+      pathPrefix: Scripts
+      guid: 5e53651ba678aa54cae5aca032a66a50
+    - name: route-1-common/day-2/scene-3
+      pathPrefix: Scripts
+      guid: 5f4e1a5cf77202540a64a65447ef7c13
+    - name: route-1-common/day-2/scene-2-x
+      pathPrefix: Scripts
+      guid: 64da782f529384b498342426c0919e81
+    - name: route-1-common/day-3/scene-2-dead-end
+      pathPrefix: Scripts
+      guid: 3bec8efff537ba748ba5a1dbab15ead6
+    - name: title
+      pathPrefix: Scripts
+      guid: 2074869c8af60174e910661a98dd3447
   - Id: Backgrounds/a9d74494-814d-4ca1-87a0-3e2b2d24c691
     Resources:
     - name: Mountain

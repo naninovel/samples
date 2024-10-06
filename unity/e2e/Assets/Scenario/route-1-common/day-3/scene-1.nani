@@ -1,4 +1,4 @@
-@back Rain
+@back Rain wait!
 Common route.|#1|[i] Day 3.|#2|[i] Scene A.|#3|
 
 Choose to loose a health or X point.|#4|[< skip!]
@@ -14,9 +14,8 @@ If X is more than Y and above 2, go to X route.|#6|
 
 @if yPoints=2
     @choice "Last chance to get to route Y|#d3-last-y|" set:yPoints++
-    @choice "Nah|#d3-last-nah|"
+    @choice Nah|#d3-last-nah|
     @stop
-@endIf
 
 If Y is above 2, go to Y route.|#7|
 @goto route-2-y/scene-1 if:yPoints>2

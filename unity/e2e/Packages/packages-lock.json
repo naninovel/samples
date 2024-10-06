@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.elringus.naninovel": {
+      "version": "https://github.com/naninovel/upm.git#1.20",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.video": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.textmeshpro": "3.0.9"
+      },
+      "hash": "06c45c880f4fbd14835527ee067dd66e4b2353fc"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -14,6 +30,13 @@
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {

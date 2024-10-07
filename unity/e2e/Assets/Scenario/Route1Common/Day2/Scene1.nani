@@ -6,8 +6,8 @@ It's scene A. The fact that this text line has "a" identifier is purely coincede
 @gosub .BonusForLimitedChoice
 
 Choose which scene to visit next. This will have major impact on which route (X or Y) you'll allign to.|#b|[< skip!]
-@choice X|#d2-toward-x| goto:route-1-common/day-2/scene-2-x
-@choice Y|#d2-toward-y| goto:route-1-common/day-2/scene-2-y
+@choice X|#d2-toward-x| goto:Route1Common/Day2/Scene2X
+@choice Y|#d2-toward-y| goto:Route1Common/Day2/Scene2Y
 @stop
 
 # BonusForLimitedChoice

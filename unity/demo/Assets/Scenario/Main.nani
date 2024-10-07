@@ -42,13 +42,13 @@ n: Shall we get started then?
 
 @char n pos:50,-10 time:0
 
-n: Imagine you've imported Naninovel package to your Unity project.[i][char b.CreateScript transition:Ripple time:1 pos:{pos} ][char n pos:80 time:0.5 ] For starters, create a <b>naninovel script</b>.[i] Naninovel scripts are text documents where you control what happens on scenes.[i] Open them with a text editor of your choice, like Notepad, Word or Atom.
+n: Imagine you've imported Naninovel package to your Unity project.[i][char b.CreateScript transition:Ripple time:1 pos:{pos}][char n pos:80 time:0.5] For starters, create a <b>naninovel script</b>.[i] Naninovel scripts are text documents where you control what happens on scenes.[i] Open them with a text editor of your choice, like Notepad, Word or Atom.
 
 @char b.OpenScript transition:Ripple time:1
 n: For example, here is the contents of a naninovel script used for this demo so far.[i] Don't worry if it looks complicated, I'll show how it works step by step a bit later.
 
 @hide b
-n: Now, open the script in a text editor.[i][char b.HelloWorld transition:Ripple time:1 pos:{pos} ] Let's start with showing a simple text. Simply type the text you wish to show, like this.[i] Enter play mode and start new game to see the result.[< skip!]
+n: Now, open the script in a text editor.[i][char b.HelloWorld transition:Ripple time:1 pos:{pos}] Let's start with showing a simple text. Simply type the text you wish to show, like this.[i] Enter play mode and start new game to see the result.[< skip!]
 
 @choice "Hello World!" goto:.Hello
 @stop
@@ -57,7 +57,7 @@ n: Now, open the script in a text editor.[i][char b.HelloWorld transition:Ripple
 Hello World!
 
 @hide b
-n: Easy, right?[i][char b.Name transition:Ripple time:1 pos:{pos} ] To associate shown text with a character, just add its name followed by a colon before the text.[< skip!]
+n: Easy, right?[i][char b.Name transition:Ripple time:1 pos:{pos}] To associate shown text with a character, just add its name followed by a colon before the text.[< skip!]
 
 @choice "John: Hello World!" goto:.John
 @stop
@@ -75,7 +75,7 @@ n: Using Naninovel editor menu, open characters manager and add a new character 
 @hide b
 @stopBgm fade:5
 @bgm Wind fade:5
-n: Alright, it's time to summon Kohaku-chan on scene![i][char b.ShowCharacter transition:Ripple time:1 pos:{pos} ] Type the following expression in the naninovel script and run the game.[< skip!]
+n: Alright, it's time to summon Kohaku-chan on scene![i][char b.ShowCharacter transition:Ripple time:1 pos:{pos}] Type the following expression in the naninovel script and run the game.[< skip!]
 
 @choice "@char Kohaku" goto:.Kohaku
 @stop
@@ -131,8 +131,8 @@ n: You have to do something, use naninovel script![< skip!]
 @set tries=0
 
 # Choices
-@choice "@char Kohaku.Angry" goto:.Angry if:!triedAngry
-@choice "@char Kohaku pos:85" goto:.Move if:!triedMoving
+@choice "@char Kohaku.Angry" goto:.Angry if:"!triedAngry"
+@choice "@char Kohaku pos:85" goto:.Move if:"!triedMoving"
 @print "Hide! Use the hide command!" author:n wait! if:tries==2
 @choice "@hide Kohaku" goto:.Hide if:tries==2
 @stop
@@ -264,7 +264,7 @@ John: Shake[spawn ShakePrinter wait!] it!
 @stopBgm fade:10
 @bgm Wind fade:10
 k.Default: By the way, are there other ways to output the text? Like, if I want to print a whole paragraph — it won't even fit this window.
-n: Actually, the window can resize to fit as mush as the screen allow, but there is another way.[i] You can use a <b>fullscreen</b> printer; it's specifically designed for cases like this. 
+n: Actually, the window can resize to fit as mush as the screen allow, but there is another way.[i] You can use a <b>fullscreen</b> printer; it's specifically designed for cases like this.
 n: Use <b>@printer</b> command to switch printers. There are several built-in ones, and you can always add your own. Try it out![< skip!]
 
 # PrinterChoice
@@ -279,14 +279,14 @@ n: Use <b>@printer</b> command to switch printers. There are several built-in on
 @hideChars
 @printer Fullscreen
 @resetText
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Nunc dapibus maximus molestie. Etiam luctus arcu in lorem tristique tristique. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Nunc dapibus maximus molestie. Etiam luctus arcu in lorem tristique tristique. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus.
 @hidePrinter
 @goto .PrinterChoice
 
 # DialoguePrinter
 @hideChars
 @printer Dialogue
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus.
 @hidePrinter
 @goto .PrinterChoice
 
@@ -437,7 +437,7 @@ n: You can also specify a transition effect to use when switching backgrounds. A
 @stopBgm fade:10
 k: Hm, but all those backgrounds, they look a bit...[wait 0.7] flat?
 n: Well, they are sprite backgrounds, after all.[i] Just like characters, backgrounds can be based on multiple implementations: sprites, animated objects, videos and even full-fledged Unity scenes.
-k.Surprise: You said videos? 
+k.Surprise: You said videos?
 n: Indeed. Simply add a video file as another background resource and use the same command.[i] Check this out.[< skip!]
 
 @choice "@back VideoForest" goto:.SelectVideoBack
@@ -457,7 +457,7 @@ k.Angry: Wait, I think we're missing something essential.
 n: Like what?
 k: Listen closely...
 n: ...[i] Don't think I can hear anything.
-k.Confidence: Exactly! 
+k.Confidence: Exactly!
 n: Ah, I've got it. Right, let's talk about audio.
 n: Use <b>@bgm</b> and <b>@sfx</b> commands to play background music and sound effects respectively.[i] Both music and sound effect audio files can be added in the same way as all the other resources via editor GUI.
 n: The music will loop by default, though you can change this, as well as volume and fade duration.[i] Here, check out these music tracks.[< skip!]

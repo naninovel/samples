@@ -14,7 +14,7 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.textmeshpro": "3.0.9"
       },
-      "hash": "14727ba235dc80ea090ebf842f5b0a9ed519e31a"
+      "hash": "06c45c880f4fbd14835527ee067dd66e4b2353fc"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
@@ -33,7 +33,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.7.0",
+      "version": "1.11.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.elringus.naninovel": "https://github.com/naninovel/upm.git#1.20",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.31",
     "com.unity.textmeshpro": "3.0.9",

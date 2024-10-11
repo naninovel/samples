@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Tollaras_Background_Test_Atlas
   m_EditorClassIdentifier: 
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
   atlasFile: {fileID: 4900000, guid: aa2e4a320ad8090478d9661bc60d445f, type: 3}
   materials:
   - {fileID: 2100000, guid: 2d37b77285091e844be4d153138a6f23, type: 2}

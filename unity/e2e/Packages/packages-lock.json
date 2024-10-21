@@ -12,9 +12,10 @@
         "com.unity.modules.particlesystem": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.ugui": "1.0.0",
-        "com.unity.textmeshpro": "3.0.9"
+        "com.unity.textmeshpro": "3.0.9",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
-      "hash": "f42874254de22b64ec4d82ea3c7da3d8082cdb43"
+      "hash": "a10306b793becda5428b0c9c49822bf2edd7a917"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
@@ -34,7 +35,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

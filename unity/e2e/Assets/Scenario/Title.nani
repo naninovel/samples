@@ -3,3 +3,5 @@
 ; Show special background when completed true route.
 @back { g_completedTrue ? "Snow" : "Mountain" }
 @stop
+
+@goto Route2X/Scene1
